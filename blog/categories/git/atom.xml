@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Git | Damoiseau.ME, Le blog d'un développeur web]]></title>
+  <link href="http://mikedamoiseau.github.io/blog/categories/git/atom.xml" rel="self"/>
+  <link href="http://mikedamoiseau.github.io/"/>
+  <updated>2014-12-31T14:40:20+07:00</updated>
+  <id>http://mikedamoiseau.github.io/</id>
+  <author>
+    <name><![CDATA[Michael Damoiseau]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[GIT - Ajouter Localement Une Branche Distante]]></title>
+    <link href="http://mikedamoiseau.github.io/git-ajouter-localement-une-branche-distante/"/>
+    <updated>2014-04-17T13:25:03+07:00</updated>
+    <id>http://mikedamoiseau.github.io/git-ajouter-localement-une-branche-distante</id>
+    <content type="html"><![CDATA[<p>Auparavant, lorsque j&#8217;avais besoin d&#8217;ajouter localement une branche présente sur un dépôt distant, j&#8217;utilisais les commandes suivantes:</p>
+
+<pre><code class="bash">git checkout -b nomDeMaBrancheDistante
+git pull origin nomDeMaBrancheDistante
+</code></pre>
+
+<p>Mais&hellip;</p>
+
+<!--more-->
+
+
+<p>Que se passe-t-il quand vous êtes en plein milieu de modifications et que vous ne désirez pas créer de <em>commit</em>?
+Et bien ce n&#8217;est tout simplement pas possible!</p>
+
+<p>Deux possibilitiés:</p>
+
+<ul>
+<li>Vous créez un commit intermédiaire pour vous permettre de changer de branche (pas terrible, je le reconnais&hellip;)</li>
+<li>Vous utilisez la commande suivante, elle est plus propre et elle fonctionne bien :)</li>
+</ul>
+
+
+<pre><code class="bash">git checkout -b nomDeMaBrancheDistante origin/nomDeMaBrancheDistante
+</code></pre>
+
+<p>Il se peut dans certains cas que Git refuse de créer la branche et vous affiche le message d&#8217;erreur suivant:</p>
+
+<pre><code class="bash">fatal: git checkout: updating paths is incompatible with switching branches/forcing
+Did you intend to checkout ‘origin/‘ which can not be resolved as commit?’
+</code></pre>
+
+<p>Dans ce cas, un petit</p>
+
+<pre><code class="bash">git remote update
+</code></pre>
+
+<p>devrait vous aider à en venir à bout&hellip;</p>
+]]></content>
+  </entry>
+  
+</feed>

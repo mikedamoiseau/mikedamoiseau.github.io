@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Tester Le Rendu De Votre Site Internet Simultanément Sur Plusieurs Périphériques Avec BrowserSync - Damoiseau.ME, Le blog d&#8217;un développeur web</title>
+  <meta name="author" content="Michael Damoiseau">
+
+  
+  <meta name="description" content="BrowserSync est un outil que l'on pourrait pratiquement considéré comme magique! J'ai découvert cet utilitaire il y a quelques semaines, et depuis je &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://mikedamoiseau.github.io/tester-le-rendu-de-votre-site-internet-simultanement-sur-plusieurs-peripheriques-avec-browsersync">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Damoiseau.ME, Le blog d'un développeur web" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-43047575-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Damoiseau.ME, Le blog d&#8217;un développeur web</a></h1>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="mikedamoiseau.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Tester Le Rendu De Votre Site Internet Simultanément Sur Plusieurs Périphériques Avec BrowserSync</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-10-30T13:55:17+07:00'><span class='date'>30/10/14</span> <span class='time'>1:55 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><a href="http://www.browsersync.io/" title="BrowserSync">BrowserSync</a> est un outil que l&#8217;on pourrait pratiquement considéré comme magique! J&#8217;ai découvert cet utilitaire il y a quelques semaines, et depuis je ne peux plus m&#8217;en passer lorsque je travaille sur à peu près n&#8217;importe quel projet web.</p>
+
+<!--more-->
+
+
+<h3>Qu&#8217;est-ce que BrowserSync?</h3>
+
+<p>BrowserSync est l&#8217;utilitaire de choix à utiliser lorsque vous développez un site internet adaptif <em>(mon dieu que je déteste toujours autant ce mot&hellip; Je parle bien entendu de &ldquo;responsive design&rdquo;!)</em>.
+BrowserSync permet de synchroniser l&#8217;affichage et les actions effectuées dans le navigateur sur différents périphériques <strong>en temps réel</strong>.</p>
+
+<h3>Comment cela fonctionne-t-il?</h3>
+
+<p>Vous démarrez BrowserSync sur votre machine de développement en lui indiquant l&#8217;url/adresse IP du site internet à afficher. BrowserSync va servir de serveur proxy intermédiaire auquel tous les autres périphériques se connecteront.
+Ainsi, tous les périphériques connectés afficheront la même page, mais le rendu pourra différer d&#8217;un périphérique à l&#8217;autre (prenons le cas d&#8217;un ordinateur et d&#8217;un téléphone, il y a de fortes chances que le rendu de la page ne soit pas le même sur les deux écrans).</p>
+
+<p>Là où ça devient super intéressant, c&#8217;est lorsque vous effectuez des actions sur l&#8217;un des périphériques connectés à BrowserSync tels qu&#8217;un défilement, remplir un formulaire, cliquer sur un lien, &hellip; Toutes ces actions vont être automatiquement répercutées sur tous les périphériques!</p>
+
+<p>Imaginez par exemple que vous deviez améliorer l&#8217;affichage de messages d&#8217;erreur liés à un formulaire de contact. Il faut bien évidemment que les messages soient lisibles et bien présentés sur toutes les tailles d&#8217;écran possibles.</p>
+
+<p>Avec mon ancienne méthode de travail, je devais remplir le formulaire et le soumettre sur chacun des périphériques afin de visualiser l&#8217;affichage des messages d&#8217;erreur. Tandis que maintenant, avec BrowserSync, je fais tout cela d&#8217;une seule traite. Cela peut représenter un fameux gain de temps, imaginez: vous remplissez et soumettez le formulaire sur votre ordinateur, et ces actions sont automatiquement répercutées sur les autres périphériques. Vous pouvez visualiser les messages d&#8217;erreur sur tous les écrans en une seule manipulation.</p>
+
+<h3>Installation et utilisation de BrowserSync</h3>
+
+<p>L&#8217;utilisation de BrowserSync requiert l&#8217;installation de Node.js. Si vous ne l&#8217;avez pas encore fait, installez-le en utilisant <a href="http://nodejs.org/download/" title="installateurs pour MacOS, Windows et Linux">l&#8217;installateur pour votre plateforme (MaC OS, Windows ou Linux)</a>. C&#8217;est facile et rapide.</p>
+
+<p>Installez ensuite BrowserSync en tapant cette ligne de commande dans votre terminal:
+<code>npm install -g browser-sync</code></p>
+
+<p>Enfin, vous pouvez lancer BrowserSync en tapant la ligne de commande suivante dans votre terminal:
+<code>browser-sync start --proxy "monprojet.dev" --files "css/*.css"</code></p>
+
+<p>Quelques éclaircissements concernant la ligne de commande pour lancer BrowserSync:</p>
+
+<ul>
+<li><code>start</code> démarre BrowserSync</li>
+<li><code>--proxy "monprojet.dev"</code> spécifie l&#8217;url permettant d&#8217;afficher votre projet</li>
+<li><code>--files "css/*.css"</code> indique les répertoires et les types de fichier que BrowserSync doit surveiller<sup>(1)</sup></li>
+</ul>
+
+
+<h3>Quelles sont les limitations de BrowserSync?</h3>
+
+<p>Une très grosse limitation de BrowserSync (à mon goût): le site doit être hébergé localement sur votre machine, sinon BrowserSync ne fonctionnera pas correctement. Tous les périphériques se connectant à BrowserSync seront redirigés vers la vraie url du site.</p>
+
+<p>Une autre limitation gênante, BrowserSync ne fonctionne pas bien avec les sites affichant des url complètes. En effet, si vous cliquez sur un lien contenant une url complète, vous serez redirigé vers l&#8217;url en question et perdrez la connexion à BrowserSync.</p>
+
+<h3>Et Wordpress?</h3>
+
+<p>Et bien malheureusement, avec Wordpress ça fonctionne moyennement :(</p>
+
+<p>En effet, Wordpress utilise des url complètes (voir point précédent) pour tous les liens tels que ceux présents dans les menus, les images, les liens vers d&#8217;autres articles et pages, &hellip;.
+Par exemple, si votre site est hébergé à l&#8217;adresse <code>http://www.exemple.com</code>, le lien vers la page <code>A propos</code> (ayant pour slug <code>a-propos</code>) contiendra l&#8217;url complète <code>http://www.exemple.com/a-propos</code>. BrowserSync ne filtrant pas le contenu, cliquer sur le lien vous redirigera vers <code>http://www.exemple.com/a-propos</code> et vous perdrez la connexion à BrowserSync ainsi que la synchronisation avec vos autres périphériques.</p>
+
+<p>Il existe cependant une extension Wordpress qui peut aider: <a href="https://wordpress.org/plugins/browser-sync-filter/" title="Extension Wordpress Browser-sync Filter">Browser-sync Filter</a>. Je ne parlerai pas d&#8217;avantage de cette extension car elle a l&#8217;air de fonctionner moyennement&hellip; Parfois ça marche, parfois pas!</p>
+
+<p>Une autre extension qui m&#8217;a l&#8217;air plus intéressante: <a href="https://wordpress.org/plugins/root-relative-urls/" title="Root Relative URLs">Root Relative URLs</a>. Lorsque vous insérez une url dans votre site Wordpress, l&#8217;extension va automatiquement convertir les urls complètes en urls relatives.</p>
+
+<h3>Conclusion</h3>
+
+<p>BrowserSync est un utilitaire que je conseille fortement à tout développeur web. Testez-le et vous devriez rapidement constater un gain en temps lors de vos développements front-end!</p>
+
+<h3>Notes</h3>
+
+<p><sup>(1)</sup> BrowserSync permet également de surveiller les fichiers de votre projet. Si vous modifiez le contenu d&#8217;un fichier, BrowserSync rafraichira automatiquement le contenu de la page sur tous les périphériques.
+BrowserSync propose d&#8217;autres fonctionnalités telles qu&#8217;un mini serveur web (ne gère que les fichiers HTML je pense, pas de PHP, ASP ou autre&hellip;). Pour découvrir la liste complète des fonctionnalités de BrowserSync, rien de mieux que de se rendre sur la page officielle, dans la rubrique <a href="http://www.browsersync.io/docs/command-line/" title="BrowserSync - Documentation: lignes de commande">documentation des lignes de commandes</a>.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Michael Damoiseau</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2014-10-30T13:55:17+07:00'><span class='date'>30/10/14</span> <span class='time'>1:55 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/divers/'>divers</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://mikedamoiseau.github.io/tester-le-rendu-de-votre-site-internet-simultanement-sur-plusieurs-peripheriques-avec-browsersync/" data-via="" data-counturl="http://mikedamoiseau.github.io/tester-le-rendu-de-votre-site-internet-simultanement-sur-plusieurs-peripheriques-avec-browsersync/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/wordpress-filtres-actions-partie-2/" title="Previous Post: Wordpress, des filtres et des actions (2ème partie)">&laquo; Wordpress, des filtres et des actions (2ème partie)</a>
+      
+      
+        <a class="basic-alignment right" href="/wordpress-4.1-disponible-au-telechargement/" title="Next Post: Wordpress 4.1 disponible au téléchargement">Wordpress 4.1 disponible au téléchargement &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/wordpress-4.1-disponible-au-telechargement/">Wordpress 4.1 Disponible Au Téléchargement</a>
+      </li>
+    
+      <li class="post">
+        <a href="/tester-le-rendu-de-votre-site-internet-simultanement-sur-plusieurs-peripheriques-avec-browsersync/">Tester Le Rendu De Votre Site Internet Simultanément Sur Plusieurs Périphériques Avec BrowserSync</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wordpress-filtres-actions-partie-2/">Wordpress, Des Filtres Et Des Actions (2ème Partie)</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wordpress-4-dot-0-benny-disponible-au-telechargement/">WordPress 4.0 Benny Disponible Au Téléchargement</a>
+      </li>
+    
+      <li class="post">
+        <a href="/modifier-un-custom-post-type-existant/">Modifier Un Custom Post Type Existant</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/+MichaëlDamoiseau?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+<section>
+  <h1>Category Cloud</h1>
+    <span id="tag-cloud"><a href='/blog/categories/cakephp' style='font-size: 120.0%'>cakephp(4)</a> <a href='/blog/categories/divers' style='font-size: 110.0%'>divers(2)</a> <a href='/blog/categories/git' style='font-size: 105.0%'>git(1)</a> <a href='/blog/categories/humour' style='font-size: 120.0%'>humour(4)</a> <a href='/blog/categories/javascript' style='font-size: 115.0%'>javascript(3)</a> <a href='/blog/categories/linux' style='font-size: 105.0%'>linux(1)</a> <a href='/blog/categories/php' style='font-size: 125.0%'>php(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 105.0%'>ubuntu(1)</a> <a href='/blog/categories/wordpress' style='font-size: 160.0%'>wordpress(12)</a> </span>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Michael Damoiseau -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'damoiseaume';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://mikedamoiseau.github.io/tester-le-rendu-de-votre-site-internet-simultanement-sur-plusieurs-peripheriques-avec-browsersync/';
+        var disqus_url = 'http://mikedamoiseau.github.io/tester-le-rendu-de-votre-site-internet-simultanement-sur-plusieurs-peripheriques-avec-browsersync/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

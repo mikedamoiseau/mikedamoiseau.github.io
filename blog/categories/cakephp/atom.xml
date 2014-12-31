@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Cakephp | Damoiseau.ME, Le blog d'un développeur web]]></title>
+  <link href="http://mikedamoiseau.github.io/blog/categories/cakephp/atom.xml" rel="self"/>
+  <link href="http://mikedamoiseau.github.io/"/>
+  <updated>2014-12-31T14:40:20+07:00</updated>
+  <id>http://mikedamoiseau.github.io/</id>
+  <author>
+    <name><![CDATA[Michael Damoiseau]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Ajouter Dynamiquement Des Liens JS Et CSS Dans La Balise Head De Votre Site]]></title>
+    <link href="http://mikedamoiseau.github.io/ajouter-dynamiquement-des-liens-js-et-css-dans-la-balise-head-de-votre-site/"/>
+    <updated>2014-02-18T13:12:59+07:00</updated>
+    <id>http://mikedamoiseau.github.io/ajouter-dynamiquement-des-liens-js-et-css-dans-la-balise-head-de-votre-site</id>
+    <content type="html"><![CDATA[<p>Ajouter des liens vers des fichiers JS et/ou CSS dans le layout est quelque chose d&#8217;extrêmement facile dans <strong>CakePHP</strong>:
+Par exemple:
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="c1">// fichier View/Layouts/default.ctp&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">Html</span><span class="o">-&gt;</span><span class="na">css</span><span class="p">(</span> <span class="k">array</span><span class="p">(</span>
+</span><span class='line'>   <span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">bootstrap</span><span class="o">.</span><span class="nb">min</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;,</span>
+</span><span class='line'><span class="p">));</span><span class="o">&lt;/</span><span class="nx">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">Html</span><span class="o">-&gt;</span><span class="na">script</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
+</span><span class='line'>   <span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">jquery</span><span class="o">-</span><span class="mf">1.10</span><span class="o">.</span><span class="mf">2.</span><span class="nb">min</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;,</span>
+</span><span class='line'>   <span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">modernizr</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;,</span>
+</span><span class='line'>   <span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">bootstrap</span><span class="o">.</span><span class="nb">min</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;,</span>
+</span><span class='line'><span class="p">));</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Ceci aura pour effet d&#8217;ajouter les lignes suivantes dans le rendu HTML:</p>
+
+<p>&#8220;` html</p>
+
+<p><link rel="stylesheet" type="text/css" href="http://mikedamoiseau.github.io/3musketeers/Humans-Rights-Report/css/bootstrap.min.css" /></p>
+
+<script type="text/javascript" src="http://mikedamoiseau.github.io/monsite/js/jquery-2.0.3.min.js"></script>
+
+
+<script type="text/javascript" src="http://mikedamoiseau.github.io/monsite/js/modernizr.js"></script>
+
+
+<script type="text/javascript" src="http://mikedamoiseau.github.io/monsite/js/bootstrap.min.js"></script>
+
+
+<p>&#8220;`</p>
+
+<!--more-->
+
+
+<p>C&#8217;est cool, maintenant toutes les pages utilisant le layout par défaut auront ces balises automatiquement insérées dans leur balise head (en admettant que vous ayez inséré le code PHP dans la balise head bien évidemment&hellip;).</p>
+
+<p>Mais que se passe-t-il dans le cas, par exemple, d&#8217;une page utilisant une carte Google Map? Plusieurs possibilités s&#8217;offrent à vous, et personnellement je n&#8217;en vois qu&#8217;une qui tient la route:</p>
+
+<ul>
+<li><strong>Vous ajoutez le fichier JS dans toutes vos pages (voir exemple ci-dessus)</strong>: c&#8217;est dommage, il n&#8217;y a qu&#8217;une page de votre site qui a besoin de ce script, et vous allez obliger vos visiteurs à télécharger et interpréter ce script à chaque chargement de page&hellip;</li>
+<li><strong>Vous créez un layout spécial pour cette page uniquement</strong>: Cette solution peut tenir la route si cette page est très différente des autres, ce qui devrait être un cas assez rare&hellip; Normalement vous allez &ldquo;bêtement&rdquo; dupliquer le layout par défaut et ajouter le code pour insérer le fichier javascript nécessaire à l&#8217;utilisation de votre carte Google Map. Quelle horreur! Vous allez&hellip; <em>dupliquer</em> du code!</li>
+<li><strong>Vous insérez le fichier javascript dans la balise head de votre site, mais uniquement sur la page utilisant la carte Google Maps</strong>: C&#8217;est évidemment la meilleure solution! Et comment qu&#8217;on fait ça?</li>
+</ul>
+
+
+<pre><code class="php">// fichier View/Layouts/default.ctp
+
+// ce fichier CSS est utilisé sur toutes les pages du site utilisant le layout par défaut
+echo $this-&gt;Html-&gt;css( array(
+   'bootstrap.min',
+));
+
+// ce code va insérer les fichiers CSS ajoutés depuis la vue (view)
+echo $this-&gt;fetch('css');
+
+// ces fichiers JS sont utilisés sur toutes les pages du site utilisant le layout par défaut
+echo $this-&gt;Html-&gt;script(array(
+   'jquery-1.10.2.min',
+   'modernizr',
+   'bootstrap.min',
+));
+
+// ce code va insérer les fichiers JS ajoutés depuis la vue (view)
+echo $this-&gt;fetch('script');
+</code></pre>
+
+<pre><code class="php">// fichier View/Pages/carte.ctp
+$this-&gt;Html-&gt;script('googlemaps', array( 'inline' =&gt; false ) );
+</code></pre>
+
+<p>Le secret réside dans le paramètre &ldquo;inline&rdquo;. Sa valeur par défaut est TRUE, et permet un affichage directement. Nous, c&#8217;est justement l&#8217;inverse qu&#8217;on veut, et passer &ldquo;inline&rdquo; à FALSE va ajouter le fichier à la liste des fichiers à insérer dynamiquement.</p>
+
+<p>Voilà! Maintenant, vous pouvez ajouter les fichiers CSS et JS dont vous avez besoin directement depuis vos vues! Elle est pas belle la vie?</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ajouter Une Méthode TRUNCATE à Tous Vos Modèles CakePHP]]></title>
+    <link href="http://mikedamoiseau.github.io/ajouter-une-methode-truncate-a-tous-vos-modeles-cakephp/"/>
+    <updated>2013-12-31T13:09:22+07:00</updated>
+    <id>http://mikedamoiseau.github.io/ajouter-une-methode-truncate-a-tous-vos-modeles-cakephp</id>
+    <content type="html"><![CDATA[<p>La classe AppModel dans CakePHP possède un nombre conséquent de méthodes intéressantes, cependant il y a une méthode qui n&#8217;a pas été implémentée et qui pourtant peut se révéler particulièrement utile dans certains cas. Il s&#8217;agit de la méthode <code>truncate()</code>.</p>
+
+<p>Pourquoi cette méthode n&#8217;est-elle pas implémentée? Sans doute car trop dépendante du système de base de données utilisé? Ou alors parce que les développeurs du framework n&#8217;y voient tout simplement aucun intérêt&hellip; Aucune idée, mais ce n&#8217;est pas vraiment ce qui nous intéresse, n&#8217;est-ce pas? Au lieu de se focaliser sur le <strong>pourquoi</strong>, concentrons-nous donc sur le <strong>comment</strong>&hellip;</p>
+
+<!--more-->
+
+
+<p>La solution que je vais vous montrer pour ajouter la méthode <code>truncate()</code> aux modèles CakePHP doit évidemment suivre le principe <strong><a href="http://fr.wikipedia.org/wiki/Ne_vous_r%C3%A9p%C3%A9tez_pas" title="définition de DRY - Do not Repeat Yourself">DRY</a></strong>, c&#8217;est-à-dire qu&#8217;on écrit la fonction qu&#8217;une seule fois et qu&#8217;elle est accessible d&#8217;à peu près partout. Et quel meilleur endroit que le fichier <em>AppModel.php</em> pour écrire une méthode accessible par tous les modèles? Hmmm? Et bien il n&#8217;y en a pas, on écrira donc notre méthode <code>truncate()</code> dans le fichier <em>Model/AppModel.php</em>.</p>
+
+<p>Un modèle CakePHP est toujours attaché à un objet <em>DboSource</em>. Cet objet possède une méthode intéressante pour récupérer le nom de la table associée au modèle: <code>fullTableName()</code>.</p>
+
+<pre><code class="php">// Fichier Model/AppModel.php
+
+/**
+* Vide entièrement la table associée au modèle sur lequel est appelé cette méthode
+*/
+public function truncate() {
+   $datasource = $this-&gt;GetDataSource();
+   $tableName = $datasource-&gt;fullTableName( $this, true, true );
+   $sql = sprintf( 'TRUNCATE TABLE %s', tableName );
+
+   return $this-&gt;query( sprintf( $sql, $tableName ) );
+}
+</code></pre>
+
+<p>Pour exécuter la méthode <code>truncate()</code> sur un de vos modèles, rien de plus facile!
+En admettant que vous ayez un modèle <em>Comment</em> associé à une table <em>comments</em>, vous exécuterez la méthode de la façon suivante:</p>
+
+<pre><code class="php">$this-&gt;Comment-&gt;truncate();
+</code></pre>
+
+<p>La méthode proposée ici fonctionne sur MySQL, vous pouvez évidemment l&#8217;adapter à vos propres besoins.
+Une dernière remarque&hellip; Si l&#8217;un de vos modèles utilise une source de données différente, vous pouvez simplement <a href="http://fr.wikipedia.org/wiki/Programmation_orient%C3%A9e_objet#La_red.C3.A9finition" title="POO - la redéfinition d">redéfinir la méthode</a> <code>truncate()</code>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Paramétrer Le Composant Paginator Dans l'AppController]]></title>
+    <link href="http://mikedamoiseau.github.io/parametrer-le-composant-paginator-dans-lappcontroller/"/>
+    <updated>2013-09-29T12:38:10+07:00</updated>
+    <id>http://mikedamoiseau.github.io/parametrer-le-composant-paginator-dans-lappcontroller</id>
+    <content type="html"><![CDATA[<p>Que se passe-t-il lorsque vous devez écrire un backend avec un nombre conséquent de contrôleurs dont l&#8217;affichage des résultats est paginé?
+Plusieurs possibilités:</p>
+
+<ul>
+<li>Vous dupliquez votre code dans chaque contrôlleur, que ce soit via l&#8217;attribut $paginate du contrôleur, ou directement dans l&#8217;action</li>
+<li>Ou bien vous paramétrez votre attribut $paginate directement dans l&#8217;AppController</li>
+</ul>
+
+
+<p>La première solution ressemblera à ceci:
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="k">class</span> <span class="nc">postsController</span> <span class="k">extends</span> <span class="nx">AppController</span> <span class="p">{</span><span class="o">&lt;/</span><span class="nx">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="k">public</span> <span class="nv">$paginate</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+</span><span class='line'>    <span class="s1">&#39;limit&#39;</span> <span class="o">=&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="mi">25</span><span class="p">,</span>
+</span><span class='line'>    <span class="s1">&#39;order&#39;</span> <span class="o">=&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="k">array</span><span class="p">(</span> <span class="s1">&#39;id&#39;</span> <span class="o">=&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="s1">&#39;asc&#39;</span> <span class="p">)</span>
+</span><span class='line'><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// la suite du code...</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="nx">code</span><span class="o">&gt;&lt;/</span><span class="nx">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span><span class="o">&lt;/</span><span class="nx">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="k">class</span> <span class="nc">commentsController</span> <span class="k">extends</span> <span class="nx">AppController</span> <span class="p">{</span><span class="o">&lt;/</span><span class="nx">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="k">public</span> <span class="nv">$paginate</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+</span><span class='line'>    <span class="s1">&#39;limit&#39;</span> <span class="o">=&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="mi">25</span><span class="p">,</span>
+</span><span class='line'>    <span class="s1">&#39;order&#39;</span> <span class="o">=&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="k">array</span><span class="p">(</span> <span class="s1">&#39;id&#39;</span> <span class="o">=&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="s1">&#39;asc&#39;</span> <span class="p">)</span>
+</span><span class='line'><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// la suite du code...</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="nx">code</span><span class="o">&gt;&lt;/</span><span class="nx">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Solution pas vraiment élégante, car si le client décide de changer le nombre de résultats par page, on est bon pour modifier tous les contrôleurs utilisant la pagination dans leurs résultats.</p>
+
+<!--more-->
+
+
+<p>Une petite remarque en passant&hellip; Si la requête SQL exécutée par CakePHP est un tant soit peu complexe, vous aurez droit à une exception lancée par votre gestionnaire de DB car votre champ &ldquo;id&rdquo; ne sera pas nommé assez spécifiquement (par exemple lors d&#8217;une jointure entre deux tables possédant toutes les deux un champ &ldquo;id&rdquo;).</p>
+
+<p>Pour régler ce problème, il suffit d&#8217;utiliser le nom du modèle dans vos conditions:
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="k">class</span> <span class="nc">PostsController</span> <span class="k">extends</span> <span class="nx">AppController</span> <span class="p">{</span><span class="o">&lt;/</span><span class="nx">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="k">public</span> <span class="nv">$paginate</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+</span><span class='line'>    <span class="s1">&#39;limit&#39;</span> <span class="o">=&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="mi">25</span><span class="p">,</span>
+</span><span class='line'>    <span class="s1">&#39;order&#39;</span> <span class="o">=&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="k">array</span><span class="p">(</span> <span class="s1">&#39;Post.id&#39;</span> <span class="o">=&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="s1">&#39;asc&#39;</span> <span class="p">)</span>
+</span><span class='line'><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// la suite du code...</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="nx">code</span><span class="o">&gt;&lt;/</span><span class="nx">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span><span class="o">&lt;/</span><span class="nx">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="k">class</span> <span class="nc">CommentsController</span> <span class="k">extends</span> <span class="nx">AppController</span> <span class="p">{</span><span class="o">&lt;/</span><span class="nx">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="k">public</span> <span class="nv">$paginate</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+</span><span class='line'>    <span class="s1">&#39;limit&#39;</span> <span class="o">=&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="mi">25</span><span class="p">,</span>
+</span><span class='line'>    <span class="s1">&#39;order&#39;</span> <span class="o">=&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="k">array</span><span class="p">(</span> <span class="s1">&#39;Comment.id&#39;</span> <span class="o">=&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="s1">&#39;asc&#39;</span> <span class="p">)</span>
+</span><span class='line'><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// la suite du code...</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="nx">code</span><span class="o">&gt;&lt;/</span><span class="nx">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+Au moins votre code dupliqué aura moins de chance de planter !</p>
+
+<p>La deuxième solution est évidemment meilleure, mais encore faut-il s&#8217;y prendre convenablement!
+Je viens juste de vous expliquer qu&#8217;il valait mieux ajouter le nom du model utilisé dans les conditions. Aucun problème lorsque vous vous trouvez dans un contrôleur tel que <code>PostsControlleur</code> ou <code>CommentsController</code>, vous connaissez le nom du domaine à utiliser.</p>
+
+<p>Mais dans le cas de l&#8217;<code>AppControlleur</code>, les choses sont différentes! En effet, vous ne connaissez pas le nom du modèle utilisé, car celui-ci dépend du contrôleur en cours d&#8217;exécution.
+Heureusement, les développeurs de CakePHP sont des gens extrêmement intelligents, et ils ont pensé à ce cas de figure: chaque contrôleur possède un attribut appelé <code>modelClass</code> contenant le nom du modèle associé par défaut au contrôleur.
+Au lieu de dupliquer notre code dans les deux contrôleurs <code>PostsController</code> et <code>CommentsControler</code>, nous pouvons maintenant aisément le déplacer dans l&#8217;AppController de la manière suivante:
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="k">class</span> <span class="nc">AppController</span> <span class="p">{</span><span class="o">&lt;/</span><span class="nx">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="k">public</span> <span class="nv">$paginate</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+</span><span class='line'>    <span class="s1">&#39;limit&#39;</span> <span class="o">=&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="mi">25</span><span class="p">,</span>
+</span><span class='line'>    <span class="s1">&#39;order&#39;</span> <span class="o">=&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="k">array</span><span class="p">(</span> <span class="nv">$this</span><span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="nx">modelClass</span> <span class="o">.</span> <span class="s1">&#39;.id&#39;</span> <span class="o">=&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="s1">&#39;asc&#39;</span> <span class="p">)</span>
+</span><span class='line'><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// la suite du code...</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="nx">code</span><span class="o">&gt;&lt;/</span><span class="nx">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Implémenter Un "Soft Delete" Avec CakePHP]]></title>
+    <link href="http://mikedamoiseau.github.io/implementer-un-soft-delete-avec-cakephp/"/>
+    <updated>2013-09-28T12:34:35+07:00</updated>
+    <id>http://mikedamoiseau.github.io/implementer-un-soft-delete-avec-cakephp</id>
+    <content type="html"><![CDATA[<p>Dernièrement, j&#8217;ai eu à travailler sur un projet dont une des conditions du cahier des charges était de ne pas effacer les données présentes dans la base de données (excepté pour quelques tables&hellip;). À la place, le système devait changer l&#8217;état d&#8217;un champ de l&#8217;enregistrement qui indiquait au système qu&#8217;il ne devait plus le prendre en compte (pour info, le nom de ce champ était <code>is_activated</code>).</p>
+
+<!--more-->
+
+
+<p><strong>Première possibilité: modifier le code des contrôleurs</strong>
+Après avoir mûrement réfléchi pendant au moins 10 secondes&hellip; J&#8217;ai exclu l&#8217;approche qui consiste à modifier la logique de toutes les actions <code>delete</code> de mes contrôleurs.</p>
+
+<p>Voici un exemple de ce qu&#8217;il faut éviter de faire:
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="k">public</span> <span class="k">function</span> <span class="nf">delete</span><span class="p">(</span><span class="nv">$id</span> <span class="o">=</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">MyModel</span><span class="o">-&gt;</span><span class="na">id</span> <span class="o">=</span> <span class="nv">$id</span><span class="p">;</span><span class="o">&lt;/</span><span class="nx">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$this</span><span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="nx">MyModel</span><span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="nx">exists</span><span class="p">())</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">throw</span> <span class="k">new</span> <span class="nx">NotFoundException</span><span class="p">(</span><span class="nx">__</span><span class="p">(</span><span class="s1">&#39;Invalid myModel&#39;</span><span class="p">));</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">$this</span><span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="nx">request</span><span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="nx">onlyAllow</span><span class="p">(</span><span class="s1">&#39;post&#39;</span><span class="p">,</span> <span class="s1">&#39;delete&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">$this</span><span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="nx">MyModel</span><span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="nx">saveField</span><span class="p">(</span> <span class="s1">&#39;is_activated&#39;</span><span class="p">,</span> <span class="mi">0</span> <span class="p">);</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="nx">code</span><span class="o">&gt;&lt;/</span><span class="nx">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Pourquoi?</p>
+
+<ul>
+<li>J&#8217;avais un gros paquet de contrôleurs et je ne me voyais pas tous les modifier à la main (je les avais bien entendu créés avec l&#8217;outil <code>cake bake</code>).</li>
+<li>De plus, cette logique d&#8217;utiliser un champ status en lieu et place d&#8217;un vrai effacement de données relève plus de la logique de données que de la logique de l&#8217;application.
+Le second point implique que mon code gérant l&#8217;effacement de données ne devrait pas se trouver dans le contrôleur, mais plutôt dans le modèle. Ceci nous amène à la deuxième possibilité&hellip;</li>
+</ul>
+
+
+<p><strong>Deuxième possibilité: utiliser un <code>behavior</code></strong></p>
+
+<p>L&#8217;utilisation d&#8217;un behavior est la première solution à laquelle j&#8217;ai pensée&hellip; Je pensais vraiment que c&#8217;était une solution élégante. Pour rappel, un behavior permet d&#8217;attacher un comportement à certains modèles. Par exemple, dans ce cas-ci, mon idée était de réécrire la méthode callback <code>beforeSave</code> de la manière suivante:</p>
+
+<pre><code class="php">public function beforeDelete( Model $Model, $cascade = true ) {
+    $Model-&gt;save( array(
+        'is_activated' =&gt; false,
+    ) );
+
+    return false;
+}
+</code></pre>
+
+<p>Cette solution n&#8217;était malheuresement pas idéale pour plusieurs raisons:</p>
+
+<ul>
+<li>Il faut modifier tous les modèles qui vont utiliser ce <code>behavior</code> (<code>public $actsAs</code>) et il y en a un paquet également!</li>
+<li>La méthode <code>beforeDelete</code> doit renvoyer <code>false</code>, sinon CakePHP efface l&#8217;enregistrement. c&#8217;est là que le bât blesse, car cela implique en plus de devoir modifier toutes les actions <code>delete</code> de tous mes contrôleurs! (Beh oui, mes actions <code>delete</code> vérifient que l&#8217;effacement s&#8217;est produit sans heurt, et pour cela elles vérifient que la méthode <code>delete</code> du modèle renvoie bien <code>true</code>&hellip;).</li>
+</ul>
+
+
+<p><strong>Pour une solution élégante, elle me donne encore plus de boulot que la précédente possibilité!</strong></p>
+
+<p><strong>Troisième possibilité: redéfinir la méthode <code>delete</code> dans <code>AppModel</code></strong></p>
+
+<p>Je suis finalement arrivé à la conclusion que la meilleure méthode pour implémenter un soft delete avec CakePHP est de redéfinir la méthode AppModel::delete(), et voici ma solution:</p>
+
+<pre><code class="php">public function delete($id = null, $cascade = true) {
+    // the table has no field `is_activated` so we use the normal delete method from the parent
+    if( !isset( $this-&gt;_schema['is_activated'] ) ) {
+        return parent::delete( $id, $cascade );
+    }
+
+    // there is a field `is_activated`, so update it to `0`
+
+    //if $id is given as parameter of the function, set it to the current model
+    if( $id != null ) {
+        $this-&gt;id = $id;
+    }
+    return $this-&gt;saveField( 'is_activated', 0 );
+}
+</code></pre>
+
+<p>Les explications sont en anglais dans le code, mais pour les moins anglophiles d&#8217;entre-nous, voici l&#8217;explication:</p>
+
+<ol>
+<li>on vérifie d&#8217;abord que le modèle sur lequel on travaille possède bien un champ appelé <code>is_activated</code></li>
+<li>si ce n&#8217;est pas le cas, cela signifie que la table en cours n&#8217;a pas besoin de soft delete. On exécute dans ce cas l&#8217;effacement classique en appelant la méthode <code>delete</code> de la classe parent et on renvoie son résultat</li>
+<li>par contre, si le modèle en cours possède un champ dont le nom est <code>is_activated</code>, dans ce cas on met simplement sa valeur à jour et on renvoie le résultat de l&#8217;appel à la méthode <code>saveField</code></li>
+</ol>
+
+
+<p>Cette solution n&#8217;est peut-être pas la meilleure (par exemple, que se passe-t-il dans le cas d&#8217;une relation HABTM, ou plus communément appelé &ldquo;Many to Many&rdquo; ?); Mais dans mon cas, c&#8217;était, je pense, la solution la plus appropriée pour la gestion du delete.</p>
+]]></content>
+  </entry>
+  
+</feed>

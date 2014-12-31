@@ -1,0 +1,402 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Paramétrer Le Composant Paginator Dans l&#8217;AppController - Damoiseau.ME, Le blog d&#8217;un développeur web</title>
+  <meta name="author" content="Michael Damoiseau">
+
+  
+  <meta name="description" content="Que se passe-t-il lorsque vous devez écrire un backend avec un nombre conséquent de contrôleurs dont l'affichage des résultats est paginé?
+Plusieurs &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://mikedamoiseau.github.io/parametrer-le-composant-paginator-dans-lappcontroller">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Damoiseau.ME, Le blog d'un développeur web" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-43047575-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Damoiseau.ME, Le blog d&#8217;un développeur web</a></h1>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="mikedamoiseau.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Paramétrer Le Composant Paginator Dans l&#8217;AppController</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-09-29T12:38:10+07:00'><span class='date'>29/09/13</span> <span class='time'>12:38 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Que se passe-t-il lorsque vous devez écrire un backend avec un nombre conséquent de contrôleurs dont l&#8217;affichage des résultats est paginé?
+Plusieurs possibilités:</p>
+
+<ul>
+<li>Vous dupliquez votre code dans chaque contrôlleur, que ce soit via l&#8217;attribut $paginate du contrôleur, ou directement dans l&#8217;action</li>
+<li>Ou bien vous paramétrez votre attribut $paginate directement dans l&#8217;AppController</li>
+</ul>
+
+
+<p>La première solution ressemblera à ceci:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="k">class</span> <span class="nc">postsController</span> <span class="k">extends</span> <span class="nx">AppController</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">public</span> <span class="nv">$paginate</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+</span><span class='line'>        <span class="s1">&#39;limit&#39;</span> <span class="o">=&gt;</span> <span class="mi">25</span><span class="p">,</span>
+</span><span class='line'>        <span class="s1">&#39;order&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span> <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;asc&#39;</span> <span class="p">)</span>
+</span><span class='line'>    <span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">// la suite du code...</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">commentsController</span> <span class="k">extends</span> <span class="nx">AppController</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">public</span> <span class="nv">$paginate</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+</span><span class='line'>        <span class="s1">&#39;limit&#39;</span> <span class="o">=&gt;</span> <span class="mi">25</span><span class="p">,</span>
+</span><span class='line'>        <span class="s1">&#39;order&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span> <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;asc&#39;</span> <span class="p">)</span>
+</span><span class='line'>    <span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">// la suite du code...</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Solution pas vraiment élégante, car si le client décide de changer le nombre de résultats par page, on est bon pour modifier tous les contrôleurs utilisant la pagination dans leurs résultats.</p>
+
+<!--more-->
+
+
+<p>Une petite remarque en passant&hellip; Si la requête SQL exécutée par CakePHP est un tant soit peu complexe, vous aurez droit à une exception lancée par votre gestionnaire de DB car votre champ &ldquo;id&rdquo; ne sera pas nommé assez spécifiquement (par exemple lors d&#8217;une jointure entre deux tables possédant toutes les deux un champ &ldquo;id&rdquo;).</p>
+
+<p>Pour régler ce problème, il suffit d&#8217;utiliser le nom du modèle dans vos conditions:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="k">class</span> <span class="nc">PostsController</span> <span class="k">extends</span> <span class="nx">AppController</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">public</span> <span class="nv">$paginate</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+</span><span class='line'>        <span class="s1">&#39;limit&#39;</span> <span class="o">=&gt;</span> <span class="mi">25</span><span class="p">,</span>
+</span><span class='line'>        <span class="s1">&#39;order&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span> <span class="s1">&#39;Post.id&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;asc&#39;</span> <span class="p">)</span>
+</span><span class='line'>    <span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">// la suite du code...</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">CommentsController</span> <span class="k">extends</span> <span class="nx">AppController</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">public</span> <span class="nv">$paginate</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+</span><span class='line'>        <span class="s1">&#39;limit&#39;</span> <span class="o">=&gt;</span> <span class="mi">25</span><span class="p">,</span>
+</span><span class='line'>        <span class="s1">&#39;order&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span> <span class="s1">&#39;Comment.id&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;asc&#39;</span> <span class="p">)</span>
+</span><span class='line'>    <span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">// la suite du code...</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Au moins votre code dupliqué aura moins de chance de planter !</p>
+
+<p>La deuxième solution est évidemment meilleure, mais encore faut-il s&#8217;y prendre convenablement!
+Je viens juste de vous expliquer qu&#8217;il valait mieux ajouter le nom du model utilisé dans les conditions. Aucun problème lorsque vous vous trouvez dans un contrôleur tel que <code>PostsControlleur</code> ou <code>CommentsController</code>, vous connaissez le nom du domaine à utiliser.</p>
+
+<p>Mais dans le cas de l&#8217;<code>AppControlleur</code>, les choses sont différentes! En effet, vous ne connaissez pas le nom du modèle utilisé, car celui-ci dépend du contrôleur en cours d&#8217;exécution.
+Heureusement, les développeurs de CakePHP sont des gens extrêmement intelligents, et ils ont pensé à ce cas de figure: chaque contrôleur possède un attribut appelé <code>modelClass</code> contenant le nom du modèle associé par défaut au contrôleur.
+Au lieu de dupliquer notre code dans les deux contrôleurs <code>PostsController</code> et <code>CommentsControler</code>, nous pouvons maintenant aisément le déplacer dans l&#8217;AppController de la manière suivante:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="k">class</span> <span class="nc">AppController</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">public</span> <span class="nv">$paginate</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+</span><span class='line'>        <span class="s1">&#39;limit&#39;</span> <span class="o">=&gt;</span> <span class="mi">25</span><span class="p">,</span>
+</span><span class='line'>        <span class="s1">&#39;order&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">modelClass</span> <span class="o">.</span> <span class="s1">&#39;.id&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;asc&#39;</span> <span class="p">)</span>
+</span><span class='line'>    <span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">// la suite du code...</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Michael Damoiseau</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2013-09-29T12:38:10+07:00'><span class='date'>29/09/13</span> <span class='time'>12:38 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/cakephp/'>cakephp</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://mikedamoiseau.github.io/parametrer-le-composant-paginator-dans-lappcontroller/" data-via="" data-counturl="http://mikedamoiseau.github.io/parametrer-le-composant-paginator-dans-lappcontroller/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/implementer-un-soft-delete-avec-cakephp/" title="Previous Post: Implémenter un "soft delete" avec CakePHP">&laquo; Implémenter un &#8220;soft delete&#8221; avec CakePHP</a>
+      
+      
+        <a class="basic-alignment right" href="/les-entrees-des-menus-wordpress-seraient-elles-limitees/" title="Next Post: Les entrées des menus Wordpress seraient-elles limitées?">Les entrées des menus Wordpress seraient-elles limitées? &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/wordpress-4.1-disponible-au-telechargement/">Wordpress 4.1 Disponible Au Téléchargement</a>
+      </li>
+    
+      <li class="post">
+        <a href="/tester-le-rendu-de-votre-site-internet-simultanement-sur-plusieurs-peripheriques-avec-browsersync/">Tester Le Rendu De Votre Site Internet Simultanément Sur Plusieurs Périphériques Avec BrowserSync</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wordpress-filtres-actions-partie-2/">Wordpress, Des Filtres Et Des Actions (2ème Partie)</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wordpress-4-dot-0-benny-disponible-au-telechargement/">WordPress 4.0 Benny Disponible Au Téléchargement</a>
+      </li>
+    
+      <li class="post">
+        <a href="/modifier-un-custom-post-type-existant/">Modifier Un Custom Post Type Existant</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/+MichaëlDamoiseau?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+<section>
+  <h1>Category Cloud</h1>
+    <span id="tag-cloud"><a href='/blog/categories/cakephp' style='font-size: 120.0%'>cakephp(4)</a> <a href='/blog/categories/divers' style='font-size: 110.0%'>divers(2)</a> <a href='/blog/categories/git' style='font-size: 105.0%'>git(1)</a> <a href='/blog/categories/humour' style='font-size: 120.0%'>humour(4)</a> <a href='/blog/categories/javascript' style='font-size: 115.0%'>javascript(3)</a> <a href='/blog/categories/linux' style='font-size: 105.0%'>linux(1)</a> <a href='/blog/categories/php' style='font-size: 125.0%'>php(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 105.0%'>ubuntu(1)</a> <a href='/blog/categories/wordpress' style='font-size: 160.0%'>wordpress(12)</a> </span>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Michael Damoiseau -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'damoiseaume';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://mikedamoiseau.github.io/parametrer-le-composant-paginator-dans-lappcontroller/';
+        var disqus_url = 'http://mikedamoiseau.github.io/parametrer-le-composant-paginator-dans-lappcontroller/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

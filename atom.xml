@@ -1,16 +1,1560 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[Damoiseau.ME, Le blog d'un développeur web]]></title>
   <link href="http://mikedamoiseau.github.io/atom.xml" rel="self"/>
   <link href="http://mikedamoiseau.github.io/"/>
-  <updated>2014-12-31T11:00:43+07:00</updated>
+  <updated>2014-12-31T14:40:20+07:00</updated>
   <id>http://mikedamoiseau.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Michael Damoiseau]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Wordpress 4.1 Disponible Au Téléchargement]]></title>
+    <link href="http://mikedamoiseau.github.io/wordpress-4.1-disponible-au-telechargement/"/>
+    <updated>2014-12-21T14:00:02+07:00</updated>
+    <id>http://mikedamoiseau.github.io/wordpress-4.1-disponible-au-telechargement</id>
+    <content type="html"><![CDATA[<p>Quoi de neuf dans cette nouvelle mouture de Wordpress? Et bien pas mal de nouveautés en fait! Certaines d&#8217;entre elles étant très intéressantes, je vous invite vivement à lire mon article ^^</p>
+
+<!--more-->
+
+
+<p><strong>Nouveau thème &ldquo;Twenty Fifteen&rdquo;</strong>
+Orienté blog avec une mise en page claire et adaptée à différentes langues grâce à l&#8217;utilisation des polices de la famille Noto de Google.
+Le thème est adaptif et s&#8217;affiche sans problème sur tous types de périphériques.</p>
+
+<p><strong>Mode d’écriture sans distraction</strong>
+Voilà une fonctionnalité qu&#8217;elle est cool et intéressante!
+Les développeurs ont complètement repensé le mode sans distraction, et je pense que cette fois c&#8217;est une réussite: les barres latérales (le menu de gauche et les widgets à droite) ne s&#8217;affichent que lorsque l&#8217;utilisateur survole ces zones avec la souris. Autrement ces éléments sont masqués afin que l&#8217;utilisateur puisse se concentrer sur le contenu de son article.</p>
+
+<p>&nbsp;</p>
+
+<p>Message pour notifier l&#8217;utilisateur de l&#8217;existence de la fonctionnalité:</p>
+
+<p><img src="http://mikedamoiseau.github.io/images/wp1.jpg" title="Message pour notifier l'utilisateur de l'existence de la fonctionnalité" alt="Message pour notifier l'utilisateur de l'existence de la fonctionnalité" /></p>
+
+<p>Mode sans d&#8217;écriture sans distraction:</p>
+
+<p><img src="http://mikedamoiseau.github.io/images/wp2.jpg" title="Mode sans d'écriture sans distraction" alt="Mode sans d'écriture sans distraction" /></p>
+
+<p><strong>Choix des langues</strong></p>
+
+<p>Wordpress est actuellement traduit en 44 langues! Il n&#8217;est maintenant plus nécessaire de télécharger ces fameux fichiers de langues et de les installer soi-même. Tout cela est de l&#8217;histoire ancienne, car les développeurs ont (finalement) ajouté une option de langue dans l&#8217;administration, qui permet le téléchargement automatique des fichiers de langue.</p>
+
+<p><img src="http://mikedamoiseau.github.io/images/wp3.jpg" title="Choix des langues" alt="Choix des langues" /></p>
+
+<p><strong>Déconnexion globale</strong></p>
+
+<p>Autre fonctionnalité extrêmement intéressante, surtout si vous encodez vos articles dans des <em>cyber cafés</em> et autres ordinateurs publiques: la possibilité de vous déconnecter de manière globale. Je l&#8217;ai testé et cela fonctionne effectivement comme annoncé.</p>
+
+<p><img src="http://mikedamoiseau.github.io/images/wp4.jpg" title="Un bouton est ajouté dans le profile vous permettant de vous déconnecter globalement" alt="Un bouton est ajouté dans le profile vous permettant de vous déconnecter globalement" /></p>
+
+<p><img src="http://mikedamoiseau.github.io/images/wp5.jpg" title="Déconnexion effectuée avec succès. Plus la peine de transpirer si vous aviez oublié de vous déconnecter depuis un autre ordinateur!" alt="Déconnexion effectuée avec succès. Plus la peine de transpirer si vous aviez oublié de vous déconnecter depuis un autre ordinateur!" /></p>
+
+<p><strong>Insertion des vidéos Vine</strong></p>
+
+<p>Bon personnellement je m&#8217;en contrefiche complètement mais si ça a été ajouté, j&#8217;imagine que c&#8217;est parce qu&#8217;il y avait une demande&hellip; (je n&#8217;ai jamais très bien compris l&#8217;intérêt des vidéos Vine je dois dire&hellip;)</p>
+
+<p><strong>Extensions recommandées</strong></p>
+
+<p>Les développeurs ont ajouté un onglet supplémentaire dans la page de gestion des extensions, l&#8217;onglet <em>recommandation</em>. Très pratique pour découvrir de nouvelles extensions, les recommandations sont basées sur les extensions que vous avez déjà installées.</p>
+
+<p><img src="http://mikedamoiseau.github.io/images/wp6.jpg" title="WP 4.1 - Extensions recommandées" alt="WP 4.1 - Extensions recommandées" /></p>
+
+<p>Voilà pour la partie utilisateur. Qu&#8217;en est-il de la partie développeur? (vous savez, vous, moi, les développeurs d&#8217;extensions et de thèmes&hellip;)</p>
+
+<p><strong>Dashicons</strong></p>
+
+<p>20 nouveaux icônes disponibles, divisés en 3 catégories: média, article et divers:</p>
+
+<p><img src="http://mikedamoiseau.github.io/images/misc.jpg" title="Icônes catégorie média" alt="Icônes catégorie média" /></p>
+
+<p><img src="http://mikedamoiseau.github.io/images/media.jpg" title="Icônes catégorie média" alt="Icônes catégorie média" /></p>
+
+<p><img src="http://mikedamoiseau.github.io/images/post-screen.jpg" title="Icônes catégorie article" alt="Icônes catégorie article" /></p>
+
+<div style="clear: both;"></div>
+
+
+<p><strong>Les requêtes complexes</strong></p>
+
+<ul>
+<li>WP_Meta_Query, WP_Tax_Query, et WP_Date_Query supportent une syntaxe améliorée pour la création de requêtes. Les requêtes peuvent être beaucoup plus complexes tout en étant plus simples à comprendre.</li>
+<li>L&#8217;efficacité des reqêtes sur les métas et les taxonomies a été améliorée, grâce à la suppression de tables redondantes dans de nombreux cas.</li>
+<li>&lsquo;orderby=meta_value&rsquo; fonctionne correctement lorsqu&#8217;utilisé dans une requête meta avec une condition basée sur un &ldquo;OU&rdquo;.</li>
+<li>Les opérateurs &ldquo;EXISTS&rdquo; et &ldquo;NOT EXISTS&rdquo; ont été ajoutés pour les requêtes sur les taxonomies.</li>
+<li>Les dates ne posent plus problème lors de leur utilisation avec des requêtes méta et taxonomies.</li>
+<li>Les paramètres passés dans les requêtes sur les dates sont maintenant vérifiés et génèrent des erreurs pour les développeurs lorsqu&#8217;une date invalide est détectée.</li>
+<li>Les comptes utilisateur peuvent être filtrés par data grâce à la colonne &ldquo;user_registered&rdquo;.
+&nbsp;</li>
+</ul>
+
+
+<p><strong>Des fonctions renommées, modifiées et ou ajoutées:</strong></p>
+
+<p><code>get_the_archive_title()</code> et <code>the_archive_title()</code>
+<code>get_the_archive_description()</code> et <code>the_archive_description()</code></p>
+
+<p>Ces fonctions sont particulièrement pratiques lorsqu&#8217;un thème n&#8217;utilise pas de template particulier pour une taxonomie ou des archives. Les fonctions de description seront utilisées uniquement pour afficher les descriptions des mots-clés, car les autres types d&#8217;archives n&#8217;ont pas de champ description associé.</p>
+
+<p><code>get_the_post_navigation()</code> et <code>the_post_navigation()</code> pour naviguer entre les articles (précédent et suivant)
+<code>get_the_posts_navigation()</code> et <code>the_posts_navigation()</code> pour naviguer entre les pages d&#8217;articles
+La version HTML4 de ces fonctions n&#8217;existe plus!</p>
+
+<p><strong>Ajout du support des titres dans un thème</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="k">function</span> <span class="nf">theme_slug_setup</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>   <span class="nx">add_theme_support</span><span class="p">(</span> <span class="s1">&#39;title-tag&#39;</span> <span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nx">add_action</span><span class="p">(</span> <span class="s1">&#39;after_setup_theme&#39;</span><span class="p">,</span> <span class="s1">&#39;theme_slug_setup&#39;</span> <span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Le support doit être spécifié dans les actions after_setup_theme ou init, mais pas plus tard. L&#8217;action n&#8217;accepte aucun argument.
+En indiquant que votre thème supporte le titrage de Wordpress, vous indiquez à Wordpress que votre thème n&#8217;ajoutera pas de titre de lui-même et que Wordpress peut l&#8217;ajouter sans risque de dupliquer la balise ou le contenu.</p>
+
+<p>Pour ajouter cette fonctionnalité sans casser la compatibilité dans un thème existant, vous utiliserez ce petit bout de code:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="k">if</span> <span class="p">(</span> <span class="o">!</span> <span class="nb">function_exists</span><span class="p">(</span> <span class="s1">&#39;_wp_render_title_tag&#39;</span> <span class="p">)</span> <span class="p">)</span> <span class="o">:</span>
+</span><span class='line'>   <span class="k">function</span> <span class="nf">theme_slug_render_title</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">echo</span> <span class="s1">&#39;&lt;title&gt;&#39;</span> <span class="o">.</span> <span class="nx">wp_title</span><span class="p">(</span> <span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="k">false</span><span class="p">,</span> <span class="s1">&#39;right&#39;</span> <span class="p">)</span> <span class="o">.</span> <span class="s2">&quot;&lt;/title&gt;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+</span><span class='line'>   <span class="p">}</span>
+</span><span class='line'>   <span class="nx">add_action</span><span class="p">(</span> <span class="s1">&#39;wp_head&#39;</span><span class="p">,</span> <span class="s1">&#39;theme_slug_render_title&#39;</span> <span class="p">);</span>
+</span><span class='line'><span class="k">endif</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>La personnalisation des thèmes</strong></p>
+
+<p>Un début de nouvelle API en javascript pour la fonctionnalité de personnalisation des thème est en cours d&#8217;écriture! Tout n&#8217;est pas fini, mais ça avance pas mal. Et pour ceux que ça intéresse, je vais éviter de trop rentrer dans les détails et vous fournis plutôt le lien (anglais): <a href="https://make.wordpress.org/core/2014/10/27/toward-a-complete-javascript-api-for-the-customizer/" title="Toward a Complete JavaScript API for the Customizer">Toward a Complete JavaScript API for the Customizer</a>.</p>
+
+<p>Je pense avoir fait le tour des fonctionnalités principales de cette nouvelle version de Wordpress. J&#8217;ai volontairement ignoré les ajouts concernant les commentaires (rien d&#8217;extraordinaire), les médias (tiens il y a quand-même une chose importante à retenir: <strong>la hauteur des vidéos n&#8217;est plus hardcodée, afin que les vidéos en mode adaptif, <em>ou responsive,</em> fonctionnent correctement</strong>) et le multisite (car je ne l&#8217;ai encore jamais utilisé, shame on me!)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tester Le Rendu De Votre Site Internet Simultanément Sur Plusieurs Périphériques Avec BrowserSync]]></title>
+    <link href="http://mikedamoiseau.github.io/tester-le-rendu-de-votre-site-internet-simultanement-sur-plusieurs-peripheriques-avec-browsersync/"/>
+    <updated>2014-10-30T13:55:17+07:00</updated>
+    <id>http://mikedamoiseau.github.io/tester-le-rendu-de-votre-site-internet-simultanement-sur-plusieurs-peripheriques-avec-browsersync</id>
+    <content type="html"><![CDATA[<p><a href="http://www.browsersync.io/" title="BrowserSync">BrowserSync</a> est un outil que l&#8217;on pourrait pratiquement considéré comme magique! J&#8217;ai découvert cet utilitaire il y a quelques semaines, et depuis je ne peux plus m&#8217;en passer lorsque je travaille sur à peu près n&#8217;importe quel projet web.</p>
+
+<!--more-->
+
+
+<h3>Qu&#8217;est-ce que BrowserSync?</h3>
+
+<p>BrowserSync est l&#8217;utilitaire de choix à utiliser lorsque vous développez un site internet adaptif <em>(mon dieu que je déteste toujours autant ce mot&hellip; Je parle bien entendu de &ldquo;responsive design&rdquo;!)</em>.
+BrowserSync permet de synchroniser l&#8217;affichage et les actions effectuées dans le navigateur sur différents périphériques <strong>en temps réel</strong>.</p>
+
+<h3>Comment cela fonctionne-t-il?</h3>
+
+<p>Vous démarrez BrowserSync sur votre machine de développement en lui indiquant l&#8217;url/adresse IP du site internet à afficher. BrowserSync va servir de serveur proxy intermédiaire auquel tous les autres périphériques se connecteront.
+Ainsi, tous les périphériques connectés afficheront la même page, mais le rendu pourra différer d&#8217;un périphérique à l&#8217;autre (prenons le cas d&#8217;un ordinateur et d&#8217;un téléphone, il y a de fortes chances que le rendu de la page ne soit pas le même sur les deux écrans).</p>
+
+<p>Là où ça devient super intéressant, c&#8217;est lorsque vous effectuez des actions sur l&#8217;un des périphériques connectés à BrowserSync tels qu&#8217;un défilement, remplir un formulaire, cliquer sur un lien, &hellip; Toutes ces actions vont être automatiquement répercutées sur tous les périphériques!</p>
+
+<p>Imaginez par exemple que vous deviez améliorer l&#8217;affichage de messages d&#8217;erreur liés à un formulaire de contact. Il faut bien évidemment que les messages soient lisibles et bien présentés sur toutes les tailles d&#8217;écran possibles.</p>
+
+<p>Avec mon ancienne méthode de travail, je devais remplir le formulaire et le soumettre sur chacun des périphériques afin de visualiser l&#8217;affichage des messages d&#8217;erreur. Tandis que maintenant, avec BrowserSync, je fais tout cela d&#8217;une seule traite. Cela peut représenter un fameux gain de temps, imaginez: vous remplissez et soumettez le formulaire sur votre ordinateur, et ces actions sont automatiquement répercutées sur les autres périphériques. Vous pouvez visualiser les messages d&#8217;erreur sur tous les écrans en une seule manipulation.</p>
+
+<h3>Installation et utilisation de BrowserSync</h3>
+
+<p>L&#8217;utilisation de BrowserSync requiert l&#8217;installation de Node.js. Si vous ne l&#8217;avez pas encore fait, installez-le en utilisant <a href="http://nodejs.org/download/" title="installateurs pour MacOS, Windows et Linux">l&#8217;installateur pour votre plateforme (MaC OS, Windows ou Linux)</a>. C&#8217;est facile et rapide.</p>
+
+<p>Installez ensuite BrowserSync en tapant cette ligne de commande dans votre terminal:
+<code>npm install -g browser-sync</code></p>
+
+<p>Enfin, vous pouvez lancer BrowserSync en tapant la ligne de commande suivante dans votre terminal:
+<code>browser-sync start --proxy "monprojet.dev" --files "css/*.css"</code></p>
+
+<p>Quelques éclaircissements concernant la ligne de commande pour lancer BrowserSync:</p>
+
+<ul>
+<li><code>start</code> démarre BrowserSync</li>
+<li><code>--proxy "monprojet.dev"</code> spécifie l&#8217;url permettant d&#8217;afficher votre projet</li>
+<li><code>--files "css/*.css"</code> indique les répertoires et les types de fichier que BrowserSync doit surveiller<sup>(1)</sup></li>
+</ul>
+
+
+<h3>Quelles sont les limitations de BrowserSync?</h3>
+
+<p>Une très grosse limitation de BrowserSync (à mon goût): le site doit être hébergé localement sur votre machine, sinon BrowserSync ne fonctionnera pas correctement. Tous les périphériques se connectant à BrowserSync seront redirigés vers la vraie url du site.</p>
+
+<p>Une autre limitation gênante, BrowserSync ne fonctionne pas bien avec les sites affichant des url complètes. En effet, si vous cliquez sur un lien contenant une url complète, vous serez redirigé vers l&#8217;url en question et perdrez la connexion à BrowserSync.</p>
+
+<h3>Et Wordpress?</h3>
+
+<p>Et bien malheureusement, avec Wordpress ça fonctionne moyennement :(</p>
+
+<p>En effet, Wordpress utilise des url complètes (voir point précédent) pour tous les liens tels que ceux présents dans les menus, les images, les liens vers d&#8217;autres articles et pages, &hellip;.
+Par exemple, si votre site est hébergé à l&#8217;adresse <code>http://www.exemple.com</code>, le lien vers la page <code>A propos</code> (ayant pour slug <code>a-propos</code>) contiendra l&#8217;url complète <code>http://www.exemple.com/a-propos</code>. BrowserSync ne filtrant pas le contenu, cliquer sur le lien vous redirigera vers <code>http://www.exemple.com/a-propos</code> et vous perdrez la connexion à BrowserSync ainsi que la synchronisation avec vos autres périphériques.</p>
+
+<p>Il existe cependant une extension Wordpress qui peut aider: <a href="https://wordpress.org/plugins/browser-sync-filter/" title="Extension Wordpress Browser-sync Filter">Browser-sync Filter</a>. Je ne parlerai pas d&#8217;avantage de cette extension car elle a l&#8217;air de fonctionner moyennement&hellip; Parfois ça marche, parfois pas!</p>
+
+<p>Une autre extension qui m&#8217;a l&#8217;air plus intéressante: <a href="https://wordpress.org/plugins/root-relative-urls/" title="Root Relative URLs">Root Relative URLs</a>. Lorsque vous insérez une url dans votre site Wordpress, l&#8217;extension va automatiquement convertir les urls complètes en urls relatives.</p>
+
+<h3>Conclusion</h3>
+
+<p>BrowserSync est un utilitaire que je conseille fortement à tout développeur web. Testez-le et vous devriez rapidement constater un gain en temps lors de vos développements front-end!</p>
+
+<h3>Notes</h3>
+
+<p><sup>(1)</sup> BrowserSync permet également de surveiller les fichiers de votre projet. Si vous modifiez le contenu d&#8217;un fichier, BrowserSync rafraichira automatiquement le contenu de la page sur tous les périphériques.
+BrowserSync propose d&#8217;autres fonctionnalités telles qu&#8217;un mini serveur web (ne gère que les fichiers HTML je pense, pas de PHP, ASP ou autre&hellip;). Pour découvrir la liste complète des fonctionnalités de BrowserSync, rien de mieux que de se rendre sur la page officielle, dans la rubrique <a href="http://www.browsersync.io/docs/command-line/" title="BrowserSync - Documentation: lignes de commande">documentation des lignes de commandes</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Wordpress, Des Filtres Et Des Actions (2ème Partie)]]></title>
+    <link href="http://mikedamoiseau.github.io/wordpress-filtres-actions-partie-2/"/>
+    <updated>2014-10-19T13:43:16+07:00</updated>
+    <id>http://mikedamoiseau.github.io/wordpress-filtres-actions-partie-2</id>
+    <content type="html"><![CDATA[<p>Cet article fait suite à un article écrit il y a quelques temps de celà (en fait, il y a longtemps déjà et vous m&#8217;en voyez désolé&hellip;): <a href="http://damoiseau.me/wordpress-filtres-actions-partie-1/" title="WordPress, des filtres et des actions (1ère partie)">Wordpress, des filtres et des actions (1ère partie)</a>.</p>
+
+<p>Rappelez-vous, dans l&#8217;article précédent j&#8217;expliquais la différence entre <a href="http://codex.wordpress.org/Function_Reference/add_filter">un filtre</a> et <a href="http://codex.wordpress.org/Function_Reference/add_action">une action</a>&hellip; Un filtre est une fonction qui va recevoir un paramètre en entrée, le transformer et renvoyer le résultat de la transformation. L&#8217;action, quant à elle, reçoit 0, 1 ou plusieurs paramètres en entrée et effectue une action; cette action ne renvoie pas de résultat, ce n&#8217;est pas nécessaire.</p>
+
+<p>Je vais vous donner un exemple concret d&#8217;utilisation de filtres et actions, repris d&#8217;un de mes projets.</p>
+
+<!--more-->
+
+
+<p>Voici le contexte: il s&#8217;agit d&#8217;une extension Wordpress transformant un site Wordpress en annuaire. Les entrées de l&#8217;annuaire peuvent être des sites internet ou des adresses physiques, et peuvent contenir un tas d&#8217;informations supplémentaires.</p>
+
+<p>L&#8217;une de mes priorités lors de la conception de ce projet était d&#8217;écrire un noyau aussi léger que possible et facile à maintenir. J&#8217;ai donc décidé d&#8217;écrire les fonctionnalités avancées de l&#8217;extension dans des modules qui peuvent être chargés et déchargés via les options de l&#8217;extension dans l&#8217;administration du site.
+Je me suis alors demandé comment rendre mon extension assez souple pour pouvoir gérer tout type de modules sans savoir encore quels genre de fonctionnalités ils allaient contenir. Et c&#8217;est là que j&#8217;ai commencé à sérieusement m&#8217;intéresser aux filtres et actions de Wordpress&hellip;</p>
+
+<p>Je vais vous donner un exemple pratique:
+Par défaut, l&#8217;annuaire ne gère que les adresses de type internet. C&#8217;est un annuaire extrêmement basique, une entrée contient un titre, une url et une description.
+Pour ajouter des adresses physiques, il faut charger le module d&#8217;adresse physique. Cela va ajouter des informations supplémentaires qui seront affichées dans le template de l&#8217;extension.</p>
+
+<p>Voici une version simplifiée du template:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="c1"># &lt;?php echo get_the_title(); ?&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&quot;details&quot;</span><span class="o">&gt;</span>
+</span><span class='line'>    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&quot;url&quot;</span><span class="o">&gt;&lt;?</span><span class="nx">php</span> <span class="k">echo</span> <span class="nv">$url</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x">&lt;/div&gt;</span>
+</span><span class='line'><span class="x">    </span><span class="cp">&lt;?php</span> <span class="nx">do_action</span><span class="p">(</span> <span class="s1">&#39;plus_de_details&#39;</span><span class="p">,</span> <span class="nx">get_the_ID</span><span class="p">()</span> <span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
+</span><span class='line'><span class="x">&lt;/div&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Et maintenant une version simplifiée du module gérant les adresses physiques:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="k">function</span> <span class="nf">action_plus_de_details</span><span class="p">(</span> <span class="nv">$id</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nv">$champs</span> <span class="o">=</span> <span class="nx">getExtraInfo</span><span class="p">();</span> <span class="c1">// fonction renvoyant les informations supplémentaires gérées par le module (rue, numéro, code postal, ...)</span>
+</span><span class='line'>    <span class="nb">ob_start</span><span class="p">();</span>
+</span><span class='line'>    <span class="cp">?&gt;</span><span class="x"></span>
+</span><span class='line'><span class="x">    **Rue**: </span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$champs</span><span class="p">[</span><span class="s1">&#39;rue&#39;</span><span class="p">];</span> <span class="cp">?&gt;</span><span class="x">       **N°**: </span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$champs</span><span class="p">[</span><span class="s1">&#39;numero&#39;</span><span class="p">];</span> <span class="cp">?&gt;</span><span class="x"></span>
+</span><span class='line'>
+</span><span class='line'><span class="x">    **Ville**: </span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$champs</span><span class="p">[</span><span class="s1">&#39;ville&#39;</span><span class="p">];</span> <span class="cp">?&gt;</span><span class="x">   **Code Postal**: </span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$champs</span><span class="p">[</span><span class="s1">&#39;cp&#39;</span><span class="p">];</span> <span class="cp">?&gt;</span><span class="x"></span>
+</span><span class='line'>
+</span><span class='line'><span class="x">    </span><span class="cp">&lt;?php</span>
+</span><span class='line'>    <span class="k">echo</span> <span class="nb">ob_get_clean</span><span class="p">();</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nx">add_action</span><span class="p">(</span> <span class="s1">&#39;plus_de_details&#39;</span><span class="p">,</span> <span class="s1">&#39;action_plus_de_details&#39;</span> <span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Vous remarquerez que le template affiche seulement les informations de base d&#8217;une entrée de l&#8217;annuaire (en l&#8217;occurrence, l&#8217;url). Par contre, le template offre la possibilité d&#8217;effectuer des actions supplémentaires juste après ce champ &ldquo;Url&rdquo;, ce qui permet au module Adresse d&#8217;ajouter ses propres champs.</p>
+
+<p>Maintenant que nous avons vu un exemple d&#8217;action, ce serait pas mal de faire de même pour les filtres, n&#8217;est-ce pas?
+Continuons avec notre projet d&#8217;annuaire en ligne. Nous sommes en 2014 (c&#8217;est la date d&#8217;écriture de l&#8217;article en tout cas&hellip;) et il est pratiquement inconcevable d&#8217;utiliser un annuaire en ligne qui ne soit pas &ldquo;Oueb 2.0&rdquo;, c&#8217;est-à-dire interactif!
+Une des fonctionnalités de base de tout annuaire qui se respecte est l&#8217;évaluation faite par les internautes. Notre module ajoute donc un champ permettant à l&#8217;internaute d&#8217;évaluer l&#8217;entrée de l&#8217;annuaire lors de l&#8217;ajout d&#8217;un commentaire. Cette évaluation doit s&#8217;afficher à côté du titre de l&#8217;entrée.</p>
+
+<p>Voici une version simplifiée du template:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'># <span class="cp">&lt;?php echo apply_filters( &#39;filtre_sur_le_titre&#39;, get_the_title(), get_the_ID() ); ?&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;details&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;url&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;?php echo $url; ?&gt;</span><span class="nt">&lt;/div&gt;</span>
+</span><span class='line'>    <span class="cp">&lt;?php do_action( &#39;plus_de_details&#39;, get_the_ID() ); ?&gt;</span>
+</span><span class='line'><span class="nt">&lt;/div&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Et maintenant une version simplifiée du module affichant les évaluations:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="k">function</span> <span class="nf">mon_filtre_sur_le_titre</span><span class="p">(</span> <span class="nv">$titre</span><span class="p">,</span> <span class="nv">$post_id</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span><span class="p">(</span> <span class="nx">is_singular</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="nx">is_main_query</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="nx">in_the_loop</span><span class="p">()</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nv">$eval</span> <span class="o">=</span> <span class="nx">getEvaluation</span><span class="p">(</span> <span class="nv">$post_id</span> <span class="p">);</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nb">sprintf</span><span class="p">(</span> <span class="s1">&#39;%s&lt;span class=&quot;rating&quot;&gt;%d&lt;/span&gt;&#39;</span><span class="p">,</span> <span class="nv">$titre</span><span class="p">,</span> <span class="nv">$eval</span> <span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nv">$titre</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nx">add_filter</span><span class="p">(</span> <span class="s1">&#39;filtre_sur_le_titre&#39;</span><span class="p">,</span> <span class="s1">&#39;mon_filtre_sur_le_titre&#39;</span> <span class="p">)</span> <span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Vous aurez remarqué qu&#8217;il est extrêmement facile d&#8217;ajouter des fonctionnalités grâce à l&#8217;utilisation des actions et des filtres. L&#8217;exemple du filtre est plutôt explicite: on a pu ajouter un affichage des évaluations des visiteurs rien que grâce à l&#8217;utilisation d&#8217;un filtre! C&#8217;est-y pas beau ça?</p>
+
+<p><em>Si vous voulez jeter un oeil à mon extension d&#8217;évaluation, <a href="https://github.com/mikedamoiseau/my-wp-comment-rating">mon répertoire Github </a>vous accueillera à bras ouverts :)</em></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[WordPress 4.0 Benny Disponible Au Téléchargement]]></title>
+    <link href="http://mikedamoiseau.github.io/wordpress-4-dot-0-benny-disponible-au-telechargement/"/>
+    <updated>2014-09-05T13:40:49+07:00</updated>
+    <id>http://mikedamoiseau.github.io/wordpress-4-dot-0-benny-disponible-au-telechargement</id>
+    <content type="html"><![CDATA[<p>La version 4.0 de Wordpress est finalement disponible! Quoi de neuf dans cette version?</p>
+
+<!-- more -->
+
+
+<ul>
+<li>L&#8217;installateur de Wordpress 4.0 inclue un sélecteur de langue pour l&#8217;installation! (<a href="http://make.wordpress.org/core/2014/09/05/language-chooser-in-4-0/" title="Language chooser in 4.0 ">plus de détails</a>, en anglais)
+Après avoir sélectionné la langue d&#8217;installation, Wordpress va automatiquement télécharger les fichiers de la langue sélectionnée.
+La constante <code>WP_LANG</code> est maintenant dépréciée et est remplacée par l&#8217;option <code>WP_LANG</code>.</li>
+<li>Amélioration de l&#8217;interface de la bibliothèque des médias (vue en grille)</li>
+<li>L&#8217;ajout de <a href="http://codex.wordpress.org/fr:Contenus_Int%C3%A9gr%C3%A9s" title="Wordpress - Contenu intégré">contenu intégré</a> (&ldquo;<a href="http://codex.wordpress.org/Embeds" title="Wordpress - Embeds">embeds</a>&rdquo; en anglais) a encore été amélioré:
+L&#8217;éditeur visuel affiche une prévisualisation  du lien en temps réel. Par exemple, vous insérez le lien d&#8217;une vidéo Youtube, l&#8217;éditeur va automatiquement le convertir en vidéo Youtube.
+Trois sites ont été ajoutés à la (longue) liste des sites supportés par Wordpress: les vidéos du site CollegeHumor, les listes de lecture de Youtube ainsi que les conférences TED.</li>
+<li>L&#8217;éditeur se redimensionne automatiquement en fonction du contenu et les options de formattage sont affichées en permanence</li>
+<li>La section des plugins a subi un petit lifting (il était temps&hellip; finalement un design potable pour cette page).
+De plus, les développeurs peuvent associer un icône à leur plugin (<a href="http://make.wordpress.org/core/2014/08/21/introducing-plugin-icons-in-the-plugin-installer/" title="Introducing plugin icons in the plugin installer ">plus de détails</a>, en anglais)</li>
+<li>L&#8217;API de la section &ldquo;Apparence&rdquo; &gt; &ldquo;Personnaliser&rdquo; a également été mise à jour et offre plus de possibilités qu&#8217;auparavant</li>
+<li>Mise à jour des librairies: TinyMCE 4.1.3, jQuery 1.11.1 etMediaElement 2.15</li>
+<li>Le tri des requêtes (<a href="http://make.wordpress.org/core/2014/08/29/a-more-powerful-order-by-in-wordpress-4-0/" title="A more powerful ORDER BY in WordPress 4.0">plus de détails</a>, en anglais)
+En résumé, avant Wordpress 4.0 on pouvait utiliser le paramètre <code>orderby</code> pour trier les résultats récupérés à l&#8217;aide de <code>WPQuery</code>. La syntaxe avant la version 4.0 était la suivante:</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="nv">$q</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">WP_Query</span><span class="p">(</span> <span class="k">array</span><span class="p">(</span> <span class="s1">&#39;orderby&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;title author&#39;</span> <span class="p">)</span> <span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Problème: que se passe-t-il quand on veut que les résultats soient triés sur plusieurs colonnes, certaines d&#8217;entre elles en <code>ASC</code> et d&#8217;autres en <code>DESC</code>? Et bien cette syntaxe ne permettait pas grand chose&hellip; On était obligé de passer par des filtres sur les requêtes SQL.
+Avec Wordpress 4.0, on a finalement droit à un peu plus de flexibilité en tant que développeur, grâce à la syntaxe suivante:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="k">new</span> <span class="nx">WP_Query</span><span class="p">(</span> <span class="k">array</span><span class="p">(</span> <span class="s1">&#39;orderby&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span> <span class="s1">&#39;title&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;DESC&#39;</span><span class="p">,</span> <span class="s1">&#39;menu_order&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;ASC&#39;</span> <span class="p">)</span> <span class="p">)</span> <span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Le paramètre <code>orderby</code> accepte un tableau dont les clés sont les noms des colonnes sur lesquelles effectuer le tri et les valeurs sont le sens du tri (<code>ASC</code> ou <code>DESC</code>).</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Modifier Un Custom Post Type Existant]]></title>
+    <link href="http://mikedamoiseau.github.io/modifier-un-custom-post-type-existant/"/>
+    <updated>2014-07-12T13:38:34+07:00</updated>
+    <id>http://mikedamoiseau.github.io/modifier-un-custom-post-type-existant</id>
+    <content type="html"><![CDATA[<p>Je suis tombé dernièrement sur un cas relativement intéressant&hellip; Je travaillais sur un site utilisant le plugin <a href="https://wordpress.org/plugins/wp-orbit-slider/" title="WP Orbit Slider - Wordpress plugin">WP Orbit Slider</a>.
+WP Orbit Slider est un petit plugin qui permettant d&#8217;afficher des slideshows. Il est relativement basique et fait bien son boulot&hellip;</p>
+
+<p>Sauf que&hellip;</p>
+
+<!--more-->
+
+
+<p>Je me suis rendu compte en effectuant une recherche sur le site que les slides WP Orbit apparaissaient dans la liste des résultats. Personnellement je trouve ça étrange, et je ne veux pas que des slides apparaissent dans les résultats de recherche&hellip;</p>
+
+<p>Le plugin crée un <em>custom post type</em> pour gérer ses slides, et ce sont ces custom posts qui apparaissent dans les résultats. J&#8217;ai donc jeté un oeil au code du plugin et voici comment le plugin enregistre son custom post type:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="nv">$defaults</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;labels&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">plural</span><span class="p">,</span>
+</span><span class='line'>    <span class="s1">&#39;singular_name&#39;</span> <span class="o">=&gt;</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">singular</span><span class="p">,</span>
+</span><span class='line'>    <span class="s1">&#39;search_items&#39;</span> <span class="o">=&gt;</span> <span class="nx">__</span><span class="p">(</span><span class="s1">&#39;Search &#39;</span><span class="p">,</span> <span class="s1">&#39;wp-orbit-slider&#39;</span><span class="p">)</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">plural</span><span class="p">,</span>
+</span><span class='line'>    <span class="s1">&#39;popular_items&#39;</span> <span class="o">=&gt;</span> <span class="nx">__</span><span class="p">(</span><span class="s1">&#39;Popular &#39;</span><span class="p">,</span> <span class="s1">&#39;wp-orbit-slider&#39;</span><span class="p">)</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">plural</span><span class="p">,</span>
+</span><span class='line'>    <span class="s1">&#39;all_items&#39;</span> <span class="o">=&gt;</span> <span class="nx">__</span><span class="p">(</span><span class="s1">&#39;All &#39;</span><span class="p">,</span> <span class="s1">&#39;wp-orbit-slider&#39;</span><span class="p">)</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">plural</span><span class="p">,</span>
+</span><span class='line'>    <span class="s1">&#39;parent_item&#39;</span> <span class="o">=&gt;</span> <span class="nx">__</span><span class="p">(</span><span class="s1">&#39;Parent &#39;</span><span class="p">,</span> <span class="s1">&#39;wp-orbit-slider&#39;</span><span class="p">)</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">singular</span><span class="p">,</span>
+</span><span class='line'>    <span class="s1">&#39;parent_item_colon&#39;</span> <span class="o">=&gt;</span> <span class="nb">sprintf</span><span class="p">(</span> <span class="nx">__</span><span class="p">(</span><span class="s1">&#39;Parent %s:&#39;</span><span class="p">,</span> <span class="s1">&#39;wp-orbit-slider&#39;</span><span class="p">),</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">singular</span> <span class="p">),</span>
+</span><span class='line'>    <span class="s1">&#39;edit_item&#39;</span> <span class="o">=&gt;</span> <span class="nx">__</span><span class="p">(</span><span class="s1">&#39;Edit &#39;</span><span class="p">,</span> <span class="s1">&#39;wp-orbit-slider&#39;</span><span class="p">)</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">singular</span><span class="p">,</span>
+</span><span class='line'>    <span class="s1">&#39;update_item&#39;</span> <span class="o">=&gt;</span> <span class="nx">__</span><span class="p">(</span><span class="s1">&#39;Update &#39;</span><span class="p">,</span> <span class="s1">&#39;wp-orbit-slider&#39;</span><span class="p">)</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">singular</span><span class="p">,</span>
+</span><span class='line'>    <span class="s1">&#39;add_new_item&#39;</span> <span class="o">=&gt;</span> <span class="nx">__</span><span class="p">(</span><span class="s1">&#39;Add New &#39;</span><span class="p">,</span> <span class="s1">&#39;wp-orbit-slider&#39;</span><span class="p">)</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">singular</span><span class="p">,</span>
+</span><span class='line'>    <span class="s1">&#39;new_item_name&#39;</span> <span class="o">=&gt;</span> <span class="nb">sprintf</span><span class="p">(</span> <span class="nx">__</span><span class="p">(</span><span class="s1">&#39;New %s Name&#39;</span><span class="p">,</span> <span class="s1">&#39;wp-orbit-slider&#39;</span><span class="p">),</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">singular</span> <span class="p">),</span>
+</span><span class='line'>    <span class="s1">&#39;separate_items_with_commas&#39;</span> <span class="o">=&gt;</span> <span class="nb">sprintf</span><span class="p">(</span> <span class="nx">__</span><span class="p">(</span><span class="s1">&#39;Separate %s with commas&#39;</span><span class="p">,</span> <span class="s1">&#39;wp-orbit-slider&#39;</span><span class="p">),</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">plural</span><span class="p">),</span>
+</span><span class='line'>    <span class="s1">&#39;add_or_remove_items&#39;</span> <span class="o">=&gt;</span> <span class="nx">__</span><span class="p">(</span><span class="s1">&#39;Add or remove &#39;</span><span class="p">,</span> <span class="s1">&#39;wp-orbit-slider&#39;</span><span class="p">)</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">plural</span><span class="p">,</span>
+</span><span class='line'>    <span class="s1">&#39;choose_from_most_used&#39;</span> <span class="o">=&gt;</span> <span class="nx">__</span><span class="p">(</span><span class="s1">&#39;Choose from the most used &#39;</span><span class="p">,</span> <span class="s1">&#39;wp-orbit-slider&#39;</span><span class="p">)</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">plural</span><span class="p">),</span>
+</span><span class='line'>    <span class="s1">&#39;rewrite&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;slug&#39;</span> <span class="o">=&gt;</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">slug</span><span class="p">)</span>
+</span><span class='line'><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>L&#8217;auteur du plugin n&#8217;a pas cru bon d&#8217;exclure son custom post type des résultats de recherche. Pourtant, il lui suffisait d&#8217;ajouter  <code>exclude_from_search</code> au tableau de paramètres mais pour une raison que j&#8217;ignore il ne l&#8217;a pas fait.</p>
+
+<p>Bon, maintenant que j&#8217;ai trouvé la raison, il me faut encore trouver comment résoudre le problème&hellip; La solution la plus évidente, et la moins bonne, est d&#8217;ajouter dans ce tableau la clé <code>exclude_from_search</code> avec la valeur <code>true</code>:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="nx">exclude_from_search</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Sauf que (<em>bis</em>)&hellip; Cette solution n&#8217;est pas élégante, car elle implique de modifier le code d&#8217;un plugin qui ne m&#8217;appartient pas! De plus, en cas de mise à jour du plugin par son auteur (on peut toujours rêver, il n&#8217;y a eu aucune mise à jour depuis plus de deux ans&hellip;), les modifications seront écrasées et les custom post types seront à nouveau inclus dans les résultats de recherche.</p>
+
+<p>Heureusement, il y a une action très intéressant nous permettant de modifier les valeurs des paramètres du custom post type, il s&#8217;agit de l&#8217;action <code>registered_post_type</code>. Cette action permet d&#8217;intercepter la création d&#8217;un custom post type et de modifier ses paramètres de création.</p>
+
+<p>Un petit exemple valant mieux qu&#8217;un long discours, voici le code:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="sd">/**</span>
+</span><span class='line'><span class="sd"> * Vérifie que le custom post est celui créé par le plugin WP Orbit Slider et modifie son paramètre `exclude_from_search`</span>
+</span><span class='line'><span class="sd"> */</span>
+</span><span class='line'><span class="k">function</span> <span class="nf">my_registered_post_type_handler</span><span class="p">(</span> <span class="nv">$post_type</span><span class="p">,</span> <span class="nv">$args</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span><span class="p">(</span> <span class="s1">&#39;vp_orbitslides&#39;</span> <span class="o">==</span> <span class="nv">$post_type</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>       <span class="nv">$args</span><span class="o">-&gt;</span><span class="na">exclude_from_search</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Intercepter la création des custom post types</span>
+</span><span class='line'><span class="nx">add_action</span><span class="p">(</span> <span class="s1">&#39;registered_post_type&#39;</span><span class="p">,</span> <span class="s1">&#39;my_registered_post_type_handler&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span> <span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>La fonction de callback <code>my_registered_post_type_handler</code> reçoit deux paramètres, le nom du custom post type et ses arguments.
+Attention, les arguments sont passés via un objet et non un tableau!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Wordpress, Des Filtres Et Des Actions (1ère Partie)]]></title>
+    <link href="http://mikedamoiseau.github.io/wordpress-filtres-actions-partie-1/"/>
+    <updated>2014-06-08T13:32:43+07:00</updated>
+    <id>http://mikedamoiseau.github.io/wordpress-filtres-actions-partie-1</id>
+    <content type="html"><![CDATA[<p>Il est impossible d&#8217;écrire des plugins et/ou des thèmes pour Wordpress sans passer par l&#8217;utilisation des filtres et des actions. En fait, Wordpress utilise énormément les deux, et ne pas comprendre ce que c&#8217;est ni à quoi ça sert, et bien c&#8217;est mal&hellip; Et ce qui est encore plus mal, c&#8217;est de ne pas comprendre ce qui les différencie!
+La nuance entre un filtre et une action est ténue, et c&#8217;est une question qui revient souvent chez les développeurs débutant avec Wordpress: <strong>Quelle est la différence entre un filtre et une action?</strong></p>
+
+<!--more-->
+
+
+<p>La première partie de cet article va nous permettre de comprendre ce que sont exactement les filtres et les actions. Dans la seconde partie de l&#8217;article, nous verrons plus en détail comment les utiliser et comment déclarer ses propres filtres et actions, et nous verrons également comment cela peut nous rendre la vie plus facile lors du développement d&#8217;un plugin/thème pour Wordpress.</p>
+
+<h2>Hooks/hameçons</h2>
+
+<p><em>Un <a href="http://fr.wikipedia.org/wiki/Hook_(informatique">hook</a> &ldquo;Hook (informatique) sur Wikipedia&rdquo;) permet à l&#8217;utilisateur d&#8217;un logiciel de personnaliser le fonctionnement de ce dernier, en lui faisant réaliser des actions supplémentaires à des moments déterminés. Le concepteur du logiciel prévoit des hooks au long du fonctionnement de son programme, qui sont des points d&#8217;entrée vers des listes d&#8217;actions. Par défaut, le hook est généralement vide et seules les fonctionnalités de base de l&#8217;application sont exécutées. Cependant, l&#8217;utilisateur peut « accrocher » des morceaux de programme à ces hooks pour personnaliser le logiciel.</em></p>
+
+<p>Qu&#8217;est-ce que cela veut dire concrètement? Et bien concrètement, cela veut dire que vous pouvez ajouter des fonctionnalités et modifier des données sans avoir à modifier le code source de Wordpress. Les filtres et les actions vous permettent justement d&#8217;atteindre ces objectifs.
+<strong>Modifier le noyau de Wordpress est une ignominie sans nom et l&#8217;idée de la possibilité de la chose ne devrait même pas traverser votre esprit</strong>! Que se passe-t-il lorsque vous mettez à jour un site Wordpress dont le code du noyau a été modifié? Et bien vous perdez toutes les modifications vu que Wordpress va écraser les fichiers de l&#8217;ancienne version lors de sa mise à jour&hellip;</p>
+
+<h2>Les filtres</h2>
+
+<h3>Définition</h3>
+
+<p>Un filtre est une fonction qui reçoit un paramètre en entrée, le transforme, et renvoie le résultat de la transformation.
+De nombreuses fonctions du langage PHP peuvent être considérées comme des filtres. Par exemple, la fonction <code>strtoupper</code> reçoit une chaîne de caractères en entrée, la transforme (= convertit chacun des caractères de la chaîne en son équivalent majuscule) et renvoie le résultat.</p>
+
+<p>Documentation officielle <a href="http://codex.wordpress.org/Function_Reference/add_filter" title="Codex add_filter">add_filter</a>.</p>
+
+<h3>Syntaxe</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="nx">add_filter</span><span class="p">(</span> <span class="nv">$nom</span><span class="p">,</span> <span class="nv">$fonction_callback</span><span class="p">,</span> <span class="nv">$priorite</span><span class="p">,</span> <span class="nv">$nombre_parametres</span> <span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li><code>$nom</code>: nom du filtre existant sur lequel la fonctionné $fonction_callback sera exécutée</li>
+<li><code>$fonction_callback</code>: Le nom de la fonction à appeler lorsque le filtre est exécuté</li>
+<li><code>$priorite</code>: utilisé pour spécifier l’ordre dans lequel les fonctions associées à un filtre particulier sont exécutées. Plus le nombre est bas, plus la priorité est grande. La valeur par défaut est <code>10</code>.</li>
+<li><code>$nombre_parametres</code>: Le nombre de paramètres que la fonction spécifiée par $fonction_callback accepte. La valeur par défaut est <code>1</code>. (Plus de détails sur la syntaxe autorisée, lire <a href="http://damoiseau.me/php-usort-dans-une-classe-avec-callback-private-static/" title="PHP – Les différentes manières d’appeler la fonction callback d’usort">cet article</a>)</li>
+<li><code>valeur de retour</code>: La fonction renvoie <code>true</code> si la fonction $fonction_callback a pu être correctement ajoutée à la liste de fonctions à appliquer sur le filtre spécifié par $nom. Aucun test n’est fait pour vérifié que la fonction $fonction_callback existe ou non pour des raisons d’optimisation. C’est votre boulot de vérifier que la fonction existe bien!</li>
+</ul>
+
+
+<h3>Exemple</h3>
+
+<p>Afficher tous les titres des articles en majuscule:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="nx">add_filter</span><span class="p">(</span> <span class="s1">&#39;the_title&#39;</span><span class="p">,</span> <span class="s1">&#39;strtoupper&#39;</span> <span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Les actions</h2>
+
+<h3>Définition</h3>
+
+<p>Une action est un <em>hook</em> permettant au développeur d’ajouter des fonctionnalités supplémentaires à une étape particulière. La fonction appelée ne reçoit pas nécessairement de valeur en entrée, et, différence notable avec les filtres, ne doit pas renvoyer de valeur. Si une valeur est renvoyée, elle est ignorée par Wordpress.</p>
+
+<p>Documentation officielle <a href="http://codex.wordpress.org/Function_Reference/add_action" title="Codex add_action">add_action</a>.</p>
+
+<h3>Syntaxe</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="nx">add_action</span><span class="p">(</span> <span class="nv">$nom</span><span class="p">,</span> <span class="nv">$fonction_callback</span><span class="p">,</span> <span class="nv">$priorite</span><span class="p">,</span> <span class="nv">$nombre_parametres</span> <span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li><code>$nom</code>: nom du filtre existant sur lequel la fonction $fonction_callback sera exécutée</li>
+<li><code>$fonction_callback</code>: Le nom de la fonction à appeler lorsque le filtre est exécuté</li>
+<li><code>$priorite</code>: utilisé pour spécifier l’ordre dans lequel les fonctions associées à un filtre particulier sont exécutées. Plus le nombre est bas, plus la priorité est grande. La valeur par défaut est <code>10</code>.</li>
+<li><code>$nombre_parametres</code>: Le nombre de paramètres que la fonction spécifiée par $fonction_callback accepte. La valeur par défaut est <code>1</code>. (Plus de détails sur la syntaxe autorisée, lire <a href="http://damoiseau.me/php-usort-dans-une-classe-avec-callback-private-static/" title="PHP – Les différentes manières d’appeler la fonction callback d’usort">cet article</a>)</li>
+<li><code>valeur de retour</code>: La fonction renvoie toujours <code>true</code>.</li>
+</ul>
+
+
+<h3>Exemple</h3>
+
+<p>Envoyer un email lors de la publication d&#8217;un post:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="k">function</span> <span class="nf">email_amis</span><span class="p">(</span> <span class="nv">$post_ID</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>   <span class="nv">$amis</span> <span class="o">=</span> <span class="s1">&#39;bob@example.org, susie@example.org&#39;</span><span class="p">;</span>
+</span><span class='line'>   <span class="nx">wp_mail</span><span class="p">(</span> <span class="nv">$amis</span><span class="p">,</span> <span class="s2">&quot;Mise à jour du blog Damoiseau.me&quot;</span><span class="p">,</span> <span class="s1">&#39;le blog Damoiseau.me a été mist à jour: http://damoiseau.me&#39;</span> <span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nx">add_action</span><span class="p">(</span> <span class="s1">&#39;publish_post&#39;</span><span class="p">,</span> <span class="s1">&#39;email_amis&#39;</span> <span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[PHP - Les Différentes Manières D'appeler La Fonction Callback D'usort]]></title>
+    <link href="http://mikedamoiseau.github.io/php-les-differentes-manieres-dappeler-la-fonction-callback-dusort/"/>
+    <updated>2014-05-01T13:27:18+07:00</updated>
+    <id>http://mikedamoiseau.github.io/php-les-differentes-manieres-dappeler-la-fonction-callback-dusort</id>
+    <content type="html"><![CDATA[<p>Connaissez-vous les différentes manières d&#8217;utiliser une fonction callback (ou <a href="http://fr.wikipedia.org/wiki/Fonction_de_rappel" title="Fonction de rappel - callback function">fonction de rappel</a> en bon français) en paramètre de la fonction <code>usort</code></p>
+
+<p>Tout le monde connaît la méthode la plus simple qui consiste à donner en paramètre le nom d&#8217;une fonction globale, comme montré dans l&#8217;exemple suivant:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="k">function</span> <span class="nf">maFonctionCallbackUsort</span><span class="p">(</span> <span class="nv">$a</span><span class="p">,</span> <span class="nv">$b</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nb">strcmp</span><span class="p">(</span> <span class="nv">$a</span><span class="p">,</span> <span class="nv">$b</span> <span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">usort</span><span class="p">(</span> <span class="nv">$monTableau</span><span class="p">,</span> <span class="s1">&#39;maFonctionCallbackUsort&#39;</span> <span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Un bon petit bout de code qui fait ce qu&#8217;on lui demande: il compare deux éléments du tableau et renvoie un résultat indiquant lequel des deux éléments est plus grand que l&#8217;autre&hellip;</p>
+
+<p>Le problème avec ce morceau de code, c&#8217;est qu&#8217;on pollue l&#8217;espace global de notre application avec une fonction qui ne sera utilisée que pour notre appel à la fonction <em>usort</em>.
+Ce serait quand-même bien de pouvoir utiliser notre fonction <em>usort</em> dans une classe par exemple, avec une fonction callback privée qui ne serait pas accessible en dehors de la-dite classe (histoire d&#8217;éviter justement cette pollution de l&#8217;espace global).</p>
+
+<!--more-->
+
+
+<p>Un rapide coup d&#8217;oeil <a href="http://www.php.net/manual/fr/language.types.callable.php" title="Documentation PHP">dans la documentation de PHP</a> nous donne toutes les informations nécessaires quant aux différentes syntaxes possibles.</p>
+
+<p>Voyons les différentes possibilités offertes par le langage PHP:</p>
+
+<ul>
+<li>L&#8217;appel d&#8217;une méthode statique d&#8217;une classe:</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="k">class</span> <span class="nc">MyClass</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">static</span> <span class="k">function</span> <span class="nf">myCallbackMethod</span><span class="p">(</span> <span class="nv">$a</span><span class="p">,</span> <span class="nv">$b</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nb">strcmp</span><span class="p">(</span> <span class="nv">$a</span><span class="p">,</span> <span class="nv">$b</span> <span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">usort</span><span class="p">(</span> <span class="nv">$monTableau</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span> <span class="s1">&#39;MyClass&#39;</span><span class="p">,</span> <span class="s1">&#39;myCallbackMethod&#39;</span> <span class="p">)</span> <span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>L&#8217;appel d&#8217;une méthode publique d&#8217;un objet:</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="k">class</span> <span class="nc">MyClass</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">public</span> <span class="k">function</span> <span class="nf">myCallbackMethod</span><span class="p">(</span> <span class="nv">$a</span><span class="p">,</span> <span class="nv">$b</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nb">strcmp</span><span class="p">(</span> <span class="nv">$a</span><span class="p">,</span> <span class="nv">$b</span> <span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">$obj</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MyClass</span><span class="p">();</span>
+</span><span class='line'><span class="nb">usort</span><span class="p">(</span> <span class="k">array</span><span class="p">(</span> <span class="nv">$obj</span><span class="p">,</span> <span class="s1">&#39;myCallbackMethod&#39;</span> <span class="p">)</span> <span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Cette syntaxe pour l&#8217;appel d&#8217;une méthode statique d&#8217;une classe n&#8217;est possible que depuis la version 5.2.3 de PHP:</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="k">class</span> <span class="nc">MyClass</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">static</span> <span class="k">function</span> <span class="nf">myCallbackMethod</span><span class="p">(</span> <span class="nv">$a</span><span class="p">,</span> <span class="nv">$b</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nb">strcmp</span><span class="p">(</span> <span class="nv">$a</span><span class="p">,</span> <span class="nv">$b</span> <span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">usort</span><span class="p">(</span> <span class="nv">$monTableau</span><span class="p">,</span> <span class="s2">&quot;MyClass::myCallbackMethod&quot;</span> <span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Utilisation de la fonction <em>usort</em> dans une classe avec un appel à une méthode privée:</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="k">class</span> <span class="nc">MyClass</span> <span class="p">{</span>
+</span><span class='line'>   <span class="k">private</span> <span class="k">function</span> <span class="nf">myCallbackMethod</span><span class="p">(</span> <span class="nv">$a</span><span class="p">,</span> <span class="nv">$b</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nb">strcmp</span><span class="p">(</span> <span class="nv">$a</span><span class="p">,</span> <span class="nv">$b</span> <span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>   <span class="k">public</span> <span class="k">function</span> <span class="nf">aa</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nb">usort</span><span class="p">(</span> <span class="nv">$monTableau</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span> <span class="nv">$this</span><span class="p">,</span> <span class="s1">&#39;myCallbackMethod&#39;</span> <span class="p">)</span> <span class="p">);</span>
+</span><span class='line'>   <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Alors ça c&#8217;est vraiment cool:</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="k">class</span> <span class="nc">A</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">myCallbackMethod</span><span class="p">(</span> <span class="nv">$a</span><span class="p">,</span> <span class="nv">$b</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nb">strcmp</span><span class="p">(</span> <span class="nv">$a</span><span class="p">[</span><span class="s1">&#39;lastname&#39;</span><span class="p">],</span> <span class="nv">$b</span><span class="p">[</span><span class="s1">&#39;lastname&#39;</span><span class="p">]</span> <span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">class</span> <span class="nc">B</span> <span class="k">extends</span> <span class="nx">A</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">myCallbackMethod</span><span class="p">(</span> <span class="nv">$a</span><span class="p">,</span> <span class="nv">$b</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nb">strcmp</span><span class="p">(</span> <span class="nv">$a</span><span class="p">[</span><span class="s1">&#39;firstname&#39;</span><span class="p">],</span> <span class="nv">$b</span><span class="p">[</span><span class="s1">&#39;firstname&#39;</span><span class="p">]</span> <span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Les éléments du tableau sont triés par le champ `lastname`</span>
+</span><span class='line'><span class="nb">usort</span><span class="p">(</span> <span class="nv">$monTableau</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;parent::myCallbackMethod&#39;</span> <span class="p">)</span> <span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Voilà! Je pense que nous avons fait le tour de la question. Un sujet somme toute relativement intéressant.</p>
+
+<p>Et juste pour la petite histoire, c&#8217;est une syntaxe que j&#8217;utilise énormément lorsque je développe un plugin pour Wordpress&hellip; Un petit exemple rapide vaut mieux qu&#8217;un long discours (pas forcément vrai dans le cas du SEO mais ça ce sera pour une prochaine fois!):</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="k">class</span> <span class="nc">My_WP_Plugin</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">public</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">add_action</span><span class="p">(</span> <span class="s1">&#39;admin_init&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span> <span class="o">&amp;</span><span class="nv">$this</span><span class="p">,</span> <span class="s1">&#39;actionAdminInit&#39;</span> <span class="p">)</span> <span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">public</span> <span class="k">function</span> <span class="nf">actionAdminInit</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">wp_enqueue_script</span><span class="p">(</span> <span class="o">...</span> <span class="p">);</span>
+</span><span class='line'>        <span class="c1">// et plein d&#39;autres choses encore !</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Pour info, c&#8217;est en lisant <a href="http://stackoverflow.com/questions/6053994/using-usort-in-php-with-a-class-private-function">cette question sur Stackoverflow</a> que je me suis intéressé au sujet.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[GIT - Ajouter Localement Une Branche Distante]]></title>
+    <link href="http://mikedamoiseau.github.io/git-ajouter-localement-une-branche-distante/"/>
+    <updated>2014-04-17T13:25:03+07:00</updated>
+    <id>http://mikedamoiseau.github.io/git-ajouter-localement-une-branche-distante</id>
+    <content type="html"><![CDATA[<p>Auparavant, lorsque j&#8217;avais besoin d&#8217;ajouter localement une branche présente sur un dépôt distant, j&#8217;utilisais les commandes suivantes:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git checkout -b nomDeMaBrancheDistante
+</span><span class='line'>git pull origin nomDeMaBrancheDistante
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Mais&hellip;</p>
+
+<!--more-->
+
+
+<p>Que se passe-t-il quand vous êtes en plein milieu de modifications et que vous ne désirez pas créer de <em>commit</em>?
+Et bien ce n&#8217;est tout simplement pas possible!</p>
+
+<p>Deux possibilitiés:</p>
+
+<ul>
+<li>Vous créez un commit intermédiaire pour vous permettre de changer de branche (pas terrible, je le reconnais&hellip;)</li>
+<li>Vous utilisez la commande suivante, elle est plus propre et elle fonctionne bien :)</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git checkout -b nomDeMaBrancheDistante origin/nomDeMaBrancheDistante
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Il se peut dans certains cas que Git refuse de créer la branche et vous affiche le message d&#8217;erreur suivant:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>fatal: git checkout: updating paths is incompatible with switching branches/forcing
+</span><span class='line'>Did you intend to checkout ‘origin/‘ which can not be resolved as commit?’
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Dans ce cas, un petit</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git remote update
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>devrait vous aider à en venir à bout&hellip;</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[WordPress 3.9 Smith Disponible Au Téléchargement]]></title>
+    <link href="http://mikedamoiseau.github.io/wordpress-3.9-smith-disponible-au-telechargement/"/>
+    <updated>2014-04-17T13:17:54+07:00</updated>
+    <id>http://mikedamoiseau.github.io/wordpress-3.9-smith-disponible-au-telechargement</id>
+    <content type="html"><![CDATA[<p>Quelques mois après la version 3.8, c&#8217;est au tour de la version 3.9 de Wordpress de voir officiellement le jour!
+Un seul plugin a été intégré au noyau de Wordpress, il s&#8217;agit du plugin <a href="http://wordpress.org/plugins/widget-customizer/" title="Widgets Customizer">Widgets Customizer</a>.</p>
+
+<p>Quoi de neuf dans cette nouvelle mouture?</p>
+
+<!--more-->
+
+
+<ul>
+<li><strong>Création de listes de lecture audio et vidéo</strong></li>
+</ul>
+
+
+<p>Il est également possible d&#8217;ajouter plusieurs sources pour un fichier audio, afin de maximiser la comptabilité entre les navigateurs internet.
+Les vidéos supportent les sous-titres, pour peu que vous fournissiez les fichiers adéquats. <a href="http://html5doctor.com/video-subtitling-and-webvtt/">Ce post</a> (en anglais) explique la création et l&#8217;ajout de fichiers de sous-titre.</p>
+
+<ul>
+<li><strong>Gestion des thèmes</strong></li>
+</ul>
+
+
+<p>La gestion des thèmes a également été améliorée. Les images de prévisualisation sont plus grandes, un indicateur affiche si le thème est déjà installé, et la prévisualisation d&#8217;un thème est plus rapide.</p>
+
+<ul>
+<li><strong>Editer et recadrer une image</strong></li>
+</ul>
+
+
+<p>Il est maintenant possible d&#8217;éditer et de redimensionner une image directement depuis l&#8217;éditeur visuel, sans avoir à ouvrir une nouvelle page.
+Il est maintenant également possible d&#8217;ajouter une image à un article en glissant l&#8217;image directement sur l&#8217;éditeur.
+L&#8217;éditeur d&#8217;article affiche un aperçu de la galerie attachée au post. Il n&#8217;est pas encore possible de changer l&#8217;ordre des images, cette fonctionnalité devrait être disponible dans une prochaine mise à jour.</p>
+
+<ul>
+<li><strong>Prévisualisation en direct des widgets</strong></li>
+</ul>
+
+
+<p>Fini le temps où il fallait rafraîchir une page du site à chaque fois que l&#8217;on modifiait, ajoutait ou supprimait un widget! Et ce n&#8217;est pas plus mal, car les tests sur un site opérationnel, très peu pour moi!
+Cette fonctionnalité a été ajoutée dans Apparences > Personnaliser</p>
+
+<ul>
+<li><p><strong>Une nouvelle version simplifiée de l&#8217;éditeur</strong></p>
+
+<p>L&#8217;éditeur utilise maintenant la version 4.0 de <a href="http://www.tinymce.com/" title="Tiny?CE">TinyMCE</a>. Cette mise à jour apporte les améliorations suivantes:</p>
+
+<ul>
+<li>Nouvelle interface</li>
+<li>Nouveau thème</li>
+<li>Système d&#8217;événements/API réécrite</li>
+<li>Qualité du code améliorée</li>
+<li>Le bouton de collage de contenu provenant de Microsoft Word a été retiré. L&#8217;éditeur détecte automatiquement le code foireux provenant de Word et le nettoie avant insertion du texte.</li>
+<li>Le mode &ldquo;sans distraction&rdquo; (&ldquo;distraction free&rdquo;) est adaptif (responsive, je déteste toujours autant ce mot en français!).</li>
+</ul>
+</li>
+<li><p><strong>Support oEmbed</strong></p></li>
+</ul>
+
+
+<p>Vous savez, quand vous collez une url provenant de youtube par exemple, Wordpress convertit automatiquement le lien en lecteur vidéo&hellip; Et bien deux nouveaux services ont été ajoutés, personnellement je n&#8217;en ai jamais entendu parler mais bon: <a href="http://www.meetup.com/" title="Meetup.com">Meetup.com</a> et <a href="https://imgur.com/" title="Imgur">Imgur</a>. Le support pour Qik a quant à lui été retiré (le service ferme en avril).</p>
+
+<ul>
+<li><p><strong>Améliorations diverses</strong></p>
+
+<ul>
+<li>Galeries et légendes HTML5: utilisations de balises HTML5 <code>&lt;figure&gt;</code> et <code>&lt;figcaption&gt;</code></li>
+<li>L&#8217;utilisation d&#8217;un lien symbolique pour le répertoire des plugins est maintenant possible</li>
+<li>Mise à jour de la librairie de gestion d&#8217;envoi de fichiers Plupload: utilisation de la version 2.1.1</li>
+<li>MySQL: une nouvelle couche intermédiaire a été ajoutée à WPDB, afin d&#8217;automatiser l&#8217;utilisation de la librairie mysali si la version de PHP est 5.5 ou plus</li>
+<li>le script Masonry a été mis à jour: plus besoin de jQuery et le nom du <em>handle</em> du script est <code>masonry</code>. Pour en savoir d&#8217;avantage, <a href="http://make.wordpress.org/core/2014/03/27/masonry-in-wordpress-3-9/" title="Masonry dans Worpdress 3.9">c&#8217;est par ici</a> (article en anglais)</li>
+</ul>
+</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Recharger Le Contenu D'un Iframe via Javascript]]></title>
+    <link href="http://mikedamoiseau.github.io/recharger-le-contenu-dun-iframe-via-javascript/"/>
+    <updated>2014-03-16T13:15:36+07:00</updated>
+    <id>http://mikedamoiseau.github.io/recharger-le-contenu-dun-iframe-via-javascript</id>
+    <content type="html"><![CDATA[<p>Commençons par situer le contexte:
+Un client me demande d&#8217;afficher une carte Google (google maps) dans un iframe (c&#8217;est le moyen le plus simple d&#8217;intégrer une carte google maps dans un site web). Sur la carte, un marqueur indique l&#8217;emplacement de l&#8217;adresse de son bureau.</p>
+
+<p>Le site de mon client étant <a href="http://fr.wikipedia.org/wiki/Site_web_adaptatif" title="Site web adaptif">adaptif</a> (mon dieu que ce terme est laid! Responsive design, si vous avez une meilleure traduction, je suis preneur), mon cher et bien aimé client aimerait que le marqueur soit toujours situé en plein milieu de la carte, même après qu&#8217;il ait modifé les dimensions de son navigateur, ou après qu&#8217;il ait alterné le mode paysage/portrait de sa tablette.</p>
+
+<!--more-->
+
+
+<p>Après quelques recherches infructueuses, je me rends compte qu&#8217;il n&#8217;est pas possible d&#8217;exécuter du code javascript sur la carte, car celle-ci se trouve sur une autre page, et dans ce cas-ci, sur un autre serveur également (rappelez-vous, on affiche un iframe).</p>
+
+<p>C&#8217;est alors que j&#8217;ai une idée intéressante: pourquoi ne pas rafraîchir le contenu de l&#8217;iframe? Ce n&#8217;est probablement pas la solution la plus optimisée, mais n&#8217;ayant aucun moyen d&#8217;exécuter du code sur la carte, je n&#8217;ai pas vraiment le choix.</p>
+
+<p>Très fier de ma solution, j&#8217;écris le code permettant de rafraîchir le contenu de l&#8217;iframe et&hellip; Stupeur! Impossible de recharger le contenu de l&#8217;iframe parce que le contenu se trouve sur un autre serveur (<a href="http://en.wikipedia.org/wiki/Same-origin_policy" title="Same Origin Policy">Same origin policy</a>).</p>
+
+<p>Après quelques recherches supplémentaires, je trouve finalement une solution non élégante mais qui fait le boulot:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// hackishly force iframe to reload</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">iframe</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">FrameId</span><span class="p">);</span>
+</span><span class='line'><span class="nx">iframe</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">iframe</span><span class="p">.</span><span class="nx">src</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Il semblerait que ce code ne fonctionne pas pour tout le monde (qui a dit Internet Explorer?).
+Ce code-ci devrait fonctionner sur tous les navigateurs:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">iframe</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">FrameId</span><span class="p">);</span>
+</span><span class='line'><span class="nx">iframe</span><span class="p">.</span><span class="nx">contentDocument</span><span class="p">.</span><span class="nx">location</span><span class="o">=</span><span class="nx">iframe</span><span class="p">.</span><span class="nx">src</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>J&#8217;ai trouvé cette information <a href="http://stackoverflow.com/questions/4249809/reload-an-iframe-with-jquery/4249889" title="Stack Overflow">ici</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ajouter Dynamiquement Des Liens JS Et CSS Dans La Balise Head De Votre Site]]></title>
+    <link href="http://mikedamoiseau.github.io/ajouter-dynamiquement-des-liens-js-et-css-dans-la-balise-head-de-votre-site/"/>
+    <updated>2014-02-18T13:12:59+07:00</updated>
+    <id>http://mikedamoiseau.github.io/ajouter-dynamiquement-des-liens-js-et-css-dans-la-balise-head-de-votre-site</id>
+    <content type="html"><![CDATA[<p>Ajouter des liens vers des fichiers JS et/ou CSS dans le layout est quelque chose d&#8217;extrêmement facile dans <strong>CakePHP</strong>:
+Par exemple:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="c1">// fichier View/Layouts/default.ctp</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">Html</span><span class="o">-&gt;</span><span class="na">css</span><span class="p">(</span> <span class="k">array</span><span class="p">(</span>
+</span><span class='line'>   <span class="s1">&#39;bootstrap.min&#39;</span><span class="p">,</span>
+</span><span class='line'><span class="p">));</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">Html</span><span class="o">-&gt;</span><span class="na">script</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
+</span><span class='line'>   <span class="s1">&#39;jquery-1.10.2.min&#39;</span><span class="p">,</span>
+</span><span class='line'>   <span class="s1">&#39;modernizr&#39;</span><span class="p">,</span>
+</span><span class='line'>   <span class="s1">&#39;bootstrap.min&#39;</span><span class="p">,</span>
+</span><span class='line'><span class="p">));</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ceci aura pour effet d&#8217;ajouter les lignes suivantes dans le rendu HTML:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href=</span><span class="s">&quot;/3musketeers/Humans-Rights-Report/css/bootstrap.min.css&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;/monsite/js/jquery-2.0.3.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;/monsite/js/modernizr.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;/monsite/js/bootstrap.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<!--more-->
+
+
+<p>C&#8217;est cool, maintenant toutes les pages utilisant le layout par défaut auront ces balises automatiquement insérées dans leur balise head (en admettant que vous ayez inséré le code PHP dans la balise head bien évidemment&hellip;).</p>
+
+<p>Mais que se passe-t-il dans le cas, par exemple, d&#8217;une page utilisant une carte Google Map? Plusieurs possibilités s&#8217;offrent à vous, et personnellement je n&#8217;en vois qu&#8217;une qui tient la route:</p>
+
+<ul>
+<li><strong>Vous ajoutez le fichier JS dans toutes vos pages (voir exemple ci-dessus)</strong>: c&#8217;est dommage, il n&#8217;y a qu&#8217;une page de votre site qui a besoin de ce script, et vous allez obliger vos visiteurs à télécharger et interpréter ce script à chaque chargement de page&hellip;</li>
+<li><strong>Vous créez un layout spécial pour cette page uniquement</strong>: Cette solution peut tenir la route si cette page est très différente des autres, ce qui devrait être un cas assez rare&hellip; Normalement vous allez &ldquo;bêtement&rdquo; dupliquer le layout par défaut et ajouter le code pour insérer le fichier javascript nécessaire à l&#8217;utilisation de votre carte Google Map. Quelle horreur! Vous allez&hellip; <em>dupliquer</em> du code!</li>
+<li><strong>Vous insérez le fichier javascript dans la balise head de votre site, mais uniquement sur la page utilisant la carte Google Maps</strong>: C&#8217;est évidemment la meilleure solution! Et comment qu&#8217;on fait ça?</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="c1">// fichier View/Layouts/default.ctp</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// ce fichier CSS est utilisé sur toutes les pages du site utilisant le layout par défaut</span>
+</span><span class='line'><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">Html</span><span class="o">-&gt;</span><span class="na">css</span><span class="p">(</span> <span class="k">array</span><span class="p">(</span>
+</span><span class='line'>   <span class="s1">&#39;bootstrap.min&#39;</span><span class="p">,</span>
+</span><span class='line'><span class="p">));</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// ce code va insérer les fichiers CSS ajoutés depuis la vue (view)</span>
+</span><span class='line'><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">(</span><span class="s1">&#39;css&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// ces fichiers JS sont utilisés sur toutes les pages du site utilisant le layout par défaut</span>
+</span><span class='line'><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">Html</span><span class="o">-&gt;</span><span class="na">script</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
+</span><span class='line'>   <span class="s1">&#39;jquery-1.10.2.min&#39;</span><span class="p">,</span>
+</span><span class='line'>   <span class="s1">&#39;modernizr&#39;</span><span class="p">,</span>
+</span><span class='line'>   <span class="s1">&#39;bootstrap.min&#39;</span><span class="p">,</span>
+</span><span class='line'><span class="p">));</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// ce code va insérer les fichiers JS ajoutés depuis la vue (view)</span>
+</span><span class='line'><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="c1">// fichier View/Pages/carte.ctp</span>
+</span><span class='line'><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">Html</span><span class="o">-&gt;</span><span class="na">script</span><span class="p">(</span><span class="s1">&#39;googlemaps&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span> <span class="s1">&#39;inline&#39;</span> <span class="o">=&gt;</span> <span class="k">false</span> <span class="p">)</span> <span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Le secret réside dans le paramètre &ldquo;inline&rdquo;. Sa valeur par défaut est TRUE, et permet un affichage directement. Nous, c&#8217;est justement l&#8217;inverse qu&#8217;on veut, et passer &ldquo;inline&rdquo; à FALSE va ajouter le fichier à la liste des fichiers à insérer dynamiquement.</p>
+
+<p>Voilà! Maintenant, vous pouvez ajouter les fichiers CSS et JS dont vous avez besoin directement depuis vos vues! Elle est pas belle la vie?</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Les Raisons Qui Font Que Vos Visiteurs Ne S'attardent Pas Sur Votre Site]]></title>
+    <link href="http://mikedamoiseau.github.io/les-raisons-qui-font-que-vos-visiteurs-ne-sattardent-pas-sur-votre-site/"/>
+    <updated>2014-01-04T13:11:11+07:00</updated>
+    <id>http://mikedamoiseau.github.io/les-raisons-qui-font-que-vos-visiteurs-ne-sattardent-pas-sur-votre-site</id>
+    <content type="html"><![CDATA[<p>Vu le nombre de sites internet existant, attirer le chalant sur votre site est une tâche difficile. Et comme si ce n&#8217;était pas suffisant, une autre tâche, délicate également, est de faire en sorte que votre visiteur s&#8217;attarde sur votre site, et s&#8217;y intéresse.</p>
+
+<p>Mais quelles sont les raisons qui font que vos visiteurs ne s&#8217;attardent pas sur vos pages?</p>
+
+<!--more-->
+
+
+<ul>
+<li><h4>La vitesse d&#8217;affichage des pages</h4>
+
+<p>Une page qui met trois plombes à s&#8217;afficher? Pas de problème, je passe au site suivant!
+D&#8217;après certaines études, les internautes se divisent en trois grandes catégories:</p>
+
+<ol>
+<li>  <strong>Les internautes occasionnels</strong>, avec une consommation internet de moins de 5 heures par semaine. Ils sont les plus patients et peuvent attendre jusqu&#8217;à 16 secondes avant de s&#8217;impatienter et quitter votre site internet</li>
+<li>  <strong>Les internautes intermédiaires</strong>, avec une consommation internet de 5 à 15 heures par semaine. Cette catégorie d&#8217;internautes est prête à attendre 8 à 10 secondes avant d&#8217;abandonner.</li>
+<li>  <strong>Les internautes professionnels</strong>, avec une consommation internet de plus de 20 heures par semaine. Bon, là c&#8217;est que 2 ou 3 secondes, donc faut que ça speede un maximum!
+Il faut également se dire que l&#8217;internaute professionnel se comporte probablement de la même façon lorsqu&#8217;il surfe pour ses loisirs&hellip; La combinaison de touches CTRL+W (COMMANDE+W sur Mac) n&#8217;est jamais très loin!</li>
+</ol>
+
+
+<p>  <strong>Optimisez vos images</strong>
+La vitesse est donc un critère essentiel et il faut absolument éviter de faire des sites internet surchargés avec des images pesant des mégas. Le mot d&#8217;ordre: optimisez vos images! Rien qu&#8217;en faisant ça, vous pouvez diminuer la durée de chargement de votre site de moitié!</p>
+
+<p>  <strong>Assemblez et minifiez les fichiers JS/CSS</strong>
+Vous pouvez (devriez) également minifier vos fichiers <em>javascript</em> et <em>css</em>, et soyons un peu fous, même les assembler dans un seul fichier <em>javascript</em> et un seul fichier <em>css</em>. Le but ici est de limiter le nombre de  <em>requêtes http</em>.</p>
+
+<p>  <strong>Utilisez un sous-domaine ou un second domaine pour vos fichiers statiques</strong>
+Utiliser un sous-domaine pour tous vos fichiers graphiques est également une bonne idée. Les navigateurs internet sont limités dans leur nombre de requêtes HTTP exécutées en parallèle (généralement 2 ou 3, pas plus). Une solution toute simple, proposée par l&#8217;équipe de performance Yahoo, est de répartir vos fichiers sur différents domaines ou sous-domaines, pour lever cette limite. Ainsi votre navigateur utilise un nombre plus élevé de requêtes en parallèle. Évitez quand-même d&#8217;utiliser un nombre trop élevé de domaines différents, sans quoi le navigateur risque de lancer trop de requêtes en parallèle, ce qui aurait un effet négatif sur la vitesse d&#8217;affichage de la page.</p>
+
+<p>  <strong>Configurer votre sous-domaine/second domaine</strong>
+Une petite dernière pour la route, en utilisant un sous-domaine/domaine spécifique pour vos fichiers statiques, vous pouvez aller encore plus loin dans l&#8217;optimisation en supprimant les cookies et en mettant des entêtes d&#8217;expiration configurées globalement sur tout le domaine!</p>
+
+<p>  <strong>Utilisez les outils à votre disposition</strong>
+Pour tester plus en détail votre site internet, utilisez <a href="https://developers.google.com/speed/pagespeed/insights" title="PageSpeed Insights">l&#8217;outil d&#8217;analyse Google PageSpeed Insights</a></p></li>
+<li><h4>La publicité</h4>
+
+<p>La publicité est un mal nécessaire pour de nombreux webmasters&hellip; Elle est souvent une source de revenu non négligeable pour le webmaster et de ce fait, peut difficilement être retirée du site.
+Il faut à tout prix éviter de faire fuir les visiteurs, ce qui signifie pas de publicités envahissantes qui masquent le contenu du site ou distraient le visiteur.
+Évitez également les bannières publicitaires trop lourdes qui mettent du temps à s&#8217;afficher. Un autre facteur à prendre en compte lorsque vous ajoutez des publicités sur votre site: le code javascript ajouté peut être conséquent et peut contribuer au ralentissement du chargement de vos pages.</p>
+
+<p>  Enfin, on peut également citer le cas des redirections. Il s&#8217;agit de pages intermédiaires affichant des publicités en grand. Lorsqu&#8217;un internaute clique sur un lien, il s&#8217;attend à visualiser la page cible, et non une page de publicité (vous savez, avec le lien généralement en tout petit &ldquo;passer la publicité&rdquo;).</p></li>
+<li><h4>Les boîtes de dialogue</h4>
+
+<p>Évitez les boîtes de dialogue envahissantes, du genre: &ldquo;inscrivez-vous à notre newsletter&rdquo; et compagnie&hellip; Lorsqu&#8217;un internaute visite votre site, il est généralement à la recherche d&#8217;information, et dans ce cas le popup risque de le faire fuir.</p></li>
+<li><h4>Les musiques et vidéos</h4>
+
+<p>Évitez comme la peste les sons et/ou vidéos qui démarrent automatiquement et qui ennuient plus qu&#8217;autre chose vos visiteurs. Ce genre d&#8217;accueil était cool dans les années 90&rsquo;s, plus maintenant !</p></li>
+<li><h4>Faut-il favoriser le fond ou la forme?</h4>
+
+<p>Votre site internet doit être visuellement attirant, c&#8217;est un fait&hellip; Si votre site est super laid, vos visiteurs n&#8217;auront pas forcément envie de s&#8217;y attarder.</p>
+
+<p>Je vais vous donner un exemple concret&hellip;Personnellement quand je visite des sites avec un look des années 90&rsquo;s, je ne m&#8217;y attarde que très rarement&hellip; Pourquoi? Car un site avec une charte graphique dépassée de 10 ou 15 ans a peu de chance de proposer du contenu mis à jour. Hors la plupart du temps, ce que l&#8217;internaute désire, c&#8217;est un contenu cohérent et mis à jour. Pas un vieil article écrit il y a 10 ans. Peut-être n&#8217;est-ce qu&#8217;une impression, mais en tout cas si je me comporte ainsi, je me doute bien que de nombreuses autres personnes doivent penser de la même façon.
+Il faut toutefois éviter de favoriser la forme sur le fond, car la quête finale du visiteur est quand-même de trouver l&#8217;information qu&#8217;il recherche.</p>
+
+<p>  Il m&#8217;arrive parfois de tomber sur des sites développés en flash (par exemple) avec des super animations et autres effets de la mort qui tue, mais dont le fonctionnement n’apparaît pas de prime abord. Et que fait-on dans ce cas? On passe au site suivant. Dommage&hellip;</p></li>
+<li><h4>La qualité du contenu</h4>
+
+<p>Cela peut paraître évident, mais un site ayant un contenu peu pertinent ou pauvre aura peu de chance d&#8217;attirer et garder ses visiteurs.
+Parmi les critères qui font qu&#8217;un contenu est ou semble pauvre, le plus important est probablement l&#8217;orthographe. Un site bourré de fautes d&#8217;orthographe ne pourra pas être considéré comme sérieux par ses visiteurs. Cela donne l&#8217;impression que l&#8217;auteur du site a bâclé son travail, et qui dit travail bâclé dit contenu pauvre dans l&#8217;esprit de l&#8217;internaute. Une solution toute simple, préparer son contenu à l&#8217;avance, utiliser un logiciel tel que Microsoft Word, Open Office ou autre et utiliser <strong>l&#8217;outil dictionnaire</strong>.</p>
+
+<p>  Les règles élémentaires de typographie sont également importantes. Pas besoin d&#8217;être un expert en la matière, mais un minimum de savoir-faire est nécessaire:</p>
+
+<ul>
+<li>  Alignement correct du texte (ne pas centrer le texte si ce n&#8217;est pas nécessaire!)</li>
+<li>  Le nombre optimal de caractères par ligne pour faciliter la lecture se situe aux alentours de 50-70. Plus de caractères et les lignes deviennent trop longues, ce qui rend le passage d&#8217;une ligne à la suivante plus compliqué pour les yeux. À l&#8217;inverse, des lignes trop courtes obligent les yeux à faire des aller-retours incessants pour passer à la ligne suivante; ce qui provoque une rupture dans le rythme de lecture.</li>
+<li>  Partitionnez votre texte en paragraphes. Un gros bloc de texte indigeste, et vos visiteurs zapperont le bloc entier.</li>
+<li>  Comme déjà dit précédemment, un contenu à jour est important. N&#8217;hésitez pas à mettre à jour le contenu de vos pages quand cela est nécessaire.</li>
+</ul>
+</li>
+<li><h4>Plates-formes mobiles</h4>
+
+<p>C&#8217;est le nouveau truc de ces dernières années. Ca a commencé avec l&#8217;iphone et depuis le phénomène n&#8217;a fait que s&#8217;accentuer: les internautes utilisent de plus en plus leurs périphériques mobiles pour surfer sur le web: smartphones et tablettes.</p>
+
+<p>Et plutôt que de développer des versions différentes de vos sites pour chaque type de périphérique, vous devriez, vous devez même&hellip;, rendre vos sites <a href="http://fr.wikipedia.org/wiki/Site_web_adaptatif" title="Site Web Adaptif">adaptifs</a> (mon dieu que cette traduction est foireuse! Il s&#8217;agit bien évidemment d&#8217;utiliser la technique <strong><a href="http://en.wikipedia.org/wiki/Responsive_web_design" title="Responsive Web Design">responsive design</a></strong>).
+Des frameworks CSS existent pour vous simplifier la tâche. Les plus connus sont probablement <a href="http://foundation.zurb.com/" title="Framework css Foundation ">Foundation</a> et <a href="http://getbootstrap.com/" title="Framework css Bootstrap">Bootstrap</a>.</p></li>
+<li><h4>Qui êtes-vous et comment vous joindre?</h4>
+
+<p>Ces deux pages sont essentielles pour tout site internet qui se respecte. Et pourtant, nombreux sont les sites internets qui ne proposent pas ces pages.
+Un formulaire de contact peut être ajouté en moins de 5 minutes sur un site Wordpress. Personnellement, je suis un grand fan de l&#8217;extension <a href="http://wordpress.org/plugins/contact-form-7/" title="Extension Contact Form 7 pour Wordpress">Contact Form 7</a> que je vous recommande chaudement!</p></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ajouter Une Méthode TRUNCATE à Tous Vos Modèles CakePHP]]></title>
+    <link href="http://mikedamoiseau.github.io/ajouter-une-methode-truncate-a-tous-vos-modeles-cakephp/"/>
+    <updated>2013-12-31T13:09:22+07:00</updated>
+    <id>http://mikedamoiseau.github.io/ajouter-une-methode-truncate-a-tous-vos-modeles-cakephp</id>
+    <content type="html"><![CDATA[<p>La classe AppModel dans CakePHP possède un nombre conséquent de méthodes intéressantes, cependant il y a une méthode qui n&#8217;a pas été implémentée et qui pourtant peut se révéler particulièrement utile dans certains cas. Il s&#8217;agit de la méthode <code>truncate()</code>.</p>
+
+<p>Pourquoi cette méthode n&#8217;est-elle pas implémentée? Sans doute car trop dépendante du système de base de données utilisé? Ou alors parce que les développeurs du framework n&#8217;y voient tout simplement aucun intérêt&hellip; Aucune idée, mais ce n&#8217;est pas vraiment ce qui nous intéresse, n&#8217;est-ce pas? Au lieu de se focaliser sur le <strong>pourquoi</strong>, concentrons-nous donc sur le <strong>comment</strong>&hellip;</p>
+
+<!--more-->
+
+
+<p>La solution que je vais vous montrer pour ajouter la méthode <code>truncate()</code> aux modèles CakePHP doit évidemment suivre le principe <strong><a href="http://fr.wikipedia.org/wiki/Ne_vous_r%C3%A9p%C3%A9tez_pas" title="définition de DRY - Do not Repeat Yourself">DRY</a></strong>, c&#8217;est-à-dire qu&#8217;on écrit la fonction qu&#8217;une seule fois et qu&#8217;elle est accessible d&#8217;à peu près partout. Et quel meilleur endroit que le fichier <em>AppModel.php</em> pour écrire une méthode accessible par tous les modèles? Hmmm? Et bien il n&#8217;y en a pas, on écrira donc notre méthode <code>truncate()</code> dans le fichier <em>Model/AppModel.php</em>.</p>
+
+<p>Un modèle CakePHP est toujours attaché à un objet <em>DboSource</em>. Cet objet possède une méthode intéressante pour récupérer le nom de la table associée au modèle: <code>fullTableName()</code>.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="c1">// Fichier Model/AppModel.php</span>
+</span><span class='line'>
+</span><span class='line'><span class="sd">/**</span>
+</span><span class='line'><span class="sd">* Vide entièrement la table associée au modèle sur lequel est appelé cette méthode</span>
+</span><span class='line'><span class="sd">*/</span>
+</span><span class='line'><span class="k">public</span> <span class="k">function</span> <span class="nf">truncate</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>   <span class="nv">$datasource</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">GetDataSource</span><span class="p">();</span>
+</span><span class='line'>   <span class="nv">$tableName</span> <span class="o">=</span> <span class="nv">$datasource</span><span class="o">-&gt;</span><span class="na">fullTableName</span><span class="p">(</span> <span class="nv">$this</span><span class="p">,</span> <span class="k">true</span><span class="p">,</span> <span class="k">true</span> <span class="p">);</span>
+</span><span class='line'>   <span class="nv">$sql</span> <span class="o">=</span> <span class="nb">sprintf</span><span class="p">(</span> <span class="s1">&#39;TRUNCATE TABLE %s&#39;</span><span class="p">,</span> <span class="nx">tableName</span> <span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>   <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span> <span class="nb">sprintf</span><span class="p">(</span> <span class="nv">$sql</span><span class="p">,</span> <span class="nv">$tableName</span> <span class="p">)</span> <span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Pour exécuter la méthode <code>truncate()</code> sur un de vos modèles, rien de plus facile!
+En admettant que vous ayez un modèle <em>Comment</em> associé à une table <em>comments</em>, vous exécuterez la méthode de la façon suivante:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">Comment</span><span class="o">-&gt;</span><span class="na">truncate</span><span class="p">();</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>La méthode proposée ici fonctionne sur MySQL, vous pouvez évidemment l&#8217;adapter à vos propres besoins.
+Une dernière remarque&hellip; Si l&#8217;un de vos modèles utilise une source de données différente, vous pouvez simplement <a href="http://fr.wikipedia.org/wiki/Programmation_orient%C3%A9e_objet#La_red.C3.A9finition" title="POO - la redéfinition d">redéfinir la méthode</a> <code>truncate()</code>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[La Méthode Agile en Image]]></title>
+    <link href="http://mikedamoiseau.github.io/la-methode-agile-en-image/"/>
+    <updated>2013-12-15T13:04:20+07:00</updated>
+    <id>http://mikedamoiseau.github.io/la-methode-agile-en-image</id>
+    <content type="html"><![CDATA[<p><a href="http://mikedamoiseau.github.io/images/try-agile.png"><img src="http://mikedamoiseau.github.io/images/try-agile.png" alt="try-agile" /></a></p>
+
+<p>Pour les anglophobes, une traduction imprécise:</p>
+
+<!--more-->
+
+
+<p>Image 1:
+On va tester quelque chose qui s&#8217;appelle la programmation Agile</p>
+
+<p>Image 2:
+Cela signifie qu&#8217;on ne planifie plus et qu&#8217;on ne documente plus. On écrit directement du code et on se plaint.</p>
+
+<p>Image 3: 1. Je suis content de savoir que cela porte un nom    |    2. C&#8217;était ta formation</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Wordpress 3.8 Disponible en Téléchargement]]></title>
+    <link href="http://mikedamoiseau.github.io/wordpress-3.8-disponible-en-telechargement/"/>
+    <updated>2013-12-13T13:00:52+07:00</updated>
+    <id>http://mikedamoiseau.github.io/wordpress-3.8-disponible-en-telechargement</id>
+    <content type="html"><![CDATA[<p>Ca y est, La version 3.8 est disponible!</p>
+
+<p>Quoi de neuf dans cette version?</p>
+
+<!--more-->
+
+
+<ul>
+<li><p>L&#8217;interface du tabeau de bord a été mis à jour:</p>
+
+<ul>
+<li>plus de couleurs et d&#8217;effets de fondu qui rendent l&#8217;utilisation de l&#8217;administration plus agréable</li>
+<li>Utilisation de la police de caractère Open Sans optimisée aussi bien pour un usage sur destkop que sur mobile</li>
+<li>Interface adaptative (responsive design pour ceux qui n&#8217;ont pas peur de l&#8217;anglais)</li>
+<li>Utilisation d&#8217;images vectorielles pour les icônes</li>
+<li>Différent thèmes pour l&#8217;administration (8 couleurs différentes)</li>
+</ul>
+</li>
+<li><p>Mise à jour de la gestion des thèmes</p></li>
+<li><p>La gestion des widgets a été grandement améliorée. Différents comportement en fonction du périphérique utilisé (tablette, ordinateur avec résolution élevée, &hellip;)</p></li>
+<li><p>Le thème Twenty Fourteen inclus dans la 3.8 permet la création d&#8217;un magazine en ligne avec différentes options d&#8217;affichage pour la page d&#8217;accueil (grille, slider), ainsi que deux modèles pour modifier la présentation de vos pages.</p></li>
+</ul>
+
+
+<p>Cette mise à jour me semble très excitante pour les administrateurs de site Wordpress! Les fonctionnalités ne changent pas beaucoup, mais l&#8217;utilisation quotidienne de Wordpress n&#8217;en sera que plus agréable après la mise à jour en 3.8!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tester en Javascript Si Une Variable Est Déclarée]]></title>
+    <link href="http://mikedamoiseau.github.io/tester-en-javascript-si-une-variable-est-declaree/"/>
+    <updated>2013-12-09T12:57:55+07:00</updated>
+    <id>http://mikedamoiseau.github.io/tester-en-javascript-si-une-variable-est-declaree</id>
+    <content type="html"><![CDATA[<p>Quels sont les différents moyens de tester en javascript si une variable est définie ou non?</p>
+
+<p><strong>1. Tester la valeur d&#8217;une variable</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">a</span><span class="p">;</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span> <span class="nx">a</span> <span class="o">==</span> <span class="kc">undefined</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>   <span class="c1">// ...</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Problème: <code>undefined</code> est également une variable, ce qui signifie que sa valeur peut être modifiée! Le résultat de la condition peut donc être totalement différent du résultat attendu&hellip;
+Par exemple:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">a</span><span class="p">,</span> <span class="kc">undefined</span> <span class="o">=</span> <span class="s2">&quot;defined!&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span> <span class="nx">a</span> <span class="o">==</span> <span class="kc">undefined</span> <span class="p">)</span> <span class="p">{</span> <span class="c1">// le programme n&#39;exécutera pas le contenu du IF</span>
+</span><span class='line'>   <span class="c1">// ...</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">a</span><span class="p">;</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span> <span class="nx">a</span> <span class="o">==</span> <span class="kc">null</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>   <span class="c1">// ...</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>2. Tester l&#8217;existence d&#8217;une variable</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="k">if</span> <span class="p">(</span> <span class="nx">a</span> <span class="o">==</span> <span class="kc">null</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>   <span class="c1">// ...</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Attention</strong>: lance une exception ReferenceError: &ldquo;a&rdquo; n&#8217;est pas défini</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="k">if</span> <span class="p">(</span> <span class="k">typeof</span> <span class="nx">a</span> <span class="o">==</span> <span class="s2">&quot;undefined&quot;</span> <span class="p">)</span> <span class="p">{</span> <span class="c1">// si la variable n&#39;a pas été déclarée auparavant</span>
+</span><span class='line'>   <span class="c1">// ...</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>La méthode la plus sûre je pense&hellip;</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Un Peu D'humour Ne Fait Jamais De Mal...]]></title>
+    <link href="http://mikedamoiseau.github.io/un-peu-dhumour-ne-fait-jamais-de-mal/"/>
+    <updated>2013-11-08T12:51:37+07:00</updated>
+    <id>http://mikedamoiseau.github.io/un-peu-dhumour-ne-fait-jamais-de-mal</id>
+    <content type="html"><![CDATA[<p>Vous avez aimé What does the fox say? Vous aimerez encore plus celle-ci!</p>
+
+<!--more-->
+
+
+<p>Vous connaissez probablement déjà la chanson <a href="http://www.youtube.com/watch?v=jofNR_WkoCE" title="What does the fox say?">&ldquo;What does the fox say&rdquo;</a>? Si ce n&#8217;est pas le cas, soit vous vivez dans une grotte, soit&hellip; je ne sais pas, mais en tout cas vous devriez la connaître.</p>
+
+<p>Bref&hellip; Voici une autre chanson réalisée par nos deux compères norvégiens du duo Ylvis. Je vous préviens, ça ne vole pas haut, mais ça vaut son pesant de cacahuètes!</p>
+
+<div class="embed-video-container"><iframe src="//www.youtube.com/embed/4EqVGU_N_qw" allowfullscreen></iframe></div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Nouvelle Version d'Ubuntu 13.10 Saucy Salamander Disponible Au Téléchargement]]></title>
+    <link href="http://mikedamoiseau.github.io/nouvelle-version-dubuntu-13-dot-10-saucy-salamander-disponible-au-telechargement/"/>
+    <updated>2013-10-24T12:48:21+07:00</updated>
+    <id>http://mikedamoiseau.github.io/nouvelle-version-dubuntu-13-dot-10-saucy-salamander-disponible-au-telechargement</id>
+    <content type="html"><![CDATA[<p>La nouvelle version d&#8217;Ubuntu, la 13.10 Saucy Salamander, est disponible au téléchargement!</p>
+
+<!--more-->
+
+
+<p>Quoi de neuf dans cette mise à jour mineure? Sous le capot, pas mal de changements.
+On va éviter d&#8217;entrer dans les détails techniques, mais disons tout simplement que le moteur pour l&#8217;interface graphique (appelé XMir) a été ajouté et qu&#8217;il permet de gérer toute la panoplie de périphériques possibles et imaginables: ordinateurs de bureau, portables, tablettes et téléphones.
+Ça c&#8217;est en théorie&hellip; En pratique, l&#8217;équipe de Canonical a rencontré des soucis de dernière minute et a préféré reporter l&#8217;intégration de XMir dans Ubuntu. Il est bien possible d&#8217;installer Ubuntu sur un Nexus, mais la version d&#8217;XMir n&#8217;est pas stable et il n&#8217;est donc pas recommandé de le faire.</p>
+
+<p><a href="http://mikedamoiseau.github.io/images/ubuntu-tv-pc-smartphone-tablet.jpg"><img src="http://mikedamoiseau.github.io/images/ubuntu-tv-pc-smartphone-tablet.jpg" alt="ubuntu-tv-pc-smartphone-tablet" /></a></p>
+
+<p>Ça c&#8217;est ce que j&#8217;ai compris en lisant les sites d&#8217;information&hellip; personnellement je ne compte pas installer Ubuntu sur mon téléphone, pas de soucis pour moi donc&hellip; J&#8217;installe la mise à jour en 13.10 sur mon antique Lenovo&hellip;</p>
+
+<p>La mise à jour ne m&#8217;a strictement rien apporté de plus par rapport à la version précédente. Par contre, voici une liste non exhaustive des problèmes rencontrés depuis la mise à jour:</p>
+
+<ul>
+<li>Le dashboard est censé être plus réactif mais ce n&#8217;est pas le cas sur mon ordinateur qui date de Mathusalem (c&#8217;est peut-être le cas sur les ordinateurs plus récents?). De plus, il arrive fréquemment qu&#8217;il ne réponde plus ou ne recherche plus les applications au fur et à mesure de ma saisie!</li>
+<li>Le passage d&#8217;une langue à une autre via un raccourci clavier ne fonctionne pas bien, alors que c&#8217;était niquel sur la 13.04 (plus moyen d&#8217;utiliser les mêmes raccourcis clavier, j&#8217;ai dû en créer des différents)</li>
+<li>Le menu de l&#8217;application courante est souvent inaccessible. J&#8217;ai beau cliquer comme un dingue sur &lsquo;Edit&rsquo;, le menu refuse de s&#8217;afficher&hellip; Heureusement ça ne pose pas trop de problèmes dans des applications comme Gimp qui permet d&#8217;afficher le menu via le clic droit de la souris, et Sublime Text qui permet de tout contrôler via les raccourcis clavier (encore faut-il les connaître&hellip;)</li>
+<li>L&#8217;heure n&#8217;apparaît plus en haut à droite de l&#8217;écran</li>
+<li>J&#8217;ai fréquemment une erreur au démarrage (après m&#8217;être identifié). Une boîte de dialogue me demande si je veux envoyer un feedback aux développeurs. Je n&#8217;ai pas encore cherché à en savoir d&#8217;avantage, il faudra bien que je creuse un jour pour régler ce problème.</li>
+</ul>
+
+
+<p>&nbsp;</p>
+
+<p>Mon conseil du jour: pas besoin de se ruer sur la 13.10, la prochaine fois j&#8217;attendrai les retours des premiers utilisateurs!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Wordpress 3.7 en Préparation]]></title>
+    <link href="http://mikedamoiseau.github.io/wordpress-3.7-en-preparation/"/>
+    <updated>2013-10-20T12:44:53+07:00</updated>
+    <id>http://mikedamoiseau.github.io/wordpress-3.7-en-preparation</id>
+    <content type="html"><![CDATA[<p>Une nouvelle version de Wordpress est en préparation. Apparemment elle devrait sortir la semaine prochaine.</p>
+
+<p>Alors, qu&#8217;il y a-t-il de nouveau dans cette version? Et bien, pas grand chose&hellip; Mais c&#8217;est pas mal quand-même!</p>
+
+<p>Dorénavant, Wordpress téléchargera et appliquera automatiquement les mises à jour en tâche de fond. Il s&#8217;agira des mises à jour mineures et de sécurité, ce qui ne devrait pas poser de problème à la plupart des utilisateurs.</p>
+
+<p>Se rapprocherait-on d&#8217;un monde où tous les sites Wordpress seraient à jours? Pas sûr, mais en tout cas c&#8217;est un pas dans la bonne direction!</p>
+
+<!--more-->
+
+
+<hr />
+
+<p><em>Mise à jour 24/10/2013:</em> ça y est, <a href="http://wordpress.org/news/2013/10/basie/" title="Wordpress 3.7">Wordpress est passé en 3.7</a>!
+Au menu des nouveautés:</p>
+
+<ul>
+<li>Mises à jour de sécurité et de maintenance automatiquement installées</li>
+<li>L&#8217;outil de recommandation de mot de passe a été amélioré pour détecter les mots de passe faibles (dates, noms, références à la culture pop, &hellip;)
+Comme vous avez pu le constater, le cycle de dévelopement est maintenant plus court (Wordpress 3.6 est sorti en Août et la 3.8 est prévue pour le mois de décembre!).</li>
+</ul>
+
+
+<hr />
+
+<p><em>Mise à jour 24/10/2013 (bis):</em> Je n&#8217;ai évidemment pas résisté à la tentation et j&#8217;ai mis à jour le site en 3.7. Il semblerait qu&#8217;il y ait quelques nouveautés supplémentaires:</p>
+
+<ul>
+<li>Les résultats des recherches sont améliorés. Par défault, Wordpress triera les résultats par pertinence plutôt que par date. Ça c&#8217;est cool!</li>
+<li>L&#8217;automatisation des mises à jour peut être configurée de manière assez précisé. Les versions majeures peuvent être ajoutées, les extensions également (uniquement celles que l&#8217;on désire)</li>
+<li>Pour les développeurs, la recherche de posts par date a été grandement améliorée</li>
+<li>&ldquo;wp_get_sites() permet aux développeurs d’obtenir facilement un tableau de tous les sites de votre réseau sans devoir faire une requête directe sur la base de données &rdquo; (citation du tableau de bord après passage en 3.7. Apparemment les dévelopeurs ont travaillé sur la multi site</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Les Entrées Des Menus Wordpress Seraient-elles Limitées?]]></title>
+    <link href="http://mikedamoiseau.github.io/les-entrees-des-menus-wordpress-seraient-elles-limitees/"/>
+    <updated>2013-10-01T12:40:30+07:00</updated>
+    <id>http://mikedamoiseau.github.io/les-entrees-des-menus-wordpress-seraient-elles-limitees</id>
+    <content type="html"><![CDATA[<h5>Le client</h5>
+
+<p>Aujourd&#8217;hui je me suis retrouvé face à un problème extrêmement intéressant! Un client m&#8217;a contacté car il rencontrait un problème étrange&hellip; &ldquo;La sauvegarde des menus ne fonctionnent plus dans l&#8217;administration !&rdquo; me dit-il sur un ton qui sous-entend que j&#8217;ai encore fait quelque chose que je n&#8217;aurais pas dû (non non, promis, c&#8217;est pas moi!).</p>
+
+<h5>Constatation du problème</h5>
+
+<p>Après investigation, j&#8217;ai constaté que la sauvegarde fonctionnait pour les entrées existantes du menu, mais que Wordpress refusait obstinément de sauvegarder les nouvelles entrées. Cela ressemble étrangement à une limite de Wordpress, genre &ldquo;Wordpress a décidé que vous ne pouvez pas avoir plus de 70 entrées dans un menu&rdquo;.</p>
+
+<!--more-->
+
+
+<h5>Un peu de théorie</h5>
+
+<p>Et bien en fait, non, rien à voir&hellip; Le problème ne vient pas de Wordpress, mais plutôt de la configuration de votre PHP! Mais commençons par le début&hellip;</p>
+
+<p>Une entrée d&#8217;un menu possède un certain nombre de propriétés, parmis lesquelles son nom, son attribut html <code>title</code>, l&#8217;option <code>target</code>, la ou les classes css, et encore deux ou trois autres trucs. Au minimum, une entrée d&#8217;un menu aura 6 propriétés, sans compter les ID&rsquo;s et autres propriétés propres à l&#8217;utilisation de Wordpress! Vous l&#8217;avez maintenant compris, pour un gros menu, on arrive facilement à un nombre conséquent de propriétés.</p>
+
+<h5>La responsable</h5>
+
+<p>Lorsque vous sauvegardez un menu dans l&#8217;administration de Wordpress, toutes ces propriétés vont être placées dans des tableaux PHP (<code>array</code>) pour ensuite être envoyées au serveur via une requête POST. Hors, il se trouve que depuis <a href="http://php.net/releases/5_3_9.php" title="PHP 5.3.9">PHP 5.3.9</a>, une nouvelle option a fait son apparition. Elle s&#8217;appelle <code>max_input_vars</code> et est probablement la responsable de la disparition de vos entrées!</p>
+
+<p><code>max_input_vars</code> est une option qui permet de limiter le nombre de tableaux envoyés dans une requête POST. Cette option est souvent limitée à 1000, ce aui semble suffisant pour une utilisation courante de PHP. Dans le cas de Wordpress, si votre menu possède au minimum 60-70 entrées, cette limite sera rapidement atteinte, et PHP ignorera tout ce qui se trouve après.
+PHP émet bien un Warning si la limite est atteinte, mais la plupart des sites en production n&#8217;affichent pas les warning et les stockent dans des fichiers logs. Et un utilisateur Wordpress, quand il sait ce qu&#8217;est un fichier log (ce qui n&#8217;est pas gagné&hellip;), ne pensera pas forcément à aller analyser le contenu de ses logs!</p>
+
+<h5>La solution</h5>
+
+<p>Nous savons donc maintenant comment fonctionne la sauvegarde des menus (plein de tableaux contenant les propriétés des menus et de leurs entrées dans une requête POST). Nous savons également que PHP, depuis sa version 5.3.9, possède une option qui limite le nombre de tableaux dans une requête POST. Bien! Maintenant il ne nous reste plus qu&#8217;à régler le problème&hellip;</p>
+
+<p>Et régler le problème est extrêmement simple&hellip; ou pas:</p>
+
+<ul>
+<li><strong>Vous avez accès au fichier <code>php.ini</code></strong>
+Dans ce cas, super simple! Il vous suffit d&#8217;ajouter cette ligne dans votre fichier <code>php.ini</code> (ou de modifier la ligne existante si elle s&#8217;y trouve déjà ):</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>max_input_vars = 3000</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li><p><strong>Vous n&#8217;avez pas accès au fichier <code>php.ini</code></strong>
+Pas de panique, vous avez deux solutions:</p>
+
+<ul>
+<li>  Vous avez accès au fichier <code>.htaccess</code>
+Ajouter la ligne suivante dans votre fichier <code>.htaccess</code>:</li>
+</ul>
+</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>php_value max_input_vars 3000</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Attention: il semblerait que la modification du fichier <code>.htaccess</code> soit délicate&hellip; Je me suis retrouvé avec un site complet en erreur 500!</strong> J&#8217;ai donc préféré la méthode suivante:</p>
+
+<ul>
+<li>Créez un fichier php.ini dans le répertoire <code>wp-admin</code> et ajoutez-y la ligne suivante:</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>max_input_vars = 3000</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Ca ne marche toujours pas</li>
+</ul>
+
+
+<p>Avant l&#8217;utilisation de l&#8217;option <code>max_input_vars</code>, de nombreux hébergeurs utilisaient un module de sécurité appelé <code>Suhosin PHP Security</code>.
+Tout ce qui a été dit précédemment reste d&#8217;actualité, mais le contenu des fichiers <code>php.ini</code> et/ou <code>.htaccess</code> sont différents:</p>
+
+<ul>
+<li><strong><code>php.ini</code></strong></li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ini'><span class='line'><span class="c1"># nouvelle option à partir de php 5.3.9</span>
+</span><span class='line'><span class="na">max_input_vars</span> <span class="o">=</span> <span class="s">3000</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1"># module Suhosin PHP Security</span>
+</span><span class='line'><span class="na">suhosin.post.max_vars</span> <span class="o">=</span> <span class="s">3000</span>
+</span><span class='line'><span class="na">suhosin.request.max_vars</span> <span class="o">=</span> <span class="s">3000</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li><strong><code>.htaccess</code></strong></li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># nouvelle option à partir de php 5.3.9
+</span><span class='line'>php_value max_input_vars 3000
+</span><span class='line'>
+</span><span class='line'>    # module Suhosin PHP Security
+</span><span class='line'>php_value suhosin.post.max_vars 3000
+</span><span class='line'>php_value suhosin.request.max_vars 3000</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
 </feed>

@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Les Entrées Des Menus Wordpress Seraient-elles Limitées? - Damoiseau.ME, Le blog d&#8217;un développeur web</title>
+  <meta name="author" content="Michael Damoiseau">
+
+  
+  <meta name="description" content="Le client Aujourd'hui je me suis retrouvé face à un problème extrêmement intéressant! Un client m'a contacté car il rencontrait un problème étrange& &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://mikedamoiseau.github.io/les-entrees-des-menus-wordpress-seraient-elles-limitees">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Damoiseau.ME, Le blog d'un développeur web" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-43047575-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Damoiseau.ME, Le blog d&#8217;un développeur web</a></h1>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="mikedamoiseau.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Les Entrées Des Menus Wordpress Seraient-elles Limitées?</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-10-01T12:40:30+07:00'><span class='date'>01/10/13</span> <span class='time'>12:40 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h5>Le client</h5>
+
+<p>Aujourd&#8217;hui je me suis retrouvé face à un problème extrêmement intéressant! Un client m&#8217;a contacté car il rencontrait un problème étrange&hellip; &ldquo;La sauvegarde des menus ne fonctionnent plus dans l&#8217;administration !&rdquo; me dit-il sur un ton qui sous-entend que j&#8217;ai encore fait quelque chose que je n&#8217;aurais pas dû (non non, promis, c&#8217;est pas moi!).</p>
+
+<h5>Constatation du problème</h5>
+
+<p>Après investigation, j&#8217;ai constaté que la sauvegarde fonctionnait pour les entrées existantes du menu, mais que Wordpress refusait obstinément de sauvegarder les nouvelles entrées. Cela ressemble étrangement à une limite de Wordpress, genre &ldquo;Wordpress a décidé que vous ne pouvez pas avoir plus de 70 entrées dans un menu&rdquo;.</p>
+
+<!--more-->
+
+
+<h5>Un peu de théorie</h5>
+
+<p>Et bien en fait, non, rien à voir&hellip; Le problème ne vient pas de Wordpress, mais plutôt de la configuration de votre PHP! Mais commençons par le début&hellip;</p>
+
+<p>Une entrée d&#8217;un menu possède un certain nombre de propriétés, parmis lesquelles son nom, son attribut html <code>title</code>, l&#8217;option <code>target</code>, la ou les classes css, et encore deux ou trois autres trucs. Au minimum, une entrée d&#8217;un menu aura 6 propriétés, sans compter les ID&rsquo;s et autres propriétés propres à l&#8217;utilisation de Wordpress! Vous l&#8217;avez maintenant compris, pour un gros menu, on arrive facilement à un nombre conséquent de propriétés.</p>
+
+<h5>La responsable</h5>
+
+<p>Lorsque vous sauvegardez un menu dans l&#8217;administration de Wordpress, toutes ces propriétés vont être placées dans des tableaux PHP (<code>array</code>) pour ensuite être envoyées au serveur via une requête POST. Hors, il se trouve que depuis <a href="http://php.net/releases/5_3_9.php" title="PHP 5.3.9">PHP 5.3.9</a>, une nouvelle option a fait son apparition. Elle s&#8217;appelle <code>max_input_vars</code> et est probablement la responsable de la disparition de vos entrées!</p>
+
+<p><code>max_input_vars</code> est une option qui permet de limiter le nombre de tableaux envoyés dans une requête POST. Cette option est souvent limitée à 1000, ce aui semble suffisant pour une utilisation courante de PHP. Dans le cas de Wordpress, si votre menu possède au minimum 60-70 entrées, cette limite sera rapidement atteinte, et PHP ignorera tout ce qui se trouve après.
+PHP émet bien un Warning si la limite est atteinte, mais la plupart des sites en production n&#8217;affichent pas les warning et les stockent dans des fichiers logs. Et un utilisateur Wordpress, quand il sait ce qu&#8217;est un fichier log (ce qui n&#8217;est pas gagné&hellip;), ne pensera pas forcément à aller analyser le contenu de ses logs!</p>
+
+<h5>La solution</h5>
+
+<p>Nous savons donc maintenant comment fonctionne la sauvegarde des menus (plein de tableaux contenant les propriétés des menus et de leurs entrées dans une requête POST). Nous savons également que PHP, depuis sa version 5.3.9, possède une option qui limite le nombre de tableaux dans une requête POST. Bien! Maintenant il ne nous reste plus qu&#8217;à régler le problème&hellip;</p>
+
+<p>Et régler le problème est extrêmement simple&hellip; ou pas:</p>
+
+<ul>
+<li><strong>Vous avez accès au fichier <code>php.ini</code></strong>
+Dans ce cas, super simple! Il vous suffit d&#8217;ajouter cette ligne dans votre fichier <code>php.ini</code> (ou de modifier la ligne existante si elle s&#8217;y trouve déjà ):</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>max_input_vars = 3000</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li><p><strong>Vous n&#8217;avez pas accès au fichier <code>php.ini</code></strong>
+Pas de panique, vous avez deux solutions:</p>
+
+<ul>
+<li>  Vous avez accès au fichier <code>.htaccess</code>
+Ajouter la ligne suivante dans votre fichier <code>.htaccess</code>:</li>
+</ul>
+</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>php_value max_input_vars 3000</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Attention: il semblerait que la modification du fichier <code>.htaccess</code> soit délicate&hellip; Je me suis retrouvé avec un site complet en erreur 500!</strong> J&#8217;ai donc préféré la méthode suivante:</p>
+
+<ul>
+<li>Créez un fichier php.ini dans le répertoire <code>wp-admin</code> et ajoutez-y la ligne suivante:</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>max_input_vars = 3000</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Ca ne marche toujours pas</li>
+</ul>
+
+
+<p>Avant l&#8217;utilisation de l&#8217;option <code>max_input_vars</code>, de nombreux hébergeurs utilisaient un module de sécurité appelé <code>Suhosin PHP Security</code>.
+Tout ce qui a été dit précédemment reste d&#8217;actualité, mais le contenu des fichiers <code>php.ini</code> et/ou <code>.htaccess</code> sont différents:</p>
+
+<ul>
+<li><strong><code>php.ini</code></strong></li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ini'><span class='line'><span class="c1"># nouvelle option à partir de php 5.3.9</span>
+</span><span class='line'><span class="na">max_input_vars</span> <span class="o">=</span> <span class="s">3000</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1"># module Suhosin PHP Security</span>
+</span><span class='line'><span class="na">suhosin.post.max_vars</span> <span class="o">=</span> <span class="s">3000</span>
+</span><span class='line'><span class="na">suhosin.request.max_vars</span> <span class="o">=</span> <span class="s">3000</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li><strong><code>.htaccess</code></strong></li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># nouvelle option à partir de php 5.3.9
+</span><span class='line'>php_value max_input_vars 3000
+</span><span class='line'>
+</span><span class='line'>    # module Suhosin PHP Security
+</span><span class='line'>php_value suhosin.post.max_vars 3000
+</span><span class='line'>php_value suhosin.request.max_vars 3000</span></code></pre></td></tr></table></div></figure>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Michael Damoiseau</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2013-10-01T12:40:30+07:00'><span class='date'>01/10/13</span> <span class='time'>12:40 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/php/'>php</a>, <a class='category' href='/blog/categories/wordpress/'>wordpress</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://mikedamoiseau.github.io/les-entrees-des-menus-wordpress-seraient-elles-limitees/" data-via="" data-counturl="http://mikedamoiseau.github.io/les-entrees-des-menus-wordpress-seraient-elles-limitees/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/parametrer-le-composant-paginator-dans-lappcontroller/" title="Previous Post: Paramétrer le composant Paginator dans l'AppController">&laquo; Paramétrer le composant Paginator dans l&#8217;AppController</a>
+      
+      
+        <a class="basic-alignment right" href="/wordpress-3.7-en-preparation/" title="Next Post: Wordpress 3.7 en préparation">Wordpress 3.7 en préparation &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/wordpress-4.1-disponible-au-telechargement/">Wordpress 4.1 Disponible Au Téléchargement</a>
+      </li>
+    
+      <li class="post">
+        <a href="/tester-le-rendu-de-votre-site-internet-simultanement-sur-plusieurs-peripheriques-avec-browsersync/">Tester Le Rendu De Votre Site Internet Simultanément Sur Plusieurs Périphériques Avec BrowserSync</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wordpress-filtres-actions-partie-2/">Wordpress, Des Filtres Et Des Actions (2ème Partie)</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wordpress-4-dot-0-benny-disponible-au-telechargement/">WordPress 4.0 Benny Disponible Au Téléchargement</a>
+      </li>
+    
+      <li class="post">
+        <a href="/modifier-un-custom-post-type-existant/">Modifier Un Custom Post Type Existant</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/+MichaëlDamoiseau?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+<section>
+  <h1>Category Cloud</h1>
+    <span id="tag-cloud"><a href='/blog/categories/cakephp' style='font-size: 120.0%'>cakephp(4)</a> <a href='/blog/categories/divers' style='font-size: 110.0%'>divers(2)</a> <a href='/blog/categories/git' style='font-size: 105.0%'>git(1)</a> <a href='/blog/categories/humour' style='font-size: 120.0%'>humour(4)</a> <a href='/blog/categories/javascript' style='font-size: 115.0%'>javascript(3)</a> <a href='/blog/categories/linux' style='font-size: 105.0%'>linux(1)</a> <a href='/blog/categories/php' style='font-size: 125.0%'>php(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 105.0%'>ubuntu(1)</a> <a href='/blog/categories/wordpress' style='font-size: 160.0%'>wordpress(12)</a> </span>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Michael Damoiseau -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'damoiseaume';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://mikedamoiseau.github.io/les-entrees-des-menus-wordpress-seraient-elles-limitees/';
+        var disqus_url = 'http://mikedamoiseau.github.io/les-entrees-des-menus-wordpress-seraient-elles-limitees/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

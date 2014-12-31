@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Javascript | Damoiseau.ME, Le blog d'un développeur web]]></title>
+  <link href="http://mikedamoiseau.github.io/blog/categories/javascript/atom.xml" rel="self"/>
+  <link href="http://mikedamoiseau.github.io/"/>
+  <updated>2014-12-31T14:40:20+07:00</updated>
+  <id>http://mikedamoiseau.github.io/</id>
+  <author>
+    <name><![CDATA[Michael Damoiseau]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Recharger Le Contenu D'un Iframe via Javascript]]></title>
+    <link href="http://mikedamoiseau.github.io/recharger-le-contenu-dun-iframe-via-javascript/"/>
+    <updated>2014-03-16T13:15:36+07:00</updated>
+    <id>http://mikedamoiseau.github.io/recharger-le-contenu-dun-iframe-via-javascript</id>
+    <content type="html"><![CDATA[<p>Commençons par situer le contexte:
+Un client me demande d&#8217;afficher une carte Google (google maps) dans un iframe (c&#8217;est le moyen le plus simple d&#8217;intégrer une carte google maps dans un site web). Sur la carte, un marqueur indique l&#8217;emplacement de l&#8217;adresse de son bureau.</p>
+
+<p>Le site de mon client étant <a href="http://fr.wikipedia.org/wiki/Site_web_adaptatif" title="Site web adaptif">adaptif</a> (mon dieu que ce terme est laid! Responsive design, si vous avez une meilleure traduction, je suis preneur), mon cher et bien aimé client aimerait que le marqueur soit toujours situé en plein milieu de la carte, même après qu&#8217;il ait modifé les dimensions de son navigateur, ou après qu&#8217;il ait alterné le mode paysage/portrait de sa tablette.</p>
+
+<!--more-->
+
+
+<p>Après quelques recherches infructueuses, je me rends compte qu&#8217;il n&#8217;est pas possible d&#8217;exécuter du code javascript sur la carte, car celle-ci se trouve sur une autre page, et dans ce cas-ci, sur un autre serveur également (rappelez-vous, on affiche un iframe).</p>
+
+<p>C&#8217;est alors que j&#8217;ai une idée intéressante: pourquoi ne pas rafraîchir le contenu de l&#8217;iframe? Ce n&#8217;est probablement pas la solution la plus optimisée, mais n&#8217;ayant aucun moyen d&#8217;exécuter du code sur la carte, je n&#8217;ai pas vraiment le choix.</p>
+
+<p>Très fier de ma solution, j&#8217;écris le code permettant de rafraîchir le contenu de l&#8217;iframe et&hellip; Stupeur! Impossible de recharger le contenu de l&#8217;iframe parce que le contenu se trouve sur un autre serveur (<a href="http://en.wikipedia.org/wiki/Same-origin_policy" title="Same Origin Policy">Same origin policy</a>).</p>
+
+<p>Après quelques recherches supplémentaires, je trouve finalement une solution non élégante mais qui fait le boulot:</p>
+
+<pre><code class="javascript">// hackishly force iframe to reload
+var iframe = document.getElementById(FrameId);
+iframe.src = iframe.src;
+</code></pre>
+
+<p>Il semblerait que ce code ne fonctionne pas pour tout le monde (qui a dit Internet Explorer?).
+Ce code-ci devrait fonctionner sur tous les navigateurs:</p>
+
+<pre><code class="javascript">var iframe = document.getElementById(FrameId);
+iframe.contentDocument.location=iframe.src;
+</code></pre>
+
+<p>J&#8217;ai trouvé cette information <a href="http://stackoverflow.com/questions/4249809/reload-an-iframe-with-jquery/4249889" title="Stack Overflow">ici</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tester en Javascript Si Une Variable Est Déclarée]]></title>
+    <link href="http://mikedamoiseau.github.io/tester-en-javascript-si-une-variable-est-declaree/"/>
+    <updated>2013-12-09T12:57:55+07:00</updated>
+    <id>http://mikedamoiseau.github.io/tester-en-javascript-si-une-variable-est-declaree</id>
+    <content type="html"><![CDATA[<p>Quels sont les différents moyens de tester en javascript si une variable est définie ou non?</p>
+
+<p><strong>1. Tester la valeur d&#8217;une variable</strong>
+<code>javascript
+var a;
+if ( a == undefined ) {
+   // ...
+}
+</code></p>
+
+<p>Problème: <code>undefined</code> est également une variable, ce qui signifie que sa valeur peut être modifiée! Le résultat de la condition peut donc être totalement différent du résultat attendu&hellip;
+Par exemple:
+<code>javascript
+var a, undefined = "defined!";
+if ( a == undefined ) { // le programme n'exécutera pas le contenu du IF
+   // ...
+}
+</code></p>
+
+<pre><code class="javascript">var a;
+if ( a == null ) {
+   // ...
+}
+</code></pre>
+
+<p><strong>2. Tester l&#8217;existence d&#8217;une variable</strong></p>
+
+<pre><code class="javascript">if ( a == null ) {
+   // ...
+}
+</code></pre>
+
+<p><strong>Attention</strong>: lance une exception ReferenceError: &ldquo;a&rdquo; n&#8217;est pas défini</p>
+
+<pre><code class="javascript">if ( typeof a == "undefined" ) { // si la variable n'a pas été déclarée auparavant
+   // ...
+}
+</code></pre>
+
+<p>La méthode la plus sûre je pense&hellip;</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Javascript: Ma Variable Est-elle Un Tableau?]]></title>
+    <link href="http://mikedamoiseau.github.io/javascript-ma-variable-est-elle-un-tableau/"/>
+    <updated>2013-09-06T12:27:41+07:00</updated>
+    <id>http://mikedamoiseau.github.io/javascript-ma-variable-est-elle-un-tableau</id>
+    <content type="html"><![CDATA[<p>Javascript est langage de programmation parfois pas piqué des vers! Des choses censées être relativement simples peuvent vite devenir relativement compliquées!</p>
+
+<p>Un exemple&hellip; Dernièrement j&#8217;étais en train d&#8217;écrire un plugin pour jQuery, et il me fallait être certain que la variable sur laquelle j&#8217;allais travailler était bien un tableau (array). En PHP, rien de plus facile! Un petit <code>is_array()</code> et en avant, on peut se concentrer sur la suite du code&hellip;</p>
+
+<p>En Javascript par contre, que nenni! Il n&#8217;y a pas de fonction <code>is_array()</code></p>
+
+<!--more-->
+
+
+<p>Après quelques recherches sur google, j&#8217;ai finalement trouvé plusieurs méthodes:</p>
+
+<ul>
+<li><p>La première est d&#8217;utiliser la fonction <code>toString</code> de <code>Object.prototype</code>. Il semblerait que ce soit la solution donnée par le standard ECMAScript:
+<code>javascript
+if( Object.prototype.toString.call( maVariable ) === '[object Array]' ) {
+  // On a un tableau
+}
+</code></p></li>
+<li><p>la deuxième solution, et celle-là, &ldquo;je la kiffe à mort&rdquo;, &ldquo;c&#8217;est de la bombe bébé&rdquo;, bref je l&#8217;aime vraiment bien, c&#8217;est d&#8217;en quelque sorte  forcer le typage:
+<code>javascript
+maVariable = [].concat( maVariable );
+</code></p></li>
+</ul>
+
+
+<p><code>[]</code> est la représentation d&#8217;un tableau en Javascript. Ici on crée un tableau vide (aucun élément n&#8217;est spécifié entre les &ldquo;[]&rdquo;) auquel on ajoute notre variable. Si notre variable n&#8217;est pas un tableau, ce bout de code va simplement ajouter un élement au tableau vide (on se retrouvera donc avec un tableau contenant un élément). Si notre variable est déjà de type &ldquo;Array&rdquo;, tous les élements de notre variable seront ajoutés à la suite du tableau vide.</p>
+
+<p>Sympa comme méthode, non? :)</p>
+
+<ul>
+<li>Une troisième solution, qui ne fonctionne que partiellement, est d&#8217;utiliser l&#8217;attribut <code>isArray</code>.  Malheureusement cette méthode ne fonctionne pas avec tous les navigateurs. On peut donc utiliser une solution intermédiaire du style:
+<code>javascript
+Utils = {};
+Utils.isArray = ('isArray' in Array) ?
+  Array.isArray :
+  function (value) {
+      return Object.prototype.toString.call(value) === '[object Array]';
+  }
+</code></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

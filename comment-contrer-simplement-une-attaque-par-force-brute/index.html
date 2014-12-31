@@ -1,0 +1,354 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Comment Contrer Simplement Une Attaque Par Force Brute? - Damoiseau.ME, Le blog d&#8217;un développeur web</title>
+  <meta name="author" content="Michael Damoiseau">
+
+  
+  <meta name="description" content="Dernièrement, des milliers de sites internet tournant sous Wordpress ont été la proie de bots qui tentaient de se connecter en tant qu'utilisateur &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://mikedamoiseau.github.io/comment-contrer-simplement-une-attaque-par-force-brute">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Damoiseau.ME, Le blog d'un développeur web" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-43047575-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Damoiseau.ME, Le blog d&#8217;un développeur web</a></h1>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="mikedamoiseau.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Comment Contrer Simplement Une Attaque Par Force Brute?</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-08-13T12:07:35+07:00'><span class='date'>13/08/13</span> <span class='time'>12:07 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Dernièrement, des milliers de sites internet tournant sous Wordpress ont été la proie de bots qui tentaient de se connecter en tant qu&#8217;utilisateur admin via une attaque par force brute.</p>
+
+<p>Ayant quelques sites clients tournant sous Wordpress, je me suis évidemment intéressé à la question et j&#8217;ai illico presto installé des plugins pour renforcer la sécurité des systèmes.
+Toutes ces solutions étaient plus ou moins compliquées, alors que dans mon esprit, la solution est plutôt simple (il est fort possible que mon raisonnement soit faux évidemment, je ne suis pas un expert en sécurité&hellip;).</p>
+
+<!--more-->
+
+
+<p>Par essence, un bot qui tente de forcer le passage va lancer un nombre important de requêtes jusqu&#8217;à réussir son intrusion dans le système. Le nombre de requêtes par seconde peut être impressionnant, on parle là de plusieurs centaines ou milliers de requêtes par seconde!
+Une solution simple et efficace, du moins dans mon esprit, est de légèrement ralentir l&#8217;étape d&#8217;identification. Je pense qu&#8217;une seconde d&#8217;attente ne dérangera pas l&#8217;utilisateur et qu&#8217;il ne se rendra même pas compte de ce délai. Pour le bot, par contre, cela peut devenir rapidement gênant si chaque requête effectuée prend au minimum une seconde. Multiplié par cent ou mille (voire plus), cela devient vite inintéressant pour lui.</p>
+
+<p>J&#8217;ai donc écrit un petit plugin qui permet d&#8217;ajouter un délai d&#8217;une seconde à toute tentative de login. Je vous propose ici le code du plugin, en espérant qu&#8217;il puisse être utile à certains. Et qui sait, peut-être que par la suite je le complèterai pour lui ajouter des options supplémentaires (je pense par exemple à ajouter une option pour la durée du délai, ça serait bien ça non?).
+Voici donc, sans plus attendre, le code du plugin, que j&#8217;ai nommé de manière très originale: <strong>Wordpress Login Delay</strong>:</p>
+
+<figure class='code'><figcaption><span>Wordpress Login Delay</span><a href='http://wordpress.org/plugins/wp-login-delay/'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="o">&lt;?</span><span class="nx">php</span>
+</span><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm">Plugin Name: Wordpress Login Delay</span>
+</span><span class='line'><span class="cm">Plugin URI: http://damoiseau.me</span>
+</span><span class='line'><span class="cm">Description: Adds a one second delay to the login to avoid brute-force attack</span>
+</span><span class='line'><span class="cm">Version: 1.0</span>
+</span><span class='line'><span class="cm">Author: Mike</span>
+</span><span class='line'><span class="cm">Author URI: http://damoiseau.me</span>
+</span><span class='line'><span class="cm">License: GPL2</span>
+</span><span class='line'><span class="cm">*/</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// @see http://codex.wordpress.org/Function_Reference/add_filter</span>
+</span><span class='line'><span class="c1">// @see https://codex.wordpress.org/Plugin_API/Filter_Reference/wp_authenticate_user</span>
+</span><span class='line'><span class="nx">add_filter</span><span class="p">(</span><span class="s1">&#39;wp_authenticate_user&#39;</span><span class="p">,</span> <span class="s1">&#39;wld_auth_login&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+</span><span class='line'><span class="k">function</span> <span class="nf">wld_auth_login</span> <span class="p">(</span><span class="nv">$user</span><span class="p">,</span> <span class="nv">$password</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nb">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nv">$user</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="cp">?&gt;</span><span class="x"></span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Quelques explications pour ceux qui ne sont pas des habitués de l&#8217;API Wordpress:</p>
+
+<ul>
+<li><strong>Les commentaires en début de fichier</strong>
+Ceux-ci sont nécessaires à Wordpress et servent à donner des informations supplémentaires concernant votre plugin.</li>
+<li><p><strong>add_filter</strong>
+<code>add_filter</code> permet d&#8217;attacher une fonction à un filtre Wordpress (&ldquo;hook a function to a specific filter action&rdquo;, traduction personnelle).</p>
+
+<p>  <code>add_filter</code> peut être appelé avec 4 paramètres:</p></li>
+<li>$tag: le nom du filtre aue l&#8217;on veut intercepter</li>
+<li>$function_to_add: nom de la fonction qui va être appelée par Wordpress</li>
+<li>$priority (optionnel): permet de spécifier la priorité et l&#8217;ordre d&#8217;appel des fonctions attachées au même filtre. Un nombre <strong>inférieur</strong> indique une priorité <strong>supérieure</strong>. Par exemple si <code>function1</code> possède la priorité <code>1</code> et <code>function2</code> la priorité <code>2</code>, <code>function1</code> sera appelé avant <code>function2</code>.</li>
+<li><p>$accepted_args: Le nombre de paramètres que la fonction va recevoir</p>
+
+<p>  Le filtre <code>wp_authenticate_user</code> est appelé lors de la phase d&#8217;identification, avant même que ne soit effectuée la vérification du nom d&#8217;utilisateur et du mot de passe, c&#8217;est donc l&#8217;endroit idéal pour ajouter notre petit délai.</p>
+
+<p>  Pour plus de détails sur <code>add_filter</code>, c&#8217;est par ici: <a href="http://codex.wordpress.org/Function_Reference/add_filter" title="add_filter">add_filter</a>.</p></li>
+<li><strong>Enfin, une petite explication rapide du code:</strong></li>
+<li>J&#8217;ajoute la fonction <code>wld_auth_login</code> au filtre <code>wp_authenticate_user</code> avec une priorité de <code>1</code> (le nombre minimum, c&#8217;est-à-dire la priorité la plus élevée) et cette fonction reçoit deux paramètres.</li>
+<li>La fonction <code>wld_auth_login</code> exécute une pause d&#8217;une seconde: <code>sleep(1)</code>.</li>
+<li><strong>C&#8217;est tout :)</strong>
+Comme vous pouvez le constater, le plugin est tout petit et le code extrêmement facile à comprendre. N&#8217;hésitez pas à l&#8217;installer sur vos sites Wordpress :)</li>
+</ul>
+
+
+<p><em>Edit 19 Août 2013</em>: Le plugin est maintenant disponible sur le site officiel de Wordpress: <a href="http://wordpress.org/plugins/wp-login-delay/" title="WP Login Delay sur Wordpress">WP Login Delay/</a>
+44 téléchargements en 2 jours, c&#8217;est bien, ça fait plaisir ^__^</p>
+
+<p><em>Edit 23 Juin 2014</em>: J&#8217;ai également ajouté le plugin sur <a href="https://github.com/mikedamoiseau/wordpress-login-delay" title="Wordpress Login Delay">Github</a>.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Michael Damoiseau</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2013-08-13T12:07:35+07:00'><span class='date'>13/08/13</span> <span class='time'>12:07 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/wordpress/'>wordpress</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://mikedamoiseau.github.io/comment-contrer-simplement-une-attaque-par-force-brute/" data-via="" data-counturl="http://mikedamoiseau.github.io/comment-contrer-simplement-une-attaque-par-force-brute/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+      
+        <a class="basic-alignment right" href="/why-do-so-many-developers-hate-wordpress-so-much/" title="Next Post: Why do so many developers hate Wordpress so much?">Why do so many developers hate Wordpress so much? &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/wordpress-4.1-disponible-au-telechargement/">Wordpress 4.1 Disponible Au Téléchargement</a>
+      </li>
+    
+      <li class="post">
+        <a href="/tester-le-rendu-de-votre-site-internet-simultanement-sur-plusieurs-peripheriques-avec-browsersync/">Tester Le Rendu De Votre Site Internet Simultanément Sur Plusieurs Périphériques Avec BrowserSync</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wordpress-filtres-actions-partie-2/">Wordpress, Des Filtres Et Des Actions (2ème Partie)</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wordpress-4-dot-0-benny-disponible-au-telechargement/">WordPress 4.0 Benny Disponible Au Téléchargement</a>
+      </li>
+    
+      <li class="post">
+        <a href="/modifier-un-custom-post-type-existant/">Modifier Un Custom Post Type Existant</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/+MichaëlDamoiseau?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+<section>
+  <h1>Category Cloud</h1>
+    <span id="tag-cloud"><a href='/blog/categories/cakephp' style='font-size: 120.0%'>cakephp(4)</a> <a href='/blog/categories/divers' style='font-size: 110.0%'>divers(2)</a> <a href='/blog/categories/git' style='font-size: 105.0%'>git(1)</a> <a href='/blog/categories/humour' style='font-size: 120.0%'>humour(4)</a> <a href='/blog/categories/javascript' style='font-size: 115.0%'>javascript(3)</a> <a href='/blog/categories/linux' style='font-size: 105.0%'>linux(1)</a> <a href='/blog/categories/php' style='font-size: 125.0%'>php(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 105.0%'>ubuntu(1)</a> <a href='/blog/categories/wordpress' style='font-size: 160.0%'>wordpress(12)</a> </span>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Michael Damoiseau -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'damoiseaume';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://mikedamoiseau.github.io/comment-contrer-simplement-une-attaque-par-force-brute/';
+        var disqus_url = 'http://mikedamoiseau.github.io/comment-contrer-simplement-une-attaque-par-force-brute/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

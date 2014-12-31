@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Wordpress | Damoiseau.ME, Le blog d'un développeur web]]></title>
+  <link href="http://mikedamoiseau.github.io/blog/categories/wordpress/atom.xml" rel="self"/>
+  <link href="http://mikedamoiseau.github.io/"/>
+  <updated>2014-12-31T14:40:20+07:00</updated>
+  <id>http://mikedamoiseau.github.io/</id>
+  <author>
+    <name><![CDATA[Michael Damoiseau]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Wordpress 4.1 Disponible Au Téléchargement]]></title>
+    <link href="http://mikedamoiseau.github.io/wordpress-4.1-disponible-au-telechargement/"/>
+    <updated>2014-12-21T14:00:02+07:00</updated>
+    <id>http://mikedamoiseau.github.io/wordpress-4.1-disponible-au-telechargement</id>
+    <content type="html"><![CDATA[<p>Quoi de neuf dans cette nouvelle mouture de Wordpress? Et bien pas mal de nouveautés en fait! Certaines d&#8217;entre elles étant très intéressantes, je vous invite vivement à lire mon article ^^</p>
+
+<!--more-->
+
+
+<p><strong>Nouveau thème &ldquo;Twenty Fifteen&rdquo;</strong>
+Orienté blog avec une mise en page claire et adaptée à différentes langues grâce à l&#8217;utilisation des polices de la famille Noto de Google.
+Le thème est adaptif et s&#8217;affiche sans problème sur tous types de périphériques.</p>
+
+<p><strong>Mode d’écriture sans distraction</strong>
+Voilà une fonctionnalité qu&#8217;elle est cool et intéressante!
+Les développeurs ont complètement repensé le mode sans distraction, et je pense que cette fois c&#8217;est une réussite: les barres latérales (le menu de gauche et les widgets à droite) ne s&#8217;affichent que lorsque l&#8217;utilisateur survole ces zones avec la souris. Autrement ces éléments sont masqués afin que l&#8217;utilisateur puisse se concentrer sur le contenu de son article.</p>
+
+<p>&nbsp;</p>
+
+<p>Message pour notifier l&#8217;utilisateur de l&#8217;existence de la fonctionnalité:</p>
+
+<p><img src="/images/wp1.jpg" title="Message pour notifier l'utilisateur de l'existence de la fonctionnalité" alt="Message pour notifier l'utilisateur de l'existence de la fonctionnalité" /></p>
+
+<p>Mode sans d&#8217;écriture sans distraction:</p>
+
+<p><img src="/images/wp2.jpg" title="Mode sans d'écriture sans distraction" alt="Mode sans d'écriture sans distraction" /></p>
+
+<p><strong>Choix des langues</strong></p>
+
+<p>Wordpress est actuellement traduit en 44 langues! Il n&#8217;est maintenant plus nécessaire de télécharger ces fameux fichiers de langues et de les installer soi-même. Tout cela est de l&#8217;histoire ancienne, car les développeurs ont (finalement) ajouté une option de langue dans l&#8217;administration, qui permet le téléchargement automatique des fichiers de langue.</p>
+
+<p><img src="/images/wp3.jpg" title="Choix des langues" alt="Choix des langues" /></p>
+
+<p><strong>Déconnexion globale</strong></p>
+
+<p>Autre fonctionnalité extrêmement intéressante, surtout si vous encodez vos articles dans des <em>cyber cafés</em> et autres ordinateurs publiques: la possibilité de vous déconnecter de manière globale. Je l&#8217;ai testé et cela fonctionne effectivement comme annoncé.</p>
+
+<p><img src="/images/wp4.jpg" title="Un bouton est ajouté dans le profile vous permettant de vous déconnecter globalement" alt="Un bouton est ajouté dans le profile vous permettant de vous déconnecter globalement" /></p>
+
+<p><img src="/images/wp5.jpg" title="Déconnexion effectuée avec succès. Plus la peine de transpirer si vous aviez oublié de vous déconnecter depuis un autre ordinateur!" alt="Déconnexion effectuée avec succès. Plus la peine de transpirer si vous aviez oublié de vous déconnecter depuis un autre ordinateur!" /></p>
+
+<p><strong>Insertion des vidéos Vine</strong></p>
+
+<p>Bon personnellement je m&#8217;en contrefiche complètement mais si ça a été ajouté, j&#8217;imagine que c&#8217;est parce qu&#8217;il y avait une demande&hellip; (je n&#8217;ai jamais très bien compris l&#8217;intérêt des vidéos Vine je dois dire&hellip;)</p>
+
+<p><strong>Extensions recommandées</strong></p>
+
+<p>Les développeurs ont ajouté un onglet supplémentaire dans la page de gestion des extensions, l&#8217;onglet <em>recommandation</em>. Très pratique pour découvrir de nouvelles extensions, les recommandations sont basées sur les extensions que vous avez déjà installées.</p>
+
+<p><img src="/images/wp6.jpg" title="WP 4.1 - Extensions recommandées" alt="WP 4.1 - Extensions recommandées" /></p>
+
+<p>Voilà pour la partie utilisateur. Qu&#8217;en est-il de la partie développeur? (vous savez, vous, moi, les développeurs d&#8217;extensions et de thèmes&hellip;)</p>
+
+<p><strong>Dashicons</strong></p>
+
+<p>20 nouveaux icônes disponibles, divisés en 3 catégories: média, article et divers:</p>
+
+<p><img src="/images/misc.jpg" title="Icônes catégorie média" alt="Icônes catégorie média" /></p>
+
+<p><img src="/images/media.jpg" title="Icônes catégorie média" alt="Icônes catégorie média" /></p>
+
+<p><img src="/images/post-screen.jpg" title="Icônes catégorie article" alt="Icônes catégorie article" /></p>
+
+<div style="clear: both;"></div>
+
+
+<p><strong>Les requêtes complexes</strong></p>
+
+<ul>
+<li>WP_Meta_Query, WP_Tax_Query, et WP_Date_Query supportent une syntaxe améliorée pour la création de requêtes. Les requêtes peuvent être beaucoup plus complexes tout en étant plus simples à comprendre.</li>
+<li>L&#8217;efficacité des reqêtes sur les métas et les taxonomies a été améliorée, grâce à la suppression de tables redondantes dans de nombreux cas.</li>
+<li>&lsquo;orderby=meta_value&rsquo; fonctionne correctement lorsqu&#8217;utilisé dans une requête meta avec une condition basée sur un &ldquo;OU&rdquo;.</li>
+<li>Les opérateurs &ldquo;EXISTS&rdquo; et &ldquo;NOT EXISTS&rdquo; ont été ajoutés pour les requêtes sur les taxonomies.</li>
+<li>Les dates ne posent plus problème lors de leur utilisation avec des requêtes méta et taxonomies.</li>
+<li>Les paramètres passés dans les requêtes sur les dates sont maintenant vérifiés et génèrent des erreurs pour les développeurs lorsqu&#8217;une date invalide est détectée.</li>
+<li>Les comptes utilisateur peuvent être filtrés par data grâce à la colonne &ldquo;user_registered&rdquo;.
+&nbsp;</li>
+</ul>
+
+
+<p><strong>Des fonctions renommées, modifiées et ou ajoutées:</strong></p>
+
+<p><code>get_the_archive_title()</code> et <code>the_archive_title()</code>
+<code>get_the_archive_description()</code> et <code>the_archive_description()</code></p>
+
+<p>Ces fonctions sont particulièrement pratiques lorsqu&#8217;un thème n&#8217;utilise pas de template particulier pour une taxonomie ou des archives. Les fonctions de description seront utilisées uniquement pour afficher les descriptions des mots-clés, car les autres types d&#8217;archives n&#8217;ont pas de champ description associé.</p>
+
+<p><code>get_the_post_navigation()</code> et <code>the_post_navigation()</code> pour naviguer entre les articles (précédent et suivant)
+<code>get_the_posts_navigation()</code> et <code>the_posts_navigation()</code> pour naviguer entre les pages d&#8217;articles
+La version HTML4 de ces fonctions n&#8217;existe plus!</p>
+
+<p><strong>Ajout du support des titres dans un thème</strong></p>
+
+<pre><code class="php">function theme_slug_setup() {
+   add_theme_support( 'title-tag' );
+}
+add_action( 'after_setup_theme', 'theme_slug_setup' );
+</code></pre>
+
+<p>Le support doit être spécifié dans les actions after_setup_theme ou init, mais pas plus tard. L&#8217;action n&#8217;accepte aucun argument.
+En indiquant que votre thème supporte le titrage de Wordpress, vous indiquez à Wordpress que votre thème n&#8217;ajoutera pas de titre de lui-même et que Wordpress peut l&#8217;ajouter sans risque de dupliquer la balise ou le contenu.</p>
+
+<p>Pour ajouter cette fonctionnalité sans casser la compatibilité dans un thème existant, vous utiliserez ce petit bout de code:</p>
+
+<pre><code class="php">if ( ! function_exists( '_wp_render_title_tag' ) ) :
+   function theme_slug_render_title() {
+      echo '&lt;title&gt;' . wp_title( '|', false, 'right' ) . "&lt;/title&gt;\n";
+   }
+   add_action( 'wp_head', 'theme_slug_render_title' );
+endif;
+</code></pre>
+
+<p><strong>La personnalisation des thèmes</strong></p>
+
+<p>Un début de nouvelle API en javascript pour la fonctionnalité de personnalisation des thème est en cours d&#8217;écriture! Tout n&#8217;est pas fini, mais ça avance pas mal. Et pour ceux que ça intéresse, je vais éviter de trop rentrer dans les détails et vous fournis plutôt le lien (anglais): <a href="https://make.wordpress.org/core/2014/10/27/toward-a-complete-javascript-api-for-the-customizer/" title="Toward a Complete JavaScript API for the Customizer">Toward a Complete JavaScript API for the Customizer</a>.</p>
+
+<p>Je pense avoir fait le tour des fonctionnalités principales de cette nouvelle version de Wordpress. J&#8217;ai volontairement ignoré les ajouts concernant les commentaires (rien d&#8217;extraordinaire), les médias (tiens il y a quand-même une chose importante à retenir: <strong>la hauteur des vidéos n&#8217;est plus hardcodée, afin que les vidéos en mode adaptif, <em>ou responsive,</em> fonctionnent correctement</strong>) et le multisite (car je ne l&#8217;ai encore jamais utilisé, shame on me!)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Wordpress, Des Filtres Et Des Actions (2ème Partie)]]></title>
+    <link href="http://mikedamoiseau.github.io/wordpress-filtres-actions-partie-2/"/>
+    <updated>2014-10-19T13:43:16+07:00</updated>
+    <id>http://mikedamoiseau.github.io/wordpress-filtres-actions-partie-2</id>
+    <content type="html"><![CDATA[<p>Cet article fait suite à un article écrit il y a quelques temps de celà (en fait, il y a longtemps déjà et vous m&#8217;en voyez désolé&hellip;): <a href="http://damoiseau.me/wordpress-filtres-actions-partie-1/" title="WordPress, des filtres et des actions (1ère partie)">Wordpress, des filtres et des actions (1ère partie)</a>.</p>
+
+<p>Rappelez-vous, dans l&#8217;article précédent j&#8217;expliquais la différence entre <a href="http://codex.wordpress.org/Function_Reference/add_filter">un filtre</a> et <a href="http://codex.wordpress.org/Function_Reference/add_action">une action</a>&hellip; Un filtre est une fonction qui va recevoir un paramètre en entrée, le transformer et renvoyer le résultat de la transformation. L&#8217;action, quant à elle, reçoit 0, 1 ou plusieurs paramètres en entrée et effectue une action; cette action ne renvoie pas de résultat, ce n&#8217;est pas nécessaire.</p>
+
+<p>Je vais vous donner un exemple concret d&#8217;utilisation de filtres et actions, repris d&#8217;un de mes projets.</p>
+
+<!--more-->
+
+
+<p>Voici le contexte: il s&#8217;agit d&#8217;une extension Wordpress transformant un site Wordpress en annuaire. Les entrées de l&#8217;annuaire peuvent être des sites internet ou des adresses physiques, et peuvent contenir un tas d&#8217;informations supplémentaires.</p>
+
+<p>L&#8217;une de mes priorités lors de la conception de ce projet était d&#8217;écrire un noyau aussi léger que possible et facile à maintenir. J&#8217;ai donc décidé d&#8217;écrire les fonctionnalités avancées de l&#8217;extension dans des modules qui peuvent être chargés et déchargés via les options de l&#8217;extension dans l&#8217;administration du site.
+Je me suis alors demandé comment rendre mon extension assez souple pour pouvoir gérer tout type de modules sans savoir encore quels genre de fonctionnalités ils allaient contenir. Et c&#8217;est là que j&#8217;ai commencé à sérieusement m&#8217;intéresser aux filtres et actions de Wordpress&hellip;</p>
+
+<p>Je vais vous donner un exemple pratique:
+Par défaut, l&#8217;annuaire ne gère que les adresses de type internet. C&#8217;est un annuaire extrêmement basique, une entrée contient un titre, une url et une description.
+Pour ajouter des adresses physiques, il faut charger le module d&#8217;adresse physique. Cela va ajouter des informations supplémentaires qui seront affichées dans le template de l&#8217;extension.</p>
+
+<p>Voici une version simplifiée du template:</p>
+
+<p>&#8220;` php</p>
+
+<h1>&lt;?php echo get_the_title(); ?></h1>
+
+<div id="details">
+    <div id="url"><?php echo $url; ?></div>
+    <?php do_action( 'plus_de_details', get_the_ID() ); ?>
+</div>
+
+
+<pre><code>
+Et maintenant une version simplifiée du module gérant les adresses physiques:
+</code></pre>
+
+<p>function action_plus_de_details( $id ) {
+    $champs = getExtraInfo(); // fonction renvoyant les informations supplémentaires gérées par le module (rue, numéro, code postal, &hellip;)
+    ob_start();
+    ?>
+    <strong>Rue</strong>: &lt;?php echo $champs[&lsquo;rue&rsquo;]; ?>       <strong>N°</strong>: &lt;?php echo $champs[&lsquo;numero&rsquo;]; ?></p>
+
+<pre><code>**Ville**: &lt;?php echo $champs['ville']; ?&gt;   **Code Postal**: &lt;?php echo $champs['cp']; ?&gt;
+
+&lt;?php
+echo ob_get_clean();
+</code></pre>
+
+<p>}
+add_action( &lsquo;plus_de_details&rsquo;, &lsquo;action_plus_de_details&rsquo; );</p>
+
+<pre><code>
+Vous remarquerez que le template affiche seulement les informations de base d'une entrée de l'annuaire (en l'occurrence, l'url). Par contre, le template offre la possibilité d'effectuer des actions supplémentaires juste après ce champ "Url", ce qui permet au module Adresse d'ajouter ses propres champs.
+
+Maintenant que nous avons vu un exemple d'action, ce serait pas mal de faire de même pour les filtres, n'est-ce pas?
+Continuons avec notre projet d'annuaire en ligne. Nous sommes en 2014 (c'est la date d'écriture de l'article en tout cas...) et il est pratiquement inconcevable d'utiliser un annuaire en ligne qui ne soit pas "Oueb 2.0", c'est-à-dire interactif!
+Une des fonctionnalités de base de tout annuaire qui se respecte est l'évaluation faite par les internautes. Notre module ajoute donc un champ permettant à l'internaute d'évaluer l'entrée de l'annuaire lors de l'ajout d'un commentaire. Cette évaluation doit s'afficher à côté du titre de l'entrée.
+
+Voici une version simplifiée du template:
+</code></pre>
+
+<h1>&lt;?php echo apply_filters( &lsquo;filtre_sur_le_titre&rsquo;, get_the_title(), get_the_ID() ); ?></h1>
+
+<div id="details">
+    <div id="url"><?php echo $url; ?></div>
+    <?php do_action( 'plus_de_details', get_the_ID() ); ?>
+</div>
+
+
+<pre><code>
+Et maintenant une version simplifiée du module affichant les évaluations:
+</code></pre>
+
+<p>function mon_filtre_sur_le_titre( $titre, $post_id ) {
+    if( is_singular() &amp;&amp; is_main_query() &amp;&amp; in_the_loop() ) {
+        $eval = getEvaluation( $post_id );
+        return sprintf( &lsquo;%s<span class="rating">%d</span>&rsquo;, $titre, $eval );
+    }
+    return $titre;
+}
+add_filter( &lsquo;filtre_sur_le_titre&rsquo;, &lsquo;mon_filtre_sur_le_titre&rsquo; ) ;</p>
+
+<p>&#8220;`</p>
+
+<p>Vous aurez remarqué qu&#8217;il est extrêmement facile d&#8217;ajouter des fonctionnalités grâce à l&#8217;utilisation des actions et des filtres. L&#8217;exemple du filtre est plutôt explicite: on a pu ajouter un affichage des évaluations des visiteurs rien que grâce à l&#8217;utilisation d&#8217;un filtre! C&#8217;est-y pas beau ça?</p>
+
+<p><em>Si vous voulez jeter un oeil à mon extension d&#8217;évaluation, <a href="https://github.com/mikedamoiseau/my-wp-comment-rating">mon répertoire Github </a>vous accueillera à bras ouverts :)</em></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[WordPress 4.0 Benny Disponible Au Téléchargement]]></title>
+    <link href="http://mikedamoiseau.github.io/wordpress-4-dot-0-benny-disponible-au-telechargement/"/>
+    <updated>2014-09-05T13:40:49+07:00</updated>
+    <id>http://mikedamoiseau.github.io/wordpress-4-dot-0-benny-disponible-au-telechargement</id>
+    <content type="html"><![CDATA[<p>La version 4.0 de Wordpress est finalement disponible! Quoi de neuf dans cette version?</p>
+
+<!-- more -->
+
+
+<ul>
+<li>L&#8217;installateur de Wordpress 4.0 inclue un sélecteur de langue pour l&#8217;installation! (<a href="http://make.wordpress.org/core/2014/09/05/language-chooser-in-4-0/" title="Language chooser in 4.0 ">plus de détails</a>, en anglais)
+Après avoir sélectionné la langue d&#8217;installation, Wordpress va automatiquement télécharger les fichiers de la langue sélectionnée.
+La constante <code>WP_LANG</code> est maintenant dépréciée et est remplacée par l&#8217;option <code>WP_LANG</code>.</li>
+<li>Amélioration de l&#8217;interface de la bibliothèque des médias (vue en grille)</li>
+<li>L&#8217;ajout de <a href="http://codex.wordpress.org/fr:Contenus_Int%C3%A9gr%C3%A9s" title="Wordpress - Contenu intégré">contenu intégré</a> (&ldquo;<a href="http://codex.wordpress.org/Embeds" title="Wordpress - Embeds">embeds</a>&rdquo; en anglais) a encore été amélioré:
+L&#8217;éditeur visuel affiche une prévisualisation  du lien en temps réel. Par exemple, vous insérez le lien d&#8217;une vidéo Youtube, l&#8217;éditeur va automatiquement le convertir en vidéo Youtube.
+Trois sites ont été ajoutés à la (longue) liste des sites supportés par Wordpress: les vidéos du site CollegeHumor, les listes de lecture de Youtube ainsi que les conférences TED.</li>
+<li>L&#8217;éditeur se redimensionne automatiquement en fonction du contenu et les options de formattage sont affichées en permanence</li>
+<li>La section des plugins a subi un petit lifting (il était temps&hellip; finalement un design potable pour cette page).
+De plus, les développeurs peuvent associer un icône à leur plugin (<a href="http://make.wordpress.org/core/2014/08/21/introducing-plugin-icons-in-the-plugin-installer/" title="Introducing plugin icons in the plugin installer ">plus de détails</a>, en anglais)</li>
+<li>L&#8217;API de la section &ldquo;Apparence&rdquo; &gt; &ldquo;Personnaliser&rdquo; a également été mise à jour et offre plus de possibilités qu&#8217;auparavant</li>
+<li>Mise à jour des librairies: TinyMCE 4.1.3, jQuery 1.11.1 etMediaElement 2.15</li>
+<li>Le tri des requêtes (<a href="http://make.wordpress.org/core/2014/08/29/a-more-powerful-order-by-in-wordpress-4-0/" title="A more powerful ORDER BY in WordPress 4.0">plus de détails</a>, en anglais)
+En résumé, avant Wordpress 4.0 on pouvait utiliser le paramètre <code>orderby</code> pour trier les résultats récupérés à l&#8217;aide de <code>WPQuery</code>. La syntaxe avant la version 4.0 était la suivante:</li>
+</ul>
+
+
+<pre><code class="php">$q = new WP_Query( array( 'orderby' =&gt; 'title author' ) );
+</code></pre>
+
+<p>Problème: que se passe-t-il quand on veut que les résultats soient triés sur plusieurs colonnes, certaines d&#8217;entre elles en <code>ASC</code> et d&#8217;autres en <code>DESC</code>? Et bien cette syntaxe ne permettait pas grand chose&hellip; On était obligé de passer par des filtres sur les requêtes SQL.
+Avec Wordpress 4.0, on a finalement droit à un peu plus de flexibilité en tant que développeur, grâce à la syntaxe suivante:</p>
+
+<pre><code class="php">new WP_Query( array( 'orderby' =&gt; array( 'title' =&gt; 'DESC', 'menu_order' =&gt; 'ASC' ) ) );
+</code></pre>
+
+<p>Le paramètre <code>orderby</code> accepte un tableau dont les clés sont les noms des colonnes sur lesquelles effectuer le tri et les valeurs sont le sens du tri (<code>ASC</code> ou <code>DESC</code>).</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Modifier Un Custom Post Type Existant]]></title>
+    <link href="http://mikedamoiseau.github.io/modifier-un-custom-post-type-existant/"/>
+    <updated>2014-07-12T13:38:34+07:00</updated>
+    <id>http://mikedamoiseau.github.io/modifier-un-custom-post-type-existant</id>
+    <content type="html"><![CDATA[<p>Je suis tombé dernièrement sur un cas relativement intéressant&hellip; Je travaillais sur un site utilisant le plugin <a href="https://wordpress.org/plugins/wp-orbit-slider/" title="WP Orbit Slider - Wordpress plugin">WP Orbit Slider</a>.
+WP Orbit Slider est un petit plugin qui permettant d&#8217;afficher des slideshows. Il est relativement basique et fait bien son boulot&hellip;</p>
+
+<p>Sauf que&hellip;</p>
+
+<!--more-->
+
+
+<p>Je me suis rendu compte en effectuant une recherche sur le site que les slides WP Orbit apparaissaient dans la liste des résultats. Personnellement je trouve ça étrange, et je ne veux pas que des slides apparaissent dans les résultats de recherche&hellip;</p>
+
+<p>Le plugin crée un <em>custom post type</em> pour gérer ses slides, et ce sont ces custom posts qui apparaissent dans les résultats. J&#8217;ai donc jeté un oeil au code du plugin et voici comment le plugin enregistre son custom post type:</p>
+
+<pre><code class="php">$defaults = array('labels' =&gt; array('name' =&gt; $this-&gt;plural,
+    'singular_name' =&gt; $this-&gt;singular,
+    'search_items' =&gt; __('Search ', 'wp-orbit-slider').$this-&gt;plural,
+    'popular_items' =&gt; __('Popular ', 'wp-orbit-slider').$this-&gt;plural,
+    'all_items' =&gt; __('All ', 'wp-orbit-slider').$this-&gt;plural,
+    'parent_item' =&gt; __('Parent ', 'wp-orbit-slider').$this-&gt;singular,
+    'parent_item_colon' =&gt; sprintf( __('Parent %s:', 'wp-orbit-slider'), $this-&gt;singular ),
+    'edit_item' =&gt; __('Edit ', 'wp-orbit-slider').$this-&gt;singular,
+    'update_item' =&gt; __('Update ', 'wp-orbit-slider').$this-&gt;singular,
+    'add_new_item' =&gt; __('Add New ', 'wp-orbit-slider').$this-&gt;singular,
+    'new_item_name' =&gt; sprintf( __('New %s Name', 'wp-orbit-slider'), $this-&gt;singular ),
+    'separate_items_with_commas' =&gt; sprintf( __('Separate %s with commas', 'wp-orbit-slider'), $this-&gt;plural),
+    'add_or_remove_items' =&gt; __('Add or remove ', 'wp-orbit-slider').$this-&gt;plural,
+    'choose_from_most_used' =&gt; __('Choose from the most used ', 'wp-orbit-slider').$this-&gt;plural),
+    'rewrite' =&gt; array('slug' =&gt; $this-&gt;slug)
+);
+</code></pre>
+
+<p>L&#8217;auteur du plugin n&#8217;a pas cru bon d&#8217;exclure son custom post type des résultats de recherche. Pourtant, il lui suffisait d&#8217;ajouter  <code>exclude_from_search</code> au tableau de paramètres mais pour une raison que j&#8217;ignore il ne l&#8217;a pas fait.</p>
+
+<p>Bon, maintenant que j&#8217;ai trouvé la raison, il me faut encore trouver comment résoudre le problème&hellip; La solution la plus évidente, et la moins bonne, est d&#8217;ajouter dans ce tableau la clé <code>exclude_from_search</code> avec la valeur <code>true</code>:</p>
+
+<pre><code class="php">exclude_from_search =&gt; true,
+</code></pre>
+
+<p>Sauf que (<em>bis</em>)&hellip; Cette solution n&#8217;est pas élégante, car elle implique de modifier le code d&#8217;un plugin qui ne m&#8217;appartient pas! De plus, en cas de mise à jour du plugin par son auteur (on peut toujours rêver, il n&#8217;y a eu aucune mise à jour depuis plus de deux ans&hellip;), les modifications seront écrasées et les custom post types seront à nouveau inclus dans les résultats de recherche.</p>
+
+<p>Heureusement, il y a une action très intéressant nous permettant de modifier les valeurs des paramètres du custom post type, il s&#8217;agit de l&#8217;action <code>registered_post_type</code>. Cette action permet d&#8217;intercepter la création d&#8217;un custom post type et de modifier ses paramètres de création.</p>
+
+<p>Un petit exemple valant mieux qu&#8217;un long discours, voici le code:</p>
+
+<pre><code class="php">
+/**
+ * Vérifie que le custom post est celui créé par le plugin WP Orbit Slider et modifie son paramètre `exclude_from_search`
+ */
+function my_registered_post_type_handler( $post_type, $args ) {
+    if( 'vp_orbitslides' == $post_type ) {
+       $args-&gt;exclude_from_search = true;
+    }
+}
+
+// Intercepter la création des custom post types
+add_action( 'registered_post_type', 'my_registered_post_type_handler', 10, 2 );
+</code></pre>
+
+<p>La fonction de callback <code>my_registered_post_type_handler</code> reçoit deux paramètres, le nom du custom post type et ses arguments.
+Attention, les arguments sont passés via un objet et non un tableau!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Wordpress, Des Filtres Et Des Actions (1ère Partie)]]></title>
+    <link href="http://mikedamoiseau.github.io/wordpress-filtres-actions-partie-1/"/>
+    <updated>2014-06-08T13:32:43+07:00</updated>
+    <id>http://mikedamoiseau.github.io/wordpress-filtres-actions-partie-1</id>
+    <content type="html"><![CDATA[<p>Il est impossible d&#8217;écrire des plugins et/ou des thèmes pour Wordpress sans passer par l&#8217;utilisation des filtres et des actions. En fait, Wordpress utilise énormément les deux, et ne pas comprendre ce que c&#8217;est ni à quoi ça sert, et bien c&#8217;est mal&hellip; Et ce qui est encore plus mal, c&#8217;est de ne pas comprendre ce qui les différencie!
+La nuance entre un filtre et une action est ténue, et c&#8217;est une question qui revient souvent chez les développeurs débutant avec Wordpress: <strong>Quelle est la différence entre un filtre et une action?</strong></p>
+
+<!--more-->
+
+
+<p>La première partie de cet article va nous permettre de comprendre ce que sont exactement les filtres et les actions. Dans la seconde partie de l&#8217;article, nous verrons plus en détail comment les utiliser et comment déclarer ses propres filtres et actions, et nous verrons également comment cela peut nous rendre la vie plus facile lors du développement d&#8217;un plugin/thème pour Wordpress.</p>
+
+<h2>Hooks/hameçons</h2>
+
+<p><em>Un <a href="http://fr.wikipedia.org/wiki/Hook_(informatique">hook</a> &ldquo;Hook (informatique) sur Wikipedia&rdquo;) permet à l&#8217;utilisateur d&#8217;un logiciel de personnaliser le fonctionnement de ce dernier, en lui faisant réaliser des actions supplémentaires à des moments déterminés. Le concepteur du logiciel prévoit des hooks au long du fonctionnement de son programme, qui sont des points d&#8217;entrée vers des listes d&#8217;actions. Par défaut, le hook est généralement vide et seules les fonctionnalités de base de l&#8217;application sont exécutées. Cependant, l&#8217;utilisateur peut « accrocher » des morceaux de programme à ces hooks pour personnaliser le logiciel.</em></p>
+
+<p>Qu&#8217;est-ce que cela veut dire concrètement? Et bien concrètement, cela veut dire que vous pouvez ajouter des fonctionnalités et modifier des données sans avoir à modifier le code source de Wordpress. Les filtres et les actions vous permettent justement d&#8217;atteindre ces objectifs.
+<strong>Modifier le noyau de Wordpress est une ignominie sans nom et l&#8217;idée de la possibilité de la chose ne devrait même pas traverser votre esprit</strong>! Que se passe-t-il lorsque vous mettez à jour un site Wordpress dont le code du noyau a été modifié? Et bien vous perdez toutes les modifications vu que Wordpress va écraser les fichiers de l&#8217;ancienne version lors de sa mise à jour&hellip;</p>
+
+<h2>Les filtres</h2>
+
+<h3>Définition</h3>
+
+<p>Un filtre est une fonction qui reçoit un paramètre en entrée, le transforme, et renvoie le résultat de la transformation.
+De nombreuses fonctions du langage PHP peuvent être considérées comme des filtres. Par exemple, la fonction <code>strtoupper</code> reçoit une chaîne de caractères en entrée, la transforme (= convertit chacun des caractères de la chaîne en son équivalent majuscule) et renvoie le résultat.</p>
+
+<p>Documentation officielle <a href="http://codex.wordpress.org/Function_Reference/add_filter" title="Codex add_filter">add_filter</a>.</p>
+
+<h3>Syntaxe</h3>
+
+<pre><code class="php">add_filter( $nom, $fonction_callback, $priorite, $nombre_parametres );
+</code></pre>
+
+<ul>
+<li><code>$nom</code>: nom du filtre existant sur lequel la fonctionné $fonction_callback sera exécutée</li>
+<li><code>$fonction_callback</code>: Le nom de la fonction à appeler lorsque le filtre est exécuté</li>
+<li><code>$priorite</code>: utilisé pour spécifier l’ordre dans lequel les fonctions associées à un filtre particulier sont exécutées. Plus le nombre est bas, plus la priorité est grande. La valeur par défaut est <code>10</code>.</li>
+<li><code>$nombre_parametres</code>: Le nombre de paramètres que la fonction spécifiée par $fonction_callback accepte. La valeur par défaut est <code>1</code>. (Plus de détails sur la syntaxe autorisée, lire <a href="http://damoiseau.me/php-usort-dans-une-classe-avec-callback-private-static/" title="PHP – Les différentes manières d’appeler la fonction callback d’usort">cet article</a>)</li>
+<li><code>valeur de retour</code>: La fonction renvoie <code>true</code> si la fonction $fonction_callback a pu être correctement ajoutée à la liste de fonctions à appliquer sur le filtre spécifié par $nom. Aucun test n’est fait pour vérifié que la fonction $fonction_callback existe ou non pour des raisons d’optimisation. C’est votre boulot de vérifier que la fonction existe bien!</li>
+</ul>
+
+
+<h3>Exemple</h3>
+
+<p>Afficher tous les titres des articles en majuscule:</p>
+
+<pre><code class="php">add_filter( 'the_title', 'strtoupper' );
+</code></pre>
+
+<h2>Les actions</h2>
+
+<h3>Définition</h3>
+
+<p>Une action est un <em>hook</em> permettant au développeur d’ajouter des fonctionnalités supplémentaires à une étape particulière. La fonction appelée ne reçoit pas nécessairement de valeur en entrée, et, différence notable avec les filtres, ne doit pas renvoyer de valeur. Si une valeur est renvoyée, elle est ignorée par Wordpress.</p>
+
+<p>Documentation officielle <a href="http://codex.wordpress.org/Function_Reference/add_action" title="Codex add_action">add_action</a>.</p>
+
+<h3>Syntaxe</h3>
+
+<pre><code class="php">add_action( $nom, $fonction_callback, $priorite, $nombre_parametres );
+</code></pre>
+
+<ul>
+<li><code>$nom</code>: nom du filtre existant sur lequel la fonction $fonction_callback sera exécutée</li>
+<li><code>$fonction_callback</code>: Le nom de la fonction à appeler lorsque le filtre est exécuté</li>
+<li><code>$priorite</code>: utilisé pour spécifier l’ordre dans lequel les fonctions associées à un filtre particulier sont exécutées. Plus le nombre est bas, plus la priorité est grande. La valeur par défaut est <code>10</code>.</li>
+<li><code>$nombre_parametres</code>: Le nombre de paramètres que la fonction spécifiée par $fonction_callback accepte. La valeur par défaut est <code>1</code>. (Plus de détails sur la syntaxe autorisée, lire <a href="http://damoiseau.me/php-usort-dans-une-classe-avec-callback-private-static/" title="PHP – Les différentes manières d’appeler la fonction callback d’usort">cet article</a>)</li>
+<li><code>valeur de retour</code>: La fonction renvoie toujours <code>true</code>.</li>
+</ul>
+
+
+<h3>Exemple</h3>
+
+<p>Envoyer un email lors de la publication d&#8217;un post:</p>
+
+<pre><code class="php">function email_amis( $post_ID ) {
+   $amis = 'bob@example.org, susie@example.org';
+   wp_mail( $amis, "Mise à jour du blog Damoiseau.me", 'le blog Damoiseau.me a été mist à jour: http://damoiseau.me' );
+}
+add_action( 'publish_post', 'email_amis' );
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,381 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Wordpress, Des Filtres Et Des Actions (2ème Partie) - Damoiseau.ME, Le blog d&#8217;un développeur web</title>
+  <meta name="author" content="Michael Damoiseau">
+
+  
+  <meta name="description" content="Cet article fait suite à un article écrit il y a quelques temps de celà (en fait, il y a longtemps déjà et vous m'en voyez désolé&hellip;): Wordpress &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://mikedamoiseau.github.io/wordpress-filtres-actions-partie-2">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Damoiseau.ME, Le blog d'un développeur web" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-43047575-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Damoiseau.ME, Le blog d&#8217;un développeur web</a></h1>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="mikedamoiseau.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Wordpress, Des Filtres Et Des Actions (2ème Partie)</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-10-19T13:43:16+07:00'><span class='date'>19/10/14</span> <span class='time'>1:43 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Cet article fait suite à un article écrit il y a quelques temps de celà (en fait, il y a longtemps déjà et vous m&#8217;en voyez désolé&hellip;): <a href="http://damoiseau.me/wordpress-filtres-actions-partie-1/" title="WordPress, des filtres et des actions (1ère partie)">Wordpress, des filtres et des actions (1ère partie)</a>.</p>
+
+<p>Rappelez-vous, dans l&#8217;article précédent j&#8217;expliquais la différence entre <a href="http://codex.wordpress.org/Function_Reference/add_filter">un filtre</a> et <a href="http://codex.wordpress.org/Function_Reference/add_action">une action</a>&hellip; Un filtre est une fonction qui va recevoir un paramètre en entrée, le transformer et renvoyer le résultat de la transformation. L&#8217;action, quant à elle, reçoit 0, 1 ou plusieurs paramètres en entrée et effectue une action; cette action ne renvoie pas de résultat, ce n&#8217;est pas nécessaire.</p>
+
+<p>Je vais vous donner un exemple concret d&#8217;utilisation de filtres et actions, repris d&#8217;un de mes projets.</p>
+
+<!--more-->
+
+
+<p>Voici le contexte: il s&#8217;agit d&#8217;une extension Wordpress transformant un site Wordpress en annuaire. Les entrées de l&#8217;annuaire peuvent être des sites internet ou des adresses physiques, et peuvent contenir un tas d&#8217;informations supplémentaires.</p>
+
+<p>L&#8217;une de mes priorités lors de la conception de ce projet était d&#8217;écrire un noyau aussi léger que possible et facile à maintenir. J&#8217;ai donc décidé d&#8217;écrire les fonctionnalités avancées de l&#8217;extension dans des modules qui peuvent être chargés et déchargés via les options de l&#8217;extension dans l&#8217;administration du site.
+Je me suis alors demandé comment rendre mon extension assez souple pour pouvoir gérer tout type de modules sans savoir encore quels genre de fonctionnalités ils allaient contenir. Et c&#8217;est là que j&#8217;ai commencé à sérieusement m&#8217;intéresser aux filtres et actions de Wordpress&hellip;</p>
+
+<p>Je vais vous donner un exemple pratique:
+Par défaut, l&#8217;annuaire ne gère que les adresses de type internet. C&#8217;est un annuaire extrêmement basique, une entrée contient un titre, une url et une description.
+Pour ajouter des adresses physiques, il faut charger le module d&#8217;adresse physique. Cela va ajouter des informations supplémentaires qui seront affichées dans le template de l&#8217;extension.</p>
+
+<p>Voici une version simplifiée du template:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="c1"># &lt;?php echo get_the_title(); ?&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&quot;details&quot;</span><span class="o">&gt;</span>
+</span><span class='line'>    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&quot;url&quot;</span><span class="o">&gt;&lt;?</span><span class="nx">php</span> <span class="k">echo</span> <span class="nv">$url</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x">&lt;/div&gt;</span>
+</span><span class='line'><span class="x">    </span><span class="cp">&lt;?php</span> <span class="nx">do_action</span><span class="p">(</span> <span class="s1">&#39;plus_de_details&#39;</span><span class="p">,</span> <span class="nx">get_the_ID</span><span class="p">()</span> <span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
+</span><span class='line'><span class="x">&lt;/div&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Et maintenant une version simplifiée du module gérant les adresses physiques:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="k">function</span> <span class="nf">action_plus_de_details</span><span class="p">(</span> <span class="nv">$id</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nv">$champs</span> <span class="o">=</span> <span class="nx">getExtraInfo</span><span class="p">();</span> <span class="c1">// fonction renvoyant les informations supplémentaires gérées par le module (rue, numéro, code postal, ...)</span>
+</span><span class='line'>    <span class="nb">ob_start</span><span class="p">();</span>
+</span><span class='line'>    <span class="cp">?&gt;</span><span class="x"></span>
+</span><span class='line'><span class="x">    **Rue**: </span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$champs</span><span class="p">[</span><span class="s1">&#39;rue&#39;</span><span class="p">];</span> <span class="cp">?&gt;</span><span class="x">       **N°**: </span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$champs</span><span class="p">[</span><span class="s1">&#39;numero&#39;</span><span class="p">];</span> <span class="cp">?&gt;</span><span class="x"></span>
+</span><span class='line'>
+</span><span class='line'><span class="x">    **Ville**: </span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$champs</span><span class="p">[</span><span class="s1">&#39;ville&#39;</span><span class="p">];</span> <span class="cp">?&gt;</span><span class="x">   **Code Postal**: </span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$champs</span><span class="p">[</span><span class="s1">&#39;cp&#39;</span><span class="p">];</span> <span class="cp">?&gt;</span><span class="x"></span>
+</span><span class='line'>
+</span><span class='line'><span class="x">    </span><span class="cp">&lt;?php</span>
+</span><span class='line'>    <span class="k">echo</span> <span class="nb">ob_get_clean</span><span class="p">();</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nx">add_action</span><span class="p">(</span> <span class="s1">&#39;plus_de_details&#39;</span><span class="p">,</span> <span class="s1">&#39;action_plus_de_details&#39;</span> <span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Vous remarquerez que le template affiche seulement les informations de base d&#8217;une entrée de l&#8217;annuaire (en l&#8217;occurrence, l&#8217;url). Par contre, le template offre la possibilité d&#8217;effectuer des actions supplémentaires juste après ce champ &ldquo;Url&rdquo;, ce qui permet au module Adresse d&#8217;ajouter ses propres champs.</p>
+
+<p>Maintenant que nous avons vu un exemple d&#8217;action, ce serait pas mal de faire de même pour les filtres, n&#8217;est-ce pas?
+Continuons avec notre projet d&#8217;annuaire en ligne. Nous sommes en 2014 (c&#8217;est la date d&#8217;écriture de l&#8217;article en tout cas&hellip;) et il est pratiquement inconcevable d&#8217;utiliser un annuaire en ligne qui ne soit pas &ldquo;Oueb 2.0&rdquo;, c&#8217;est-à-dire interactif!
+Une des fonctionnalités de base de tout annuaire qui se respecte est l&#8217;évaluation faite par les internautes. Notre module ajoute donc un champ permettant à l&#8217;internaute d&#8217;évaluer l&#8217;entrée de l&#8217;annuaire lors de l&#8217;ajout d&#8217;un commentaire. Cette évaluation doit s&#8217;afficher à côté du titre de l&#8217;entrée.</p>
+
+<p>Voici une version simplifiée du template:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'># <span class="cp">&lt;?php echo apply_filters( &#39;filtre_sur_le_titre&#39;, get_the_title(), get_the_ID() ); ?&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;details&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;url&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;?php echo $url; ?&gt;</span><span class="nt">&lt;/div&gt;</span>
+</span><span class='line'>    <span class="cp">&lt;?php do_action( &#39;plus_de_details&#39;, get_the_ID() ); ?&gt;</span>
+</span><span class='line'><span class="nt">&lt;/div&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Et maintenant une version simplifiée du module affichant les évaluations:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="k">function</span> <span class="nf">mon_filtre_sur_le_titre</span><span class="p">(</span> <span class="nv">$titre</span><span class="p">,</span> <span class="nv">$post_id</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span><span class="p">(</span> <span class="nx">is_singular</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="nx">is_main_query</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="nx">in_the_loop</span><span class="p">()</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nv">$eval</span> <span class="o">=</span> <span class="nx">getEvaluation</span><span class="p">(</span> <span class="nv">$post_id</span> <span class="p">);</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nb">sprintf</span><span class="p">(</span> <span class="s1">&#39;%s&lt;span class=&quot;rating&quot;&gt;%d&lt;/span&gt;&#39;</span><span class="p">,</span> <span class="nv">$titre</span><span class="p">,</span> <span class="nv">$eval</span> <span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nv">$titre</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nx">add_filter</span><span class="p">(</span> <span class="s1">&#39;filtre_sur_le_titre&#39;</span><span class="p">,</span> <span class="s1">&#39;mon_filtre_sur_le_titre&#39;</span> <span class="p">)</span> <span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Vous aurez remarqué qu&#8217;il est extrêmement facile d&#8217;ajouter des fonctionnalités grâce à l&#8217;utilisation des actions et des filtres. L&#8217;exemple du filtre est plutôt explicite: on a pu ajouter un affichage des évaluations des visiteurs rien que grâce à l&#8217;utilisation d&#8217;un filtre! C&#8217;est-y pas beau ça?</p>
+
+<p><em>Si vous voulez jeter un oeil à mon extension d&#8217;évaluation, <a href="https://github.com/mikedamoiseau/my-wp-comment-rating">mon répertoire Github </a>vous accueillera à bras ouverts :)</em></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Michael Damoiseau</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2014-10-19T13:43:16+07:00'><span class='date'>19/10/14</span> <span class='time'>1:43 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/php/'>php</a>, <a class='category' href='/blog/categories/wordpress/'>wordpress</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://mikedamoiseau.github.io/wordpress-filtres-actions-partie-2/" data-via="" data-counturl="http://mikedamoiseau.github.io/wordpress-filtres-actions-partie-2/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/wordpress-4-dot-0-benny-disponible-au-telechargement/" title="Previous Post: WordPress 4.0 Benny disponible au téléchargement">&laquo; WordPress 4.0 Benny disponible au téléchargement</a>
+      
+      
+        <a class="basic-alignment right" href="/tester-le-rendu-de-votre-site-internet-simultanement-sur-plusieurs-peripheriques-avec-browsersync/" title="Next Post: Tester le rendu de votre site internet simultanément sur plusieurs périphériques avec BrowserSync">Tester le rendu de votre site internet simultanément sur plusieurs périphériques avec BrowserSync &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/wordpress-4.1-disponible-au-telechargement/">Wordpress 4.1 Disponible Au Téléchargement</a>
+      </li>
+    
+      <li class="post">
+        <a href="/tester-le-rendu-de-votre-site-internet-simultanement-sur-plusieurs-peripheriques-avec-browsersync/">Tester Le Rendu De Votre Site Internet Simultanément Sur Plusieurs Périphériques Avec BrowserSync</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wordpress-filtres-actions-partie-2/">Wordpress, Des Filtres Et Des Actions (2ème Partie)</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wordpress-4-dot-0-benny-disponible-au-telechargement/">WordPress 4.0 Benny Disponible Au Téléchargement</a>
+      </li>
+    
+      <li class="post">
+        <a href="/modifier-un-custom-post-type-existant/">Modifier Un Custom Post Type Existant</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/+MichaëlDamoiseau?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+<section>
+  <h1>Category Cloud</h1>
+    <span id="tag-cloud"><a href='/blog/categories/cakephp' style='font-size: 120.0%'>cakephp(4)</a> <a href='/blog/categories/divers' style='font-size: 110.0%'>divers(2)</a> <a href='/blog/categories/git' style='font-size: 105.0%'>git(1)</a> <a href='/blog/categories/humour' style='font-size: 120.0%'>humour(4)</a> <a href='/blog/categories/javascript' style='font-size: 115.0%'>javascript(3)</a> <a href='/blog/categories/linux' style='font-size: 105.0%'>linux(1)</a> <a href='/blog/categories/php' style='font-size: 125.0%'>php(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 105.0%'>ubuntu(1)</a> <a href='/blog/categories/wordpress' style='font-size: 160.0%'>wordpress(12)</a> </span>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Michael Damoiseau -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'damoiseaume';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://mikedamoiseau.github.io/wordpress-filtres-actions-partie-2/';
+        var disqus_url = 'http://mikedamoiseau.github.io/wordpress-filtres-actions-partie-2/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Php | Damoiseau.ME, Le blog d'un développeur web]]></title>
+  <link href="http://mikedamoiseau.github.io/blog/categories/php/atom.xml" rel="self"/>
+  <link href="http://mikedamoiseau.github.io/"/>
+  <updated>2014-12-31T14:40:20+07:00</updated>
+  <id>http://mikedamoiseau.github.io/</id>
+  <author>
+    <name><![CDATA[Michael Damoiseau]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Wordpress, Des Filtres Et Des Actions (2ème Partie)]]></title>
+    <link href="http://mikedamoiseau.github.io/wordpress-filtres-actions-partie-2/"/>
+    <updated>2014-10-19T13:43:16+07:00</updated>
+    <id>http://mikedamoiseau.github.io/wordpress-filtres-actions-partie-2</id>
+    <content type="html"><![CDATA[<p>Cet article fait suite à un article écrit il y a quelques temps de celà (en fait, il y a longtemps déjà et vous m&#8217;en voyez désolé&hellip;): <a href="http://damoiseau.me/wordpress-filtres-actions-partie-1/" title="WordPress, des filtres et des actions (1ère partie)">Wordpress, des filtres et des actions (1ère partie)</a>.</p>
+
+<p>Rappelez-vous, dans l&#8217;article précédent j&#8217;expliquais la différence entre <a href="http://codex.wordpress.org/Function_Reference/add_filter">un filtre</a> et <a href="http://codex.wordpress.org/Function_Reference/add_action">une action</a>&hellip; Un filtre est une fonction qui va recevoir un paramètre en entrée, le transformer et renvoyer le résultat de la transformation. L&#8217;action, quant à elle, reçoit 0, 1 ou plusieurs paramètres en entrée et effectue une action; cette action ne renvoie pas de résultat, ce n&#8217;est pas nécessaire.</p>
+
+<p>Je vais vous donner un exemple concret d&#8217;utilisation de filtres et actions, repris d&#8217;un de mes projets.</p>
+
+<!--more-->
+
+
+<p>Voici le contexte: il s&#8217;agit d&#8217;une extension Wordpress transformant un site Wordpress en annuaire. Les entrées de l&#8217;annuaire peuvent être des sites internet ou des adresses physiques, et peuvent contenir un tas d&#8217;informations supplémentaires.</p>
+
+<p>L&#8217;une de mes priorités lors de la conception de ce projet était d&#8217;écrire un noyau aussi léger que possible et facile à maintenir. J&#8217;ai donc décidé d&#8217;écrire les fonctionnalités avancées de l&#8217;extension dans des modules qui peuvent être chargés et déchargés via les options de l&#8217;extension dans l&#8217;administration du site.
+Je me suis alors demandé comment rendre mon extension assez souple pour pouvoir gérer tout type de modules sans savoir encore quels genre de fonctionnalités ils allaient contenir. Et c&#8217;est là que j&#8217;ai commencé à sérieusement m&#8217;intéresser aux filtres et actions de Wordpress&hellip;</p>
+
+<p>Je vais vous donner un exemple pratique:
+Par défaut, l&#8217;annuaire ne gère que les adresses de type internet. C&#8217;est un annuaire extrêmement basique, une entrée contient un titre, une url et une description.
+Pour ajouter des adresses physiques, il faut charger le module d&#8217;adresse physique. Cela va ajouter des informations supplémentaires qui seront affichées dans le template de l&#8217;extension.</p>
+
+<p>Voici une version simplifiée du template:</p>
+
+<p>&#8220;` php</p>
+
+<h1>&lt;?php echo get_the_title(); ?></h1>
+
+<div id="details">
+    <div id="url"><?php echo $url; ?></div>
+    <?php do_action( 'plus_de_details', get_the_ID() ); ?>
+</div>
+
+
+<pre><code>
+Et maintenant une version simplifiée du module gérant les adresses physiques:
+</code></pre>
+
+<p>function action_plus_de_details( $id ) {
+    $champs = getExtraInfo(); // fonction renvoyant les informations supplémentaires gérées par le module (rue, numéro, code postal, &hellip;)
+    ob_start();
+    ?>
+    <strong>Rue</strong>: &lt;?php echo $champs[&lsquo;rue&rsquo;]; ?>       <strong>N°</strong>: &lt;?php echo $champs[&lsquo;numero&rsquo;]; ?></p>
+
+<pre><code>**Ville**: &lt;?php echo $champs['ville']; ?&gt;   **Code Postal**: &lt;?php echo $champs['cp']; ?&gt;
+
+&lt;?php
+echo ob_get_clean();
+</code></pre>
+
+<p>}
+add_action( &lsquo;plus_de_details&rsquo;, &lsquo;action_plus_de_details&rsquo; );</p>
+
+<pre><code>
+Vous remarquerez que le template affiche seulement les informations de base d'une entrée de l'annuaire (en l'occurrence, l'url). Par contre, le template offre la possibilité d'effectuer des actions supplémentaires juste après ce champ "Url", ce qui permet au module Adresse d'ajouter ses propres champs.
+
+Maintenant que nous avons vu un exemple d'action, ce serait pas mal de faire de même pour les filtres, n'est-ce pas?
+Continuons avec notre projet d'annuaire en ligne. Nous sommes en 2014 (c'est la date d'écriture de l'article en tout cas...) et il est pratiquement inconcevable d'utiliser un annuaire en ligne qui ne soit pas "Oueb 2.0", c'est-à-dire interactif!
+Une des fonctionnalités de base de tout annuaire qui se respecte est l'évaluation faite par les internautes. Notre module ajoute donc un champ permettant à l'internaute d'évaluer l'entrée de l'annuaire lors de l'ajout d'un commentaire. Cette évaluation doit s'afficher à côté du titre de l'entrée.
+
+Voici une version simplifiée du template:
+</code></pre>
+
+<h1>&lt;?php echo apply_filters( &lsquo;filtre_sur_le_titre&rsquo;, get_the_title(), get_the_ID() ); ?></h1>
+
+<div id="details">
+    <div id="url"><?php echo $url; ?></div>
+    <?php do_action( 'plus_de_details', get_the_ID() ); ?>
+</div>
+
+
+<pre><code>
+Et maintenant une version simplifiée du module affichant les évaluations:
+</code></pre>
+
+<p>function mon_filtre_sur_le_titre( $titre, $post_id ) {
+    if( is_singular() &amp;&amp; is_main_query() &amp;&amp; in_the_loop() ) {
+        $eval = getEvaluation( $post_id );
+        return sprintf( &lsquo;%s<span class="rating">%d</span>&rsquo;, $titre, $eval );
+    }
+    return $titre;
+}
+add_filter( &lsquo;filtre_sur_le_titre&rsquo;, &lsquo;mon_filtre_sur_le_titre&rsquo; ) ;</p>
+
+<p>&#8220;`</p>
+
+<p>Vous aurez remarqué qu&#8217;il est extrêmement facile d&#8217;ajouter des fonctionnalités grâce à l&#8217;utilisation des actions et des filtres. L&#8217;exemple du filtre est plutôt explicite: on a pu ajouter un affichage des évaluations des visiteurs rien que grâce à l&#8217;utilisation d&#8217;un filtre! C&#8217;est-y pas beau ça?</p>
+
+<p><em>Si vous voulez jeter un oeil à mon extension d&#8217;évaluation, <a href="https://github.com/mikedamoiseau/my-wp-comment-rating">mon répertoire Github </a>vous accueillera à bras ouverts :)</em></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Modifier Un Custom Post Type Existant]]></title>
+    <link href="http://mikedamoiseau.github.io/modifier-un-custom-post-type-existant/"/>
+    <updated>2014-07-12T13:38:34+07:00</updated>
+    <id>http://mikedamoiseau.github.io/modifier-un-custom-post-type-existant</id>
+    <content type="html"><![CDATA[<p>Je suis tombé dernièrement sur un cas relativement intéressant&hellip; Je travaillais sur un site utilisant le plugin <a href="https://wordpress.org/plugins/wp-orbit-slider/" title="WP Orbit Slider - Wordpress plugin">WP Orbit Slider</a>.
+WP Orbit Slider est un petit plugin qui permettant d&#8217;afficher des slideshows. Il est relativement basique et fait bien son boulot&hellip;</p>
+
+<p>Sauf que&hellip;</p>
+
+<!--more-->
+
+
+<p>Je me suis rendu compte en effectuant une recherche sur le site que les slides WP Orbit apparaissaient dans la liste des résultats. Personnellement je trouve ça étrange, et je ne veux pas que des slides apparaissent dans les résultats de recherche&hellip;</p>
+
+<p>Le plugin crée un <em>custom post type</em> pour gérer ses slides, et ce sont ces custom posts qui apparaissent dans les résultats. J&#8217;ai donc jeté un oeil au code du plugin et voici comment le plugin enregistre son custom post type:</p>
+
+<pre><code class="php">$defaults = array('labels' =&gt; array('name' =&gt; $this-&gt;plural,
+    'singular_name' =&gt; $this-&gt;singular,
+    'search_items' =&gt; __('Search ', 'wp-orbit-slider').$this-&gt;plural,
+    'popular_items' =&gt; __('Popular ', 'wp-orbit-slider').$this-&gt;plural,
+    'all_items' =&gt; __('All ', 'wp-orbit-slider').$this-&gt;plural,
+    'parent_item' =&gt; __('Parent ', 'wp-orbit-slider').$this-&gt;singular,
+    'parent_item_colon' =&gt; sprintf( __('Parent %s:', 'wp-orbit-slider'), $this-&gt;singular ),
+    'edit_item' =&gt; __('Edit ', 'wp-orbit-slider').$this-&gt;singular,
+    'update_item' =&gt; __('Update ', 'wp-orbit-slider').$this-&gt;singular,
+    'add_new_item' =&gt; __('Add New ', 'wp-orbit-slider').$this-&gt;singular,
+    'new_item_name' =&gt; sprintf( __('New %s Name', 'wp-orbit-slider'), $this-&gt;singular ),
+    'separate_items_with_commas' =&gt; sprintf( __('Separate %s with commas', 'wp-orbit-slider'), $this-&gt;plural),
+    'add_or_remove_items' =&gt; __('Add or remove ', 'wp-orbit-slider').$this-&gt;plural,
+    'choose_from_most_used' =&gt; __('Choose from the most used ', 'wp-orbit-slider').$this-&gt;plural),
+    'rewrite' =&gt; array('slug' =&gt; $this-&gt;slug)
+);
+</code></pre>
+
+<p>L&#8217;auteur du plugin n&#8217;a pas cru bon d&#8217;exclure son custom post type des résultats de recherche. Pourtant, il lui suffisait d&#8217;ajouter  <code>exclude_from_search</code> au tableau de paramètres mais pour une raison que j&#8217;ignore il ne l&#8217;a pas fait.</p>
+
+<p>Bon, maintenant que j&#8217;ai trouvé la raison, il me faut encore trouver comment résoudre le problème&hellip; La solution la plus évidente, et la moins bonne, est d&#8217;ajouter dans ce tableau la clé <code>exclude_from_search</code> avec la valeur <code>true</code>:</p>
+
+<pre><code class="php">exclude_from_search =&gt; true,
+</code></pre>
+
+<p>Sauf que (<em>bis</em>)&hellip; Cette solution n&#8217;est pas élégante, car elle implique de modifier le code d&#8217;un plugin qui ne m&#8217;appartient pas! De plus, en cas de mise à jour du plugin par son auteur (on peut toujours rêver, il n&#8217;y a eu aucune mise à jour depuis plus de deux ans&hellip;), les modifications seront écrasées et les custom post types seront à nouveau inclus dans les résultats de recherche.</p>
+
+<p>Heureusement, il y a une action très intéressant nous permettant de modifier les valeurs des paramètres du custom post type, il s&#8217;agit de l&#8217;action <code>registered_post_type</code>. Cette action permet d&#8217;intercepter la création d&#8217;un custom post type et de modifier ses paramètres de création.</p>
+
+<p>Un petit exemple valant mieux qu&#8217;un long discours, voici le code:</p>
+
+<pre><code class="php">
+/**
+ * Vérifie que le custom post est celui créé par le plugin WP Orbit Slider et modifie son paramètre `exclude_from_search`
+ */
+function my_registered_post_type_handler( $post_type, $args ) {
+    if( 'vp_orbitslides' == $post_type ) {
+       $args-&gt;exclude_from_search = true;
+    }
+}
+
+// Intercepter la création des custom post types
+add_action( 'registered_post_type', 'my_registered_post_type_handler', 10, 2 );
+</code></pre>
+
+<p>La fonction de callback <code>my_registered_post_type_handler</code> reçoit deux paramètres, le nom du custom post type et ses arguments.
+Attention, les arguments sont passés via un objet et non un tableau!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Wordpress, Des Filtres Et Des Actions (1ère Partie)]]></title>
+    <link href="http://mikedamoiseau.github.io/wordpress-filtres-actions-partie-1/"/>
+    <updated>2014-06-08T13:32:43+07:00</updated>
+    <id>http://mikedamoiseau.github.io/wordpress-filtres-actions-partie-1</id>
+    <content type="html"><![CDATA[<p>Il est impossible d&#8217;écrire des plugins et/ou des thèmes pour Wordpress sans passer par l&#8217;utilisation des filtres et des actions. En fait, Wordpress utilise énormément les deux, et ne pas comprendre ce que c&#8217;est ni à quoi ça sert, et bien c&#8217;est mal&hellip; Et ce qui est encore plus mal, c&#8217;est de ne pas comprendre ce qui les différencie!
+La nuance entre un filtre et une action est ténue, et c&#8217;est une question qui revient souvent chez les développeurs débutant avec Wordpress: <strong>Quelle est la différence entre un filtre et une action?</strong></p>
+
+<!--more-->
+
+
+<p>La première partie de cet article va nous permettre de comprendre ce que sont exactement les filtres et les actions. Dans la seconde partie de l&#8217;article, nous verrons plus en détail comment les utiliser et comment déclarer ses propres filtres et actions, et nous verrons également comment cela peut nous rendre la vie plus facile lors du développement d&#8217;un plugin/thème pour Wordpress.</p>
+
+<h2>Hooks/hameçons</h2>
+
+<p><em>Un <a href="http://fr.wikipedia.org/wiki/Hook_(informatique">hook</a> &ldquo;Hook (informatique) sur Wikipedia&rdquo;) permet à l&#8217;utilisateur d&#8217;un logiciel de personnaliser le fonctionnement de ce dernier, en lui faisant réaliser des actions supplémentaires à des moments déterminés. Le concepteur du logiciel prévoit des hooks au long du fonctionnement de son programme, qui sont des points d&#8217;entrée vers des listes d&#8217;actions. Par défaut, le hook est généralement vide et seules les fonctionnalités de base de l&#8217;application sont exécutées. Cependant, l&#8217;utilisateur peut « accrocher » des morceaux de programme à ces hooks pour personnaliser le logiciel.</em></p>
+
+<p>Qu&#8217;est-ce que cela veut dire concrètement? Et bien concrètement, cela veut dire que vous pouvez ajouter des fonctionnalités et modifier des données sans avoir à modifier le code source de Wordpress. Les filtres et les actions vous permettent justement d&#8217;atteindre ces objectifs.
+<strong>Modifier le noyau de Wordpress est une ignominie sans nom et l&#8217;idée de la possibilité de la chose ne devrait même pas traverser votre esprit</strong>! Que se passe-t-il lorsque vous mettez à jour un site Wordpress dont le code du noyau a été modifié? Et bien vous perdez toutes les modifications vu que Wordpress va écraser les fichiers de l&#8217;ancienne version lors de sa mise à jour&hellip;</p>
+
+<h2>Les filtres</h2>
+
+<h3>Définition</h3>
+
+<p>Un filtre est une fonction qui reçoit un paramètre en entrée, le transforme, et renvoie le résultat de la transformation.
+De nombreuses fonctions du langage PHP peuvent être considérées comme des filtres. Par exemple, la fonction <code>strtoupper</code> reçoit une chaîne de caractères en entrée, la transforme (= convertit chacun des caractères de la chaîne en son équivalent majuscule) et renvoie le résultat.</p>
+
+<p>Documentation officielle <a href="http://codex.wordpress.org/Function_Reference/add_filter" title="Codex add_filter">add_filter</a>.</p>
+
+<h3>Syntaxe</h3>
+
+<pre><code class="php">add_filter( $nom, $fonction_callback, $priorite, $nombre_parametres );
+</code></pre>
+
+<ul>
+<li><code>$nom</code>: nom du filtre existant sur lequel la fonctionné $fonction_callback sera exécutée</li>
+<li><code>$fonction_callback</code>: Le nom de la fonction à appeler lorsque le filtre est exécuté</li>
+<li><code>$priorite</code>: utilisé pour spécifier l’ordre dans lequel les fonctions associées à un filtre particulier sont exécutées. Plus le nombre est bas, plus la priorité est grande. La valeur par défaut est <code>10</code>.</li>
+<li><code>$nombre_parametres</code>: Le nombre de paramètres que la fonction spécifiée par $fonction_callback accepte. La valeur par défaut est <code>1</code>. (Plus de détails sur la syntaxe autorisée, lire <a href="http://damoiseau.me/php-usort-dans-une-classe-avec-callback-private-static/" title="PHP – Les différentes manières d’appeler la fonction callback d’usort">cet article</a>)</li>
+<li><code>valeur de retour</code>: La fonction renvoie <code>true</code> si la fonction $fonction_callback a pu être correctement ajoutée à la liste de fonctions à appliquer sur le filtre spécifié par $nom. Aucun test n’est fait pour vérifié que la fonction $fonction_callback existe ou non pour des raisons d’optimisation. C’est votre boulot de vérifier que la fonction existe bien!</li>
+</ul>
+
+
+<h3>Exemple</h3>
+
+<p>Afficher tous les titres des articles en majuscule:</p>
+
+<pre><code class="php">add_filter( 'the_title', 'strtoupper' );
+</code></pre>
+
+<h2>Les actions</h2>
+
+<h3>Définition</h3>
+
+<p>Une action est un <em>hook</em> permettant au développeur d’ajouter des fonctionnalités supplémentaires à une étape particulière. La fonction appelée ne reçoit pas nécessairement de valeur en entrée, et, différence notable avec les filtres, ne doit pas renvoyer de valeur. Si une valeur est renvoyée, elle est ignorée par Wordpress.</p>
+
+<p>Documentation officielle <a href="http://codex.wordpress.org/Function_Reference/add_action" title="Codex add_action">add_action</a>.</p>
+
+<h3>Syntaxe</h3>
+
+<pre><code class="php">add_action( $nom, $fonction_callback, $priorite, $nombre_parametres );
+</code></pre>
+
+<ul>
+<li><code>$nom</code>: nom du filtre existant sur lequel la fonction $fonction_callback sera exécutée</li>
+<li><code>$fonction_callback</code>: Le nom de la fonction à appeler lorsque le filtre est exécuté</li>
+<li><code>$priorite</code>: utilisé pour spécifier l’ordre dans lequel les fonctions associées à un filtre particulier sont exécutées. Plus le nombre est bas, plus la priorité est grande. La valeur par défaut est <code>10</code>.</li>
+<li><code>$nombre_parametres</code>: Le nombre de paramètres que la fonction spécifiée par $fonction_callback accepte. La valeur par défaut est <code>1</code>. (Plus de détails sur la syntaxe autorisée, lire <a href="http://damoiseau.me/php-usort-dans-une-classe-avec-callback-private-static/" title="PHP – Les différentes manières d’appeler la fonction callback d’usort">cet article</a>)</li>
+<li><code>valeur de retour</code>: La fonction renvoie toujours <code>true</code>.</li>
+</ul>
+
+
+<h3>Exemple</h3>
+
+<p>Envoyer un email lors de la publication d&#8217;un post:</p>
+
+<pre><code class="php">function email_amis( $post_ID ) {
+   $amis = 'bob@example.org, susie@example.org';
+   wp_mail( $amis, "Mise à jour du blog Damoiseau.me", 'le blog Damoiseau.me a été mist à jour: http://damoiseau.me' );
+}
+add_action( 'publish_post', 'email_amis' );
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[PHP - Les Différentes Manières D'appeler La Fonction Callback D'usort]]></title>
+    <link href="http://mikedamoiseau.github.io/php-les-differentes-manieres-dappeler-la-fonction-callback-dusort/"/>
+    <updated>2014-05-01T13:27:18+07:00</updated>
+    <id>http://mikedamoiseau.github.io/php-les-differentes-manieres-dappeler-la-fonction-callback-dusort</id>
+    <content type="html"><![CDATA[<p>Connaissez-vous les différentes manières d&#8217;utiliser une fonction callback (ou <a href="http://fr.wikipedia.org/wiki/Fonction_de_rappel" title="Fonction de rappel - callback function">fonction de rappel</a> en bon français) en paramètre de la fonction <code>usort</code></p>
+
+<p>Tout le monde connaît la méthode la plus simple qui consiste à donner en paramètre le nom d&#8217;une fonction globale, comme montré dans l&#8217;exemple suivant:</p>
+
+<pre><code class="php">function maFonctionCallbackUsort( $a, $b ) {
+  return strcmp( $a, $b );
+}
+
+usort( $monTableau, 'maFonctionCallbackUsort' );
+</code></pre>
+
+<p>Un bon petit bout de code qui fait ce qu&#8217;on lui demande: il compare deux éléments du tableau et renvoie un résultat indiquant lequel des deux éléments est plus grand que l&#8217;autre&hellip;</p>
+
+<p>Le problème avec ce morceau de code, c&#8217;est qu&#8217;on pollue l&#8217;espace global de notre application avec une fonction qui ne sera utilisée que pour notre appel à la fonction <em>usort</em>.
+Ce serait quand-même bien de pouvoir utiliser notre fonction <em>usort</em> dans une classe par exemple, avec une fonction callback privée qui ne serait pas accessible en dehors de la-dite classe (histoire d&#8217;éviter justement cette pollution de l&#8217;espace global).</p>
+
+<!--more-->
+
+
+<p>Un rapide coup d&#8217;oeil <a href="http://www.php.net/manual/fr/language.types.callable.php" title="Documentation PHP">dans la documentation de PHP</a> nous donne toutes les informations nécessaires quant aux différentes syntaxes possibles.</p>
+
+<p>Voyons les différentes possibilités offertes par le langage PHP:</p>
+
+<ul>
+<li>L&#8217;appel d&#8217;une méthode statique d&#8217;une classe:
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="k">class</span> <span class="nc">MyClass</span> <span class="p">{</span>
+</span><span class='line'><span class="k">static</span> <span class="k">function</span> <span class="nf">myCallbackMethod</span><span class="p">(</span> <span class="nv">$a</span><span class="p">,</span> <span class="nv">$b</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nb">strcmp</span><span class="p">(</span> <span class="nv">$a</span><span class="p">,</span> <span class="nv">$b</span> <span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="p">}</span><span class="o">&lt;/</span><span class="nx">li</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="nx">ul</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nb">usort</span><span class="p">(</span> <span class="nv">$monTableau</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span> <span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">MyClass</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;,</span> <span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">myCallbackMethod</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;</span> <span class="p">)</span> <span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<ul>
+<li>L&#8217;appel d&#8217;une méthode publique d&#8217;un objet:
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="k">class</span> <span class="nc">MyClass</span> <span class="p">{</span>
+</span><span class='line'><span class="k">public</span> <span class="k">function</span> <span class="nf">myCallbackMethod</span><span class="p">(</span> <span class="nv">$a</span><span class="p">,</span> <span class="nv">$b</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nb">strcmp</span><span class="p">(</span> <span class="nv">$a</span><span class="p">,</span> <span class="nv">$b</span> <span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="p">}</span><span class="o">&lt;/</span><span class="nx">li</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="nx">ul</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nv">$obj</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MyClass</span><span class="p">();</span>
+</span><span class='line'><span class="nb">usort</span><span class="p">(</span> <span class="k">array</span><span class="p">(</span> <span class="nv">$obj</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">myCallbackMethod</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;</span> <span class="p">)</span> <span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<ul>
+<li>Cette syntaxe pour l&#8217;appel d&#8217;une méthode statique d&#8217;une classe n&#8217;est possible que depuis la version 5.2.3 de PHP:
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="k">class</span> <span class="nc">MyClass</span> <span class="p">{</span>
+</span><span class='line'><span class="k">static</span> <span class="k">function</span> <span class="nf">myCallbackMethod</span><span class="p">(</span> <span class="nv">$a</span><span class="p">,</span> <span class="nv">$b</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nb">strcmp</span><span class="p">(</span> <span class="nv">$a</span><span class="p">,</span> <span class="nv">$b</span> <span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="p">}</span><span class="o">&lt;/</span><span class="nx">li</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="nx">ul</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nb">usort</span><span class="p">(</span> <span class="nv">$monTableau</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">MyClass</span><span class="o">::</span><span class="na">myCallbackMethod</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;</span> <span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<ul>
+<li><p>Utilisation de la fonction <em>usort</em> dans une classe avec un appel à une méthode privée:
+<code>php
+class MyClass {
+private function myCallbackMethod( $a, $b ) {
+    return strcmp( $a, $b );
+}
+public function aa() {
+  usort( $monTableau, array( $this, 'myCallbackMethod' ) );
+}
+}
+</code></p></li>
+<li><p>Alors ça c&#8217;est vraiment cool:
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="k">class</span> <span class="nc">A</span> <span class="p">{</span>
+</span><span class='line'><span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">myCallbackMethod</span><span class="p">(</span> <span class="nv">$a</span><span class="p">,</span> <span class="nv">$b</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nb">strcmp</span><span class="p">(</span> <span class="nv">$a</span><span class="p">[</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">lastname</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;],</span> <span class="nv">$b</span><span class="p">[</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">lastname</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;]</span> <span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="p">}</span><span class="o">&lt;/</span><span class="nx">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="k">class</span> <span class="nc">B</span> <span class="k">extends</span> <span class="nx">A</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">myCallbackMethod</span><span class="p">(</span> <span class="nv">$a</span><span class="p">,</span> <span class="nv">$b</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">return</span> <span class="nb">strcmp</span><span class="p">(</span> <span class="nv">$a</span><span class="p">[</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">firstname</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;],</span> <span class="nv">$b</span><span class="p">[</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">firstname</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;]</span> <span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span><span class="o">&lt;/</span><span class="nx">p</span><span class="o">&gt;&lt;/</span><span class="nx">li</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="nx">ul</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;//</span> <span class="nx">Les</span> <span class="nx">éléments</span> <span class="nx">du</span> <span class="nx">tableau</span> <span class="nx">sont</span> <span class="nx">triés</span> <span class="nx">par</span> <span class="nx">le</span> <span class="nx">champ</span> <span class="o">&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="nx">lastname</span><span class="o">&lt;/</span><span class="nx">code</span><span class="o">&gt;</span>
+</span><span class='line'><span class="nb">usort</span><span class="p">(</span> <span class="nv">$monTableau</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span> <span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">B</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;,</span> <span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="k">parent</span><span class="o">::</span><span class="na">myCallbackMethod</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;</span> <span class="p">)</span> <span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Voilà! Je pense que nous avons fait le tour de la question. Un sujet somme toute relativement intéressant.</p>
+
+<p>Et juste pour la petite histoire, c&#8217;est une syntaxe que j&#8217;utilise énormément lorsque je développe un plugin pour Wordpress&hellip; Un petit exemple rapide vaut mieux qu&#8217;un long discours (pas forcément vrai dans le cas du SEO mais ça ce sera pour une prochaine fois!):</p>
+
+<pre><code class="php">class My_WP_Plugin {
+    public function __construct() {
+        add_action( 'admin_init', array( &amp;$this, 'actionAdminInit' ) );
+    }
+
+    public function actionAdminInit() {
+        wp_enqueue_script( ... );
+        // et plein d'autres choses encore !
+    }
+}
+</code></pre>
+
+<p>Pour info, c&#8217;est en lisant <a href="http://stackoverflow.com/questions/6053994/using-usort-in-php-with-a-class-private-function">cette question sur Stackoverflow</a> que je me suis intéressé au sujet.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Les Entrées Des Menus Wordpress Seraient-elles Limitées?]]></title>
+    <link href="http://mikedamoiseau.github.io/les-entrees-des-menus-wordpress-seraient-elles-limitees/"/>
+    <updated>2013-10-01T12:40:30+07:00</updated>
+    <id>http://mikedamoiseau.github.io/les-entrees-des-menus-wordpress-seraient-elles-limitees</id>
+    <content type="html"><![CDATA[<h5>Le client</h5>
+
+<p>Aujourd&#8217;hui je me suis retrouvé face à un problème extrêmement intéressant! Un client m&#8217;a contacté car il rencontrait un problème étrange&hellip; &ldquo;La sauvegarde des menus ne fonctionnent plus dans l&#8217;administration !&rdquo; me dit-il sur un ton qui sous-entend que j&#8217;ai encore fait quelque chose que je n&#8217;aurais pas dû (non non, promis, c&#8217;est pas moi!).</p>
+
+<h5>Constatation du problème</h5>
+
+<p>Après investigation, j&#8217;ai constaté que la sauvegarde fonctionnait pour les entrées existantes du menu, mais que Wordpress refusait obstinément de sauvegarder les nouvelles entrées. Cela ressemble étrangement à une limite de Wordpress, genre &ldquo;Wordpress a décidé que vous ne pouvez pas avoir plus de 70 entrées dans un menu&rdquo;.</p>
+
+<!--more-->
+
+
+<h5>Un peu de théorie</h5>
+
+<p>Et bien en fait, non, rien à voir&hellip; Le problème ne vient pas de Wordpress, mais plutôt de la configuration de votre PHP! Mais commençons par le début&hellip;</p>
+
+<p>Une entrée d&#8217;un menu possède un certain nombre de propriétés, parmis lesquelles son nom, son attribut html <code>title</code>, l&#8217;option <code>target</code>, la ou les classes css, et encore deux ou trois autres trucs. Au minimum, une entrée d&#8217;un menu aura 6 propriétés, sans compter les ID&rsquo;s et autres propriétés propres à l&#8217;utilisation de Wordpress! Vous l&#8217;avez maintenant compris, pour un gros menu, on arrive facilement à un nombre conséquent de propriétés.</p>
+
+<h5>La responsable</h5>
+
+<p>Lorsque vous sauvegardez un menu dans l&#8217;administration de Wordpress, toutes ces propriétés vont être placées dans des tableaux PHP (<code>array</code>) pour ensuite être envoyées au serveur via une requête POST. Hors, il se trouve que depuis <a href="http://php.net/releases/5_3_9.php" title="PHP 5.3.9">PHP 5.3.9</a>, une nouvelle option a fait son apparition. Elle s&#8217;appelle <code>max_input_vars</code> et est probablement la responsable de la disparition de vos entrées!</p>
+
+<p><code>max_input_vars</code> est une option qui permet de limiter le nombre de tableaux envoyés dans une requête POST. Cette option est souvent limitée à 1000, ce aui semble suffisant pour une utilisation courante de PHP. Dans le cas de Wordpress, si votre menu possède au minimum 60-70 entrées, cette limite sera rapidement atteinte, et PHP ignorera tout ce qui se trouve après.
+PHP émet bien un Warning si la limite est atteinte, mais la plupart des sites en production n&#8217;affichent pas les warning et les stockent dans des fichiers logs. Et un utilisateur Wordpress, quand il sait ce qu&#8217;est un fichier log (ce qui n&#8217;est pas gagné&hellip;), ne pensera pas forcément à aller analyser le contenu de ses logs!</p>
+
+<h5>La solution</h5>
+
+<p>Nous savons donc maintenant comment fonctionne la sauvegarde des menus (plein de tableaux contenant les propriétés des menus et de leurs entrées dans une requête POST). Nous savons également que PHP, depuis sa version 5.3.9, possède une option qui limite le nombre de tableaux dans une requête POST. Bien! Maintenant il ne nous reste plus qu&#8217;à régler le problème&hellip;</p>
+
+<p>Et régler le problème est extrêmement simple&hellip; ou pas:</p>
+
+<ul>
+<li><p><strong>Vous avez accès au fichier <code>php.ini</code></strong>
+Dans ce cas, super simple! Il vous suffit d&#8217;ajouter cette ligne dans votre fichier <code>php.ini</code> (ou de modifier la ligne existante si elle s&#8217;y trouve déjà ):
+<code>plain
+max_input_vars = 3000
+</code></p></li>
+<li><p><strong>Vous n&#8217;avez pas accès au fichier <code>php.ini</code></strong>
+Pas de panique, vous avez deux solutions:</p>
+
+<ul>
+<li>  Vous avez accès au fichier <code>.htaccess</code>
+Ajouter la ligne suivante dans votre fichier <code>.htaccess</code>:
+<code>plain
+php_value max_input_vars 3000
+</code></li>
+</ul>
+</li>
+</ul>
+
+
+<p><strong>Attention: il semblerait que la modification du fichier <code>.htaccess</code> soit délicate&hellip; Je me suis retrouvé avec un site complet en erreur 500!</strong> J&#8217;ai donc préféré la méthode suivante:</p>
+
+<ul>
+<li>Créez un fichier php.ini dans le répertoire <code>wp-admin</code> et ajoutez-y la ligne suivante:</li>
+</ul>
+
+
+<pre><code class="plain">max_input_vars = 3000
+</code></pre>
+
+<ul>
+<li>Ca ne marche toujours pas</li>
+</ul>
+
+
+<p>Avant l&#8217;utilisation de l&#8217;option <code>max_input_vars</code>, de nombreux hébergeurs utilisaient un module de sécurité appelé <code>Suhosin PHP Security</code>.
+Tout ce qui a été dit précédemment reste d&#8217;actualité, mais le contenu des fichiers <code>php.ini</code> et/ou <code>.htaccess</code> sont différents:</p>
+
+<ul>
+<li><strong><code>php.ini</code></strong></li>
+</ul>
+
+
+<pre><code class="ini"># nouvelle option à partir de php 5.3.9
+max_input_vars = 3000
+
+    # module Suhosin PHP Security
+suhosin.post.max_vars = 3000
+suhosin.request.max_vars = 3000
+</code></pre>
+
+<ul>
+<li><strong><code>.htaccess</code></strong>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>&lt;h1&gt;nouvelle option à partir de php 5.3.9&lt;/h1&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;php_value max_input_vars 3000&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;  # module Suhosin PHP Security
+</span><span class='line'>php_value suhosin.post.max_vars 3000
+</span><span class='line'>php_value suhosin.request.max_vars 3000</span></code></pre></td></tr></table></div></figure></p></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

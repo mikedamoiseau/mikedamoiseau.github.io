@@ -1,0 +1,666 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Damoiseau.ME, Le blog d&#8217;un développeur web</title>
+  <meta name="author" content="Michael Damoiseau">
+
+  
+  <meta name="description" content="Ajouter des liens vers des fichiers JS et/ou CSS dans le layout est quelque chose d'extrêmement facile dans CakePHP:
+Par exemple: 1
+2
+3
+4
+5
+6
+7
+8
+9 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://mikedamoiseau.github.io/posts/2">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Damoiseau.ME, Le blog d'un développeur web" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-43047575-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Damoiseau.ME, Le blog d&#8217;un développeur web</a></h1>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="mikedamoiseau.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/ajouter-dynamiquement-des-liens-js-et-css-dans-la-balise-head-de-votre-site/">Ajouter Dynamiquement Des Liens JS Et CSS Dans La Balise Head De Votre Site</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-02-18T13:12:59+07:00'><span class='date'>18/02/14</span> <span class='time'>1:12 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Ajouter des liens vers des fichiers JS et/ou CSS dans le layout est quelque chose d&#8217;extrêmement facile dans <strong>CakePHP</strong>:
+Par exemple:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="c1">// fichier View/Layouts/default.ctp</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">Html</span><span class="o">-&gt;</span><span class="na">css</span><span class="p">(</span> <span class="k">array</span><span class="p">(</span>
+</span><span class='line'>   <span class="s1">&#39;bootstrap.min&#39;</span><span class="p">,</span>
+</span><span class='line'><span class="p">));</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">Html</span><span class="o">-&gt;</span><span class="na">script</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
+</span><span class='line'>   <span class="s1">&#39;jquery-1.10.2.min&#39;</span><span class="p">,</span>
+</span><span class='line'>   <span class="s1">&#39;modernizr&#39;</span><span class="p">,</span>
+</span><span class='line'>   <span class="s1">&#39;bootstrap.min&#39;</span><span class="p">,</span>
+</span><span class='line'><span class="p">));</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ceci aura pour effet d&#8217;ajouter les lignes suivantes dans le rendu HTML:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href=</span><span class="s">&quot;/3musketeers/Humans-Rights-Report/css/bootstrap.min.css&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;/monsite/js/jquery-2.0.3.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;/monsite/js/modernizr.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;/monsite/js/bootstrap.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/ajouter-dynamiquement-des-liens-js-et-css-dans-la-balise-head-de-votre-site/">Continuer la lecture &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/les-raisons-qui-font-que-vos-visiteurs-ne-sattardent-pas-sur-votre-site/">Les Raisons Qui Font Que Vos Visiteurs Ne S&#8217;attardent Pas Sur Votre Site</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-01-04T13:11:11+07:00'><span class='date'>04/01/14</span> <span class='time'>1:11 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Vu le nombre de sites internet existant, attirer le chalant sur votre site est une tâche difficile. Et comme si ce n&#8217;était pas suffisant, une autre tâche, délicate également, est de faire en sorte que votre visiteur s&#8217;attarde sur votre site, et s&#8217;y intéresse.</p>
+
+<p>Mais quelles sont les raisons qui font que vos visiteurs ne s&#8217;attardent pas sur vos pages?</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/les-raisons-qui-font-que-vos-visiteurs-ne-sattardent-pas-sur-votre-site/">Continuer la lecture &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/ajouter-une-methode-truncate-a-tous-vos-modeles-cakephp/">Ajouter Une Méthode TRUNCATE à Tous Vos Modèles CakePHP</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-12-31T13:09:22+07:00'><span class='date'>31/12/13</span> <span class='time'>1:09 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>La classe AppModel dans CakePHP possède un nombre conséquent de méthodes intéressantes, cependant il y a une méthode qui n&#8217;a pas été implémentée et qui pourtant peut se révéler particulièrement utile dans certains cas. Il s&#8217;agit de la méthode <code>truncate()</code>.</p>
+
+<p>Pourquoi cette méthode n&#8217;est-elle pas implémentée? Sans doute car trop dépendante du système de base de données utilisé? Ou alors parce que les développeurs du framework n&#8217;y voient tout simplement aucun intérêt&hellip; Aucune idée, mais ce n&#8217;est pas vraiment ce qui nous intéresse, n&#8217;est-ce pas? Au lieu de se focaliser sur le <strong>pourquoi</strong>, concentrons-nous donc sur le <strong>comment</strong>&hellip;</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/ajouter-une-methode-truncate-a-tous-vos-modeles-cakephp/">Continuer la lecture &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/la-methode-agile-en-image/">La Méthode Agile en Image</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-12-15T13:04:20+07:00'><span class='date'>15/12/13</span> <span class='time'>1:04 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="/images/try-agile.png"><img src="/images/try-agile.png" alt="try-agile" /></a></p>
+
+<p>Pour les anglophobes, une traduction imprécise:</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/la-methode-agile-en-image/">Continuer la lecture &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/wordpress-3.8-disponible-en-telechargement/">Wordpress 3.8 Disponible en Téléchargement</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-12-13T13:00:52+07:00'><span class='date'>13/12/13</span> <span class='time'>1:00 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Ca y est, La version 3.8 est disponible!</p>
+
+<p>Quoi de neuf dans cette version?</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/wordpress-3.8-disponible-en-telechargement/">Continuer la lecture &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/tester-en-javascript-si-une-variable-est-declaree/">Tester en Javascript Si Une Variable Est Déclarée</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-12-09T12:57:55+07:00'><span class='date'>09/12/13</span> <span class='time'>12:57 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Quels sont les différents moyens de tester en javascript si une variable est définie ou non?</p>
+
+<p><strong>1. Tester la valeur d&#8217;une variable</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">a</span><span class="p">;</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span> <span class="nx">a</span> <span class="o">==</span> <span class="kc">undefined</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>   <span class="c1">// ...</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Problème: <code>undefined</code> est également une variable, ce qui signifie que sa valeur peut être modifiée! Le résultat de la condition peut donc être totalement différent du résultat attendu&hellip;
+Par exemple:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">a</span><span class="p">,</span> <span class="kc">undefined</span> <span class="o">=</span> <span class="s2">&quot;defined!&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span> <span class="nx">a</span> <span class="o">==</span> <span class="kc">undefined</span> <span class="p">)</span> <span class="p">{</span> <span class="c1">// le programme n&#39;exécutera pas le contenu du IF</span>
+</span><span class='line'>   <span class="c1">// ...</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">a</span><span class="p">;</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span> <span class="nx">a</span> <span class="o">==</span> <span class="kc">null</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>   <span class="c1">// ...</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>2. Tester l&#8217;existence d&#8217;une variable</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="k">if</span> <span class="p">(</span> <span class="nx">a</span> <span class="o">==</span> <span class="kc">null</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>   <span class="c1">// ...</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Attention</strong>: lance une exception ReferenceError: &ldquo;a&rdquo; n&#8217;est pas défini</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="k">if</span> <span class="p">(</span> <span class="k">typeof</span> <span class="nx">a</span> <span class="o">==</span> <span class="s2">&quot;undefined&quot;</span> <span class="p">)</span> <span class="p">{</span> <span class="c1">// si la variable n&#39;a pas été déclarée auparavant</span>
+</span><span class='line'>   <span class="c1">// ...</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>La méthode la plus sûre je pense&hellip;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/un-peu-dhumour-ne-fait-jamais-de-mal/">Un Peu D&#8217;humour Ne Fait Jamais De Mal&#8230;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-11-08T12:51:37+07:00'><span class='date'>08/11/13</span> <span class='time'>12:51 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Vous avez aimé What does the fox say? Vous aimerez encore plus celle-ci!</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/un-peu-dhumour-ne-fait-jamais-de-mal/">Continuer la lecture &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/nouvelle-version-dubuntu-13-dot-10-saucy-salamander-disponible-au-telechargement/">Nouvelle Version d&#8217;Ubuntu 13.10 Saucy Salamander Disponible Au Téléchargement</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-10-24T12:48:21+07:00'><span class='date'>24/10/13</span> <span class='time'>12:48 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>La nouvelle version d&#8217;Ubuntu, la 13.10 Saucy Salamander, est disponible au téléchargement!</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/nouvelle-version-dubuntu-13-dot-10-saucy-salamander-disponible-au-telechargement/">Continuer la lecture &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/wordpress-3.7-en-preparation/">Wordpress 3.7 en Préparation</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-10-20T12:44:53+07:00'><span class='date'>20/10/13</span> <span class='time'>12:44 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Une nouvelle version de Wordpress est en préparation. Apparemment elle devrait sortir la semaine prochaine.</p>
+
+<p>Alors, qu&#8217;il y a-t-il de nouveau dans cette version? Et bien, pas grand chose&hellip; Mais c&#8217;est pas mal quand-même!</p>
+
+<p>Dorénavant, Wordpress téléchargera et appliquera automatiquement les mises à jour en tâche de fond. Il s&#8217;agira des mises à jour mineures et de sécurité, ce qui ne devrait pas poser de problème à la plupart des utilisateurs.</p>
+
+<p>Se rapprocherait-on d&#8217;un monde où tous les sites Wordpress seraient à jours? Pas sûr, mais en tout cas c&#8217;est un pas dans la bonne direction!</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/wordpress-3.7-en-preparation/">Continuer la lecture &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/les-entrees-des-menus-wordpress-seraient-elles-limitees/">Les Entrées Des Menus Wordpress Seraient-elles Limitées?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-10-01T12:40:30+07:00'><span class='date'>01/10/13</span> <span class='time'>12:40 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h5>Le client</h5>
+
+<p>Aujourd&#8217;hui je me suis retrouvé face à un problème extrêmement intéressant! Un client m&#8217;a contacté car il rencontrait un problème étrange&hellip; &ldquo;La sauvegarde des menus ne fonctionnent plus dans l&#8217;administration !&rdquo; me dit-il sur un ton qui sous-entend que j&#8217;ai encore fait quelque chose que je n&#8217;aurais pas dû (non non, promis, c&#8217;est pas moi!).</p>
+
+<h5>Constatation du problème</h5>
+
+<p>Après investigation, j&#8217;ai constaté que la sauvegarde fonctionnait pour les entrées existantes du menu, mais que Wordpress refusait obstinément de sauvegarder les nouvelles entrées. Cela ressemble étrangement à une limite de Wordpress, genre &ldquo;Wordpress a décidé que vous ne pouvez pas avoir plus de 70 entrées dans un menu&rdquo;.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/les-entrees-des-menus-wordpress-seraient-elles-limitees/">Continuer la lecture &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/posts/3">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/index.html">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/wordpress-4.1-disponible-au-telechargement/">Wordpress 4.1 Disponible Au Téléchargement</a>
+      </li>
+    
+      <li class="post">
+        <a href="/tester-le-rendu-de-votre-site-internet-simultanement-sur-plusieurs-peripheriques-avec-browsersync/">Tester Le Rendu De Votre Site Internet Simultanément Sur Plusieurs Périphériques Avec BrowserSync</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wordpress-filtres-actions-partie-2/">Wordpress, Des Filtres Et Des Actions (2ème Partie)</a>
+      </li>
+    
+      <li class="post">
+        <a href="/wordpress-4-dot-0-benny-disponible-au-telechargement/">WordPress 4.0 Benny Disponible Au Téléchargement</a>
+      </li>
+    
+      <li class="post">
+        <a href="/modifier-un-custom-post-type-existant/">Modifier Un Custom Post Type Existant</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/+MichaëlDamoiseau?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+<section>
+  <h1>Category Cloud</h1>
+    <span id="tag-cloud"><a href='/blog/categories/cakephp' style='font-size: 120.0%'>cakephp(4)</a> <a href='/blog/categories/divers' style='font-size: 110.0%'>divers(2)</a> <a href='/blog/categories/git' style='font-size: 105.0%'>git(1)</a> <a href='/blog/categories/humour' style='font-size: 120.0%'>humour(4)</a> <a href='/blog/categories/javascript' style='font-size: 115.0%'>javascript(3)</a> <a href='/blog/categories/linux' style='font-size: 105.0%'>linux(1)</a> <a href='/blog/categories/php' style='font-size: 125.0%'>php(5)</a> <a href='/blog/categories/ubuntu' style='font-size: 105.0%'>ubuntu(1)</a> <a href='/blog/categories/wordpress' style='font-size: 160.0%'>wordpress(12)</a> </span>
+</section>
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Michael Damoiseau -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'damoiseaume';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

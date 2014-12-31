@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Humour | Damoiseau.ME, Le blog d'un développeur web]]></title>
+  <link href="http://mikedamoiseau.github.io/blog/categories/humour/atom.xml" rel="self"/>
+  <link href="http://mikedamoiseau.github.io/"/>
+  <updated>2014-12-31T14:40:20+07:00</updated>
+  <id>http://mikedamoiseau.github.io/</id>
+  <author>
+    <name><![CDATA[Michael Damoiseau]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[La Méthode Agile en Image]]></title>
+    <link href="http://mikedamoiseau.github.io/la-methode-agile-en-image/"/>
+    <updated>2013-12-15T13:04:20+07:00</updated>
+    <id>http://mikedamoiseau.github.io/la-methode-agile-en-image</id>
+    <content type="html"><![CDATA[<p><a href="/images/try-agile.png"><img src="/images/try-agile.png" alt="try-agile" /></a></p>
+
+<p>Pour les anglophobes, une traduction imprécise:</p>
+
+<!--more-->
+
+
+<p>Image 1:
+On va tester quelque chose qui s&#8217;appelle la programmation Agile</p>
+
+<p>Image 2:
+Cela signifie qu&#8217;on ne planifie plus et qu&#8217;on ne documente plus. On écrit directement du code et on se plaint.</p>
+
+<p>Image 3: 1. Je suis content de savoir que cela porte un nom    |    2. C&#8217;était ta formation</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Un Peu D'humour Ne Fait Jamais De Mal...]]></title>
+    <link href="http://mikedamoiseau.github.io/un-peu-dhumour-ne-fait-jamais-de-mal/"/>
+    <updated>2013-11-08T12:51:37+07:00</updated>
+    <id>http://mikedamoiseau.github.io/un-peu-dhumour-ne-fait-jamais-de-mal</id>
+    <content type="html"><![CDATA[<p>Vous avez aimé What does the fox say? Vous aimerez encore plus celle-ci!</p>
+
+<!--more-->
+
+
+<p>Vous connaissez probablement déjà la chanson <a href="http://www.youtube.com/watch?v=jofNR_WkoCE" title="What does the fox say?">&ldquo;What does the fox say&rdquo;</a>? Si ce n&#8217;est pas le cas, soit vous vivez dans une grotte, soit&hellip; je ne sais pas, mais en tout cas vous devriez la connaître.</p>
+
+<p>Bref&hellip; Voici une autre chanson réalisée par nos deux compères norvégiens du duo Ylvis. Je vous préviens, ça ne vole pas haut, mais ça vaut son pesant de cacahuètes!</p>
+
+<p><div class="embed-video-container"><iframe src="//www.youtube.com/embed/4EqVGU_N_qw" allowfullscreen></iframe></div></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Code Review]]></title>
+    <link href="http://mikedamoiseau.github.io/code-review/"/>
+    <updated>2013-09-10T12:32:11+07:00</updated>
+    <id>http://mikedamoiseau.github.io/code-review</id>
+    <content type="html"><![CDATA[<p><a href="/images/code-review.jpg"><img src="/images/code-review.jpg" alt="Code review" /></a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Why Do So Many Developers Hate Wordpress So Much?]]></title>
+    <link href="http://mikedamoiseau.github.io/why-do-so-many-developers-hate-wordpress-so-much/"/>
+    <updated>2013-08-14T12:22:02+07:00</updated>
+    <id>http://mikedamoiseau.github.io/why-do-so-many-developers-hate-wordpress-so-much</id>
+    <content type="html"><![CDATA[<p>Wordpress, une plateforme puissante et dynamique? Par pour tout le monde manifestement!</p>
+
+<!--more-->
+
+
+<p><a href="/images/why-do-so-many-developers-hate-wordpress-so-much.jpg"><img src="/images/why-do-so-many-developers-hate-wordpress-so-much.jpg" alt="why do so many developers hate wordpress so much" /></a></p>
+]]></content>
+  </entry>
+  
+</feed>
