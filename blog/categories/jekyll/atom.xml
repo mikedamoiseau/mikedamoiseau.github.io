@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Jekyll | Damoiseau.ME, Le blog d'un développeur web]]></title>
+  <link href="http://mikedamoiseau.github.io/blog/categories/jekyll/atom.xml" rel="self"/>
+  <link href="http://mikedamoiseau.github.io/"/>
+  <updated>2014-12-31T17:57:41+07:00</updated>
+  <id>http://mikedamoiseau.github.io/</id>
+  <author>
+    <name><![CDATA[Michael Damoiseau]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Réécriture Du Blog Avec Jekyll/Octopress Et Bonne Année 2015]]></title>
+    <link href="http://mikedamoiseau.github.io/reecriture-blog-jekyll-octopress-bonne-annee-2015"/>
+    <updated>2014-12-31T17:42:10+07:00</updated>
+    <id>http://mikedamoiseau.github.io/reecriture-blog-jekyll-octopress-bonne-annee-2015</id>
+    <content type="html"><![CDATA[<p>Pour terminer l&#8217;année en beauté, j&#8217;ai décidé de réécrire complètement le moteur du blog. Adieu Wordpress, et bienvenue Jekyll!</p>
+
+<p>Ca faitsait longtemps que j&#8217;y pensais, mais je manquais de temps pour réellement m&#8217;atteler à la tâche (qui s&#8217;est révélée relativement facile au final!).  Heureusement les vacances sont là et j&#8217;ai pu passer un peu de temps sur ce projet. Le résultat est un site créé avec <a href="http://jekyllrb.com/">Jekyll</a> (plus précisément <a href="http://octopress.org/">Octopress</a>) et qui tourne sur <a href="https://pages.github.com/">Github Pages</a>.</p>
+
+<p>J&#8217;écrirai un article expliquant pas-à-pas les manipulations à effectuer pour arriver à ce résultat.</p>
+
+<p>En attendant, je vous souhaite une bonne année 2015 :)</p>
+]]></content>
+  </entry>
+  
+</feed>

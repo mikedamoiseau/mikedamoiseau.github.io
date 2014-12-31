@@ -4,7 +4,7 @@
   <title><![CDATA[Damoiseau.ME, Le blog d'un développeur web]]></title>
   <link href="http://mikedamoiseau.github.io/atom.xml" rel="self"/>
   <link href="http://mikedamoiseau.github.io/"/>
-  <updated>2014-12-31T17:04:10+07:00</updated>
+  <updated>2014-12-31T17:57:41+07:00</updated>
   <id>http://mikedamoiseau.github.io/</id>
   <author>
     <name><![CDATA[Michael Damoiseau]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Réécriture Du Blog Avec Jekyll/Octopress Et Bonne Année 2015]]></title>
+    <link href="http://mikedamoiseau.github.io/reecriture-blog-jekyll-octopress-bonne-annee-2015"/>
+    <updated>2014-12-31T17:42:10+07:00</updated>
+    <id>http://mikedamoiseau.github.io/reecriture-blog-jekyll-octopress-bonne-annee-2015</id>
+    <content type="html"><![CDATA[<p>Pour terminer l&#8217;année en beauté, j&#8217;ai décidé de réécrire complètement le moteur du blog. Adieu Wordpress, et bienvenue Jekyll!</p>
+
+<p>Ca faitsait longtemps que j&#8217;y pensais, mais je manquais de temps pour réellement m&#8217;atteler à la tâche (qui s&#8217;est révélée relativement facile au final!).  Heureusement les vacances sont là et j&#8217;ai pu passer un peu de temps sur ce projet. Le résultat est un site créé avec <a href="http://jekyllrb.com/">Jekyll</a> (plus précisément <a href="http://octopress.org/">Octopress</a>) et qui tourne sur <a href="https://pages.github.com/">Github Pages</a>.</p>
+
+<p>J&#8217;écrirai un article expliquant pas-à-pas les manipulations à effectuer pour arriver à ce résultat.</p>
+
+<p>En attendant, je vous souhaite une bonne année 2015 :)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Wordpress 4.1 Disponible Au Téléchargement]]></title>
@@ -1432,127 +1447,6 @@ Comme vous avez pu le constater, le cycle de dévelopement est maintenant plus c
 <li>Pour les développeurs, la recherche de posts par date a été grandement améliorée</li>
 <li>&ldquo;wp_get_sites() permet aux développeurs d’obtenir facilement un tableau de tous les sites de votre réseau sans devoir faire une requête directe sur la base de données &rdquo; (citation du tableau de bord après passage en 3.7. Apparemment les dévelopeurs ont travaillé sur la multi site</li>
 </ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Les Entrées Des Menus Wordpress Seraient-elles Limitées?]]></title>
-    <link href="http://mikedamoiseau.github.io/les-entrees-des-menus-wordpress-seraient-elles-limitees"/>
-    <updated>2013-10-01T12:40:30+07:00</updated>
-    <id>http://mikedamoiseau.github.io/les-entrees-des-menus-wordpress-seraient-elles-limitees</id>
-    <content type="html"><![CDATA[<h5>Le client</h5>
-
-<p>Aujourd&#8217;hui je me suis retrouvé face à un problème extrêmement intéressant! Un client m&#8217;a contacté car il rencontrait un problème étrange&hellip; &ldquo;La sauvegarde des menus ne fonctionnent plus dans l&#8217;administration !&rdquo; me dit-il sur un ton qui sous-entend que j&#8217;ai encore fait quelque chose que je n&#8217;aurais pas dû (non non, promis, c&#8217;est pas moi!).</p>
-
-<h5>Constatation du problème</h5>
-
-<p>Après investigation, j&#8217;ai constaté que la sauvegarde fonctionnait pour les entrées existantes du menu, mais que Wordpress refusait obstinément de sauvegarder les nouvelles entrées. Cela ressemble étrangement à une limite de Wordpress, genre &ldquo;Wordpress a décidé que vous ne pouvez pas avoir plus de 70 entrées dans un menu&rdquo;.</p>
-
-<!--more-->
-
-
-<h5>Un peu de théorie</h5>
-
-<p>Et bien en fait, non, rien à voir&hellip; Le problème ne vient pas de Wordpress, mais plutôt de la configuration de votre PHP! Mais commençons par le début&hellip;</p>
-
-<p>Une entrée d&#8217;un menu possède un certain nombre de propriétés, parmis lesquelles son nom, son attribut html <code>title</code>, l&#8217;option <code>target</code>, la ou les classes css, et encore deux ou trois autres trucs. Au minimum, une entrée d&#8217;un menu aura 6 propriétés, sans compter les ID&rsquo;s et autres propriétés propres à l&#8217;utilisation de Wordpress! Vous l&#8217;avez maintenant compris, pour un gros menu, on arrive facilement à un nombre conséquent de propriétés.</p>
-
-<h5>La responsable</h5>
-
-<p>Lorsque vous sauvegardez un menu dans l&#8217;administration de Wordpress, toutes ces propriétés vont être placées dans des tableaux PHP (<code>array</code>) pour ensuite être envoyées au serveur via une requête POST. Hors, il se trouve que depuis <a href="http://php.net/releases/5_3_9.php" title="PHP 5.3.9">PHP 5.3.9</a>, une nouvelle option a fait son apparition. Elle s&#8217;appelle <code>max_input_vars</code> et est probablement la responsable de la disparition de vos entrées!</p>
-
-<p><code>max_input_vars</code> est une option qui permet de limiter le nombre de tableaux envoyés dans une requête POST. Cette option est souvent limitée à 1000, ce aui semble suffisant pour une utilisation courante de PHP. Dans le cas de Wordpress, si votre menu possède au minimum 60-70 entrées, cette limite sera rapidement atteinte, et PHP ignorera tout ce qui se trouve après.
-PHP émet bien un Warning si la limite est atteinte, mais la plupart des sites en production n&#8217;affichent pas les warning et les stockent dans des fichiers logs. Et un utilisateur Wordpress, quand il sait ce qu&#8217;est un fichier log (ce qui n&#8217;est pas gagné&hellip;), ne pensera pas forcément à aller analyser le contenu de ses logs!</p>
-
-<h5>La solution</h5>
-
-<p>Nous savons donc maintenant comment fonctionne la sauvegarde des menus (plein de tableaux contenant les propriétés des menus et de leurs entrées dans une requête POST). Nous savons également que PHP, depuis sa version 5.3.9, possède une option qui limite le nombre de tableaux dans une requête POST. Bien! Maintenant il ne nous reste plus qu&#8217;à régler le problème&hellip;</p>
-
-<p>Et régler le problème est extrêmement simple&hellip; ou pas:</p>
-
-<ul>
-<li><strong>Vous avez accès au fichier <code>php.ini</code></strong>
-Dans ce cas, super simple! Il vous suffit d&#8217;ajouter cette ligne dans votre fichier <code>php.ini</code> (ou de modifier la ligne existante si elle s&#8217;y trouve déjà ):</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>max_input_vars = 3000</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li><p><strong>Vous n&#8217;avez pas accès au fichier <code>php.ini</code></strong>
-Pas de panique, vous avez deux solutions:</p>
-
-<ul>
-<li>  Vous avez accès au fichier <code>.htaccess</code>
-Ajouter la ligne suivante dans votre fichier <code>.htaccess</code>:</li>
-</ul>
-</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>php_value max_input_vars 3000</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Attention: il semblerait que la modification du fichier <code>.htaccess</code> soit délicate&hellip; Je me suis retrouvé avec un site complet en erreur 500!</strong> J&#8217;ai donc préféré la méthode suivante:</p>
-
-<ul>
-<li>Créez un fichier php.ini dans le répertoire <code>wp-admin</code> et ajoutez-y la ligne suivante:</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>max_input_vars = 3000</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>Ca ne marche toujours pas</li>
-</ul>
-
-
-<p>Avant l&#8217;utilisation de l&#8217;option <code>max_input_vars</code>, de nombreux hébergeurs utilisaient un module de sécurité appelé <code>Suhosin PHP Security</code>.
-Tout ce qui a été dit précédemment reste d&#8217;actualité, mais le contenu des fichiers <code>php.ini</code> et/ou <code>.htaccess</code> sont différents:</p>
-
-<ul>
-<li><strong><code>php.ini</code></strong></li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='ini'><span class='line'><span class="c1"># nouvelle option à partir de php 5.3.9</span>
-</span><span class='line'><span class="na">max_input_vars</span> <span class="o">=</span> <span class="s">3000</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="c1"># module Suhosin PHP Security</span>
-</span><span class='line'><span class="na">suhosin.post.max_vars</span> <span class="o">=</span> <span class="s">3000</span>
-</span><span class='line'><span class="na">suhosin.request.max_vars</span> <span class="o">=</span> <span class="s">3000</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li><strong><code>.htaccess</code></strong></li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># nouvelle option à partir de php 5.3.9
-</span><span class='line'>php_value max_input_vars 3000
-</span><span class='line'>
-</span><span class='line'>    # module Suhosin PHP Security
-</span><span class='line'>php_value suhosin.post.max_vars 3000
-</span><span class='line'>php_value suhosin.request.max_vars 3000</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>
