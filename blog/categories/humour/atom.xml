@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Humour | Damoiseau.ME, Le blog d'un développeur web]]></title>
   <link href="http://damoiseau.me/blog/categories/humour/atom.xml" rel="self"/>
   <link href="http://damoiseau.me/"/>
-  <updated>2015-01-01T13:28:19+07:00</updated>
+  <updated>2015-01-01T13:48:49+07:00</updated>
   <id>http://damoiseau.me/</id>
   <author>
     <name><![CDATA[Michael Damoiseau]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Sudo Sandwich]]></title>
+    <link href="http://damoiseau.me/sudo-sandwich/"/>
+    <updated>2014-12-02T13:44:33+07:00</updated>
+    <id>http://damoiseau.me/sudo-sandwich</id>
+    <content type="html"><![CDATA[<p><img src="/images/sandwich.png" title="Sudo make me a sandwich" alt="Sudo make me a sandwich" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[La Méthode Agile en Image]]></title>

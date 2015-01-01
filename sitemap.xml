@@ -11,6 +11,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>http://damoiseau.me/sudo-sandwich/</loc>
+    <lastmod>2014-12-02T13:44:33+07:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>http://damoiseau.me/tester-le-rendu-de-votre-site-internet-simultanement-sur-plusieurs-peripheriques-avec-browsersync/</loc>
     <lastmod>2014-10-30T13:55:17+07:00</lastmod>
     <priority>0.8</priority>
@@ -21,7 +26,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>http://damoiseau.me/wordpress-4-dot-0-benny-disponible-au-telechargement/</loc>
+    <loc>http://damoiseau.me/wordpress-4.0-benny-disponible-au-telechargement/</loc>
     <lastmod>2014-09-05T13:40:49+07:00</lastmod>
     <priority>0.8</priority>
   </url>
@@ -91,7 +96,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>http://damoiseau.me/nouvelle-version-dubuntu-13-dot-10-saucy-salamander-disponible-au-telechargement/</loc>
+    <loc>http://damoiseau.me/nouvelle-version-dubuntu-13.10-saucy-salamander-disponible-au-telechargement/</loc>
     <lastmod>2013-10-24T12:48:21+07:00</lastmod>
     <priority>0.8</priority>
   </url>
@@ -137,37 +142,37 @@
   </url>
   <url>
     <loc>http://damoiseau.me/404.html</loc>
-    <lastmod>2015-01-01T13:28:19+07:00</lastmod>
+    <lastmod>2015-01-01T13:48:49+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://damoiseau.me/blog/archives/</loc>
-    <lastmod>2015-01-01T13:28:19+07:00</lastmod>
+    <lastmod>2015-01-01T13:48:49+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://damoiseau.me/archives/</loc>
-    <lastmod>2015-01-01T13:28:19+07:00</lastmod>
+    <lastmod>2015-01-01T13:48:49+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://damoiseau.me/categories/</loc>
-    <lastmod>2015-01-01T13:28:19+07:00</lastmod>
+    <lastmod>2015-01-01T13:48:49+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://damoiseau.me/</loc>
-    <lastmod>2015-01-01T13:28:19+07:00</lastmod>
+    <lastmod>2015-01-01T13:48:49+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>http://damoiseau.me/posts/</loc>
-    <lastmod>2015-01-01T13:28:19+07:00</lastmod>
+    <lastmod>2015-01-01T13:48:49+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
