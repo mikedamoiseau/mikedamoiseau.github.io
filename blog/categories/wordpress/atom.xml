@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Wordpress | Damoiseau.ME, Le blog d'un développeur web]]></title>
-  <link href="http://mikedamoiseau.github.io/blog/categories/wordpress/atom.xml" rel="self"/>
-  <link href="http://mikedamoiseau.github.io/"/>
-  <updated>2014-12-31T17:57:41+07:00</updated>
-  <id>http://mikedamoiseau.github.io/</id>
+  <link href="http://damoiseau.me/blog/categories/wordpress/atom.xml" rel="self"/>
+  <link href="http://damoiseau.me/"/>
+  <updated>2015-01-01T12:41:35+07:00</updated>
+  <id>http://damoiseau.me/</id>
   <author>
     <name><![CDATA[Michael Damoiseau]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Wordpress 4.1 Disponible Au Téléchargement]]></title>
-    <link href="http://mikedamoiseau.github.io/wordpress-4.1-disponible-au-telechargement"/>
+    <link href="http://damoiseau.me/wordpress-4.1-disponible-au-telechargement"/>
     <updated>2014-12-21T14:00:02+07:00</updated>
-    <id>http://mikedamoiseau.github.io/wordpress-4.1-disponible-au-telechargement</id>
+    <id>http://damoiseau.me/wordpress-4.1-disponible-au-telechargement</id>
     <content type="html"><![CDATA[<p>Quoi de neuf dans cette nouvelle mouture de Wordpress? Et bien pas mal de nouveautés en fait! Certaines d&#8217;entre elles étant très intéressantes, je vous invite vivement à lire mon article ^^</p>
 
 <!--more-->
@@ -136,9 +136,9 @@ endif;
   
   <entry>
     <title type="html"><![CDATA[Wordpress, Des Filtres Et Des Actions (2ème Partie)]]></title>
-    <link href="http://mikedamoiseau.github.io/wordpress-filtres-actions-partie-2"/>
+    <link href="http://damoiseau.me/wordpress-filtres-actions-partie-2"/>
     <updated>2014-10-19T13:43:16+07:00</updated>
-    <id>http://mikedamoiseau.github.io/wordpress-filtres-actions-partie-2</id>
+    <id>http://damoiseau.me/wordpress-filtres-actions-partie-2</id>
     <content type="html"><![CDATA[<p>Cet article fait suite à un article écrit il y a quelques temps de celà (en fait, il y a longtemps déjà et vous m&#8217;en voyez désolé&hellip;): <a href="http://damoiseau.me/wordpress-filtres-actions-partie-1/" title="WordPress, des filtres et des actions (1ère partie)">Wordpress, des filtres et des actions (1ère partie)</a>.</p>
 
 <p>Rappelez-vous, dans l&#8217;article précédent j&#8217;expliquais la différence entre <a href="http://codex.wordpress.org/Function_Reference/add_filter">un filtre</a> et <a href="http://codex.wordpress.org/Function_Reference/add_action">une action</a>&hellip; Un filtre est une fonction qui va recevoir un paramètre en entrée, le transformer et renvoyer le résultat de la transformation. L&#8217;action, quant à elle, reçoit 0, 1 ou plusieurs paramètres en entrée et effectue une action; cette action ne renvoie pas de résultat, ce n&#8217;est pas nécessaire.</p>
@@ -229,9 +229,9 @@ add_filter( &lsquo;filtre_sur_le_titre&rsquo;, &lsquo;mon_filtre_sur_le_titre&rs
   
   <entry>
     <title type="html"><![CDATA[WordPress 4.0 Benny Disponible Au Téléchargement]]></title>
-    <link href="http://mikedamoiseau.github.io/wordpress-4-dot-0-benny-disponible-au-telechargement"/>
+    <link href="http://damoiseau.me/wordpress-4-dot-0-benny-disponible-au-telechargement"/>
     <updated>2014-09-05T13:40:49+07:00</updated>
-    <id>http://mikedamoiseau.github.io/wordpress-4-dot-0-benny-disponible-au-telechargement</id>
+    <id>http://damoiseau.me/wordpress-4-dot-0-benny-disponible-au-telechargement</id>
     <content type="html"><![CDATA[<p>La version 4.0 de Wordpress est finalement disponible! Quoi de neuf dans cette version?</p>
 
 <!-- more -->
@@ -270,9 +270,9 @@ Avec Wordpress 4.0, on a finalement droit à un peu plus de flexibilité en tan
   
   <entry>
     <title type="html"><![CDATA[Modifier Un Custom Post Type Existant]]></title>
-    <link href="http://mikedamoiseau.github.io/modifier-un-custom-post-type-existant"/>
+    <link href="http://damoiseau.me/modifier-un-custom-post-type-existant"/>
     <updated>2014-07-12T13:38:34+07:00</updated>
-    <id>http://mikedamoiseau.github.io/modifier-un-custom-post-type-existant</id>
+    <id>http://damoiseau.me/modifier-un-custom-post-type-existant</id>
     <content type="html"><![CDATA[<p>Je suis tombé dernièrement sur un cas relativement intéressant&hellip; Je travaillais sur un site utilisant le plugin <a href="https://wordpress.org/plugins/wp-orbit-slider/" title="WP Orbit Slider - Wordpress plugin">WP Orbit Slider</a>.
 WP Orbit Slider est un petit plugin qui permettant d&#8217;afficher des slideshows. Il est relativement basique et fait bien son boulot&hellip;</p>
 
@@ -337,9 +337,9 @@ Attention, les arguments sont passés via un objet et non un tableau!</p>
   
   <entry>
     <title type="html"><![CDATA[Wordpress, Des Filtres Et Des Actions (1ère Partie)]]></title>
-    <link href="http://mikedamoiseau.github.io/wordpress-filtres-actions-partie-1"/>
+    <link href="http://damoiseau.me/wordpress-filtres-actions-partie-1"/>
     <updated>2014-06-08T13:32:43+07:00</updated>
-    <id>http://mikedamoiseau.github.io/wordpress-filtres-actions-partie-1</id>
+    <id>http://damoiseau.me/wordpress-filtres-actions-partie-1</id>
     <content type="html"><![CDATA[<p>Il est impossible d&#8217;écrire des plugins et/ou des thèmes pour Wordpress sans passer par l&#8217;utilisation des filtres et des actions. En fait, Wordpress utilise énormément les deux, et ne pas comprendre ce que c&#8217;est ni à quoi ça sert, et bien c&#8217;est mal&hellip; Et ce qui est encore plus mal, c&#8217;est de ne pas comprendre ce qui les différencie!
 La nuance entre un filtre et une action est ténue, et c&#8217;est une question qui revient souvent chez les développeurs débutant avec Wordpress: <strong>Quelle est la différence entre un filtre et une action?</strong></p>
 

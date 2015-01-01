@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Humour | Damoiseau.ME, Le blog d'un développeur web]]></title>
-  <link href="http://mikedamoiseau.github.io/blog/categories/humour/atom.xml" rel="self"/>
-  <link href="http://mikedamoiseau.github.io/"/>
-  <updated>2014-12-31T17:57:41+07:00</updated>
-  <id>http://mikedamoiseau.github.io/</id>
+  <link href="http://damoiseau.me/blog/categories/humour/atom.xml" rel="self"/>
+  <link href="http://damoiseau.me/"/>
+  <updated>2015-01-01T12:41:35+07:00</updated>
+  <id>http://damoiseau.me/</id>
   <author>
     <name><![CDATA[Michael Damoiseau]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[La Méthode Agile en Image]]></title>
-    <link href="http://mikedamoiseau.github.io/la-methode-agile-en-image"/>
+    <link href="http://damoiseau.me/la-methode-agile-en-image"/>
     <updated>2013-12-15T13:04:20+07:00</updated>
-    <id>http://mikedamoiseau.github.io/la-methode-agile-en-image</id>
+    <id>http://damoiseau.me/la-methode-agile-en-image</id>
     <content type="html"><![CDATA[<p><a href="/images/try-agile.png"><img src="/images/try-agile.png" alt="try-agile" /></a></p>
 
 <p>Pour les anglophobes, une traduction imprécise:</p>
@@ -37,9 +37,9 @@ Cela signifie qu&#8217;on ne planifie plus et qu&#8217;on ne documente plus. On 
   
   <entry>
     <title type="html"><![CDATA[Un Peu D'humour Ne Fait Jamais De Mal...]]></title>
-    <link href="http://mikedamoiseau.github.io/un-peu-dhumour-ne-fait-jamais-de-mal"/>
+    <link href="http://damoiseau.me/un-peu-dhumour-ne-fait-jamais-de-mal"/>
     <updated>2013-11-08T12:51:37+07:00</updated>
-    <id>http://mikedamoiseau.github.io/un-peu-dhumour-ne-fait-jamais-de-mal</id>
+    <id>http://damoiseau.me/un-peu-dhumour-ne-fait-jamais-de-mal</id>
     <content type="html"><![CDATA[<p>Vous avez aimé What does the fox say? Vous aimerez encore plus celle-ci!</p>
 
 <!--more-->
@@ -55,18 +55,18 @@ Cela signifie qu&#8217;on ne planifie plus et qu&#8217;on ne documente plus. On 
   
   <entry>
     <title type="html"><![CDATA[Code Review]]></title>
-    <link href="http://mikedamoiseau.github.io/code-review"/>
+    <link href="http://damoiseau.me/code-review"/>
     <updated>2013-09-10T12:32:11+07:00</updated>
-    <id>http://mikedamoiseau.github.io/code-review</id>
+    <id>http://damoiseau.me/code-review</id>
     <content type="html"><![CDATA[<p><a href="/images/code-review.jpg"><img src="/images/code-review.jpg" alt="Code review" /></a></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Why Do So Many Developers Hate Wordpress So Much?]]></title>
-    <link href="http://mikedamoiseau.github.io/why-do-so-many-developers-hate-wordpress-so-much"/>
+    <link href="http://damoiseau.me/why-do-so-many-developers-hate-wordpress-so-much"/>
     <updated>2013-08-14T12:22:02+07:00</updated>
-    <id>http://mikedamoiseau.github.io/why-do-so-many-developers-hate-wordpress-so-much</id>
+    <id>http://damoiseau.me/why-do-so-many-developers-hate-wordpress-so-much</id>
     <content type="html"><![CDATA[<p>Wordpress, une plateforme puissante et dynamique? Par pour tout le monde manifestement!</p>
 
 <!--more-->

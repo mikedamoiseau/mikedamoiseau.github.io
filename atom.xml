@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Damoiseau.ME, Le blog d'un développeur web]]></title>
-  <link href="http://mikedamoiseau.github.io/atom.xml" rel="self"/>
-  <link href="http://mikedamoiseau.github.io/"/>
-  <updated>2014-12-31T17:57:41+07:00</updated>
-  <id>http://mikedamoiseau.github.io/</id>
+  <link href="http://damoiseau.me/atom.xml" rel="self"/>
+  <link href="http://damoiseau.me/"/>
+  <updated>2015-01-01T12:41:35+07:00</updated>
+  <id>http://damoiseau.me/</id>
   <author>
     <name><![CDATA[Michael Damoiseau]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Réécriture Du Blog Avec Jekyll/Octopress Et Bonne Année 2015]]></title>
-    <link href="http://mikedamoiseau.github.io/reecriture-blog-jekyll-octopress-bonne-annee-2015"/>
+    <link href="http://damoiseau.me/reecriture-blog-jekyll-octopress-bonne-annee-2015"/>
     <updated>2014-12-31T17:42:10+07:00</updated>
-    <id>http://mikedamoiseau.github.io/reecriture-blog-jekyll-octopress-bonne-annee-2015</id>
+    <id>http://damoiseau.me/reecriture-blog-jekyll-octopress-bonne-annee-2015</id>
     <content type="html"><![CDATA[<p>Pour terminer l&#8217;année en beauté, j&#8217;ai décidé de réécrire complètement le moteur du blog. Adieu Wordpress, et bienvenue Jekyll!</p>
 
 <p>Ca faitsait longtemps que j&#8217;y pensais, mais je manquais de temps pour réellement m&#8217;atteler à la tâche (qui s&#8217;est révélée relativement facile au final!).  Heureusement les vacances sont là et j&#8217;ai pu passer un peu de temps sur ce projet. Le résultat est un site créé avec <a href="http://jekyllrb.com/">Jekyll</a> (plus précisément <a href="http://octopress.org/">Octopress</a>) et qui tourne sur <a href="https://pages.github.com/">Github Pages</a>.</p>
@@ -30,9 +30,9 @@
   
   <entry>
     <title type="html"><![CDATA[Wordpress 4.1 Disponible Au Téléchargement]]></title>
-    <link href="http://mikedamoiseau.github.io/wordpress-4.1-disponible-au-telechargement"/>
+    <link href="http://damoiseau.me/wordpress-4.1-disponible-au-telechargement"/>
     <updated>2014-12-21T14:00:02+07:00</updated>
-    <id>http://mikedamoiseau.github.io/wordpress-4.1-disponible-au-telechargement</id>
+    <id>http://damoiseau.me/wordpress-4.1-disponible-au-telechargement</id>
     <content type="html"><![CDATA[<p>Quoi de neuf dans cette nouvelle mouture de Wordpress? Et bien pas mal de nouveautés en fait! Certaines d&#8217;entre elles étant très intéressantes, je vous invite vivement à lire mon article ^^</p>
 
 <!--more-->
@@ -50,25 +50,25 @@ Les développeurs ont complètement repensé le mode sans distraction, et je pen
 
 <p>Message pour notifier l&#8217;utilisateur de l&#8217;existence de la fonctionnalité:</p>
 
-<p><img src="http://mikedamoiseau.github.io/images/wp1.jpg" title="Message pour notifier l'utilisateur de l'existence de la fonctionnalité" alt="Message pour notifier l'utilisateur de l'existence de la fonctionnalité" /></p>
+<p><img src="http://damoiseau.me/images/wp1.jpg" title="Message pour notifier l'utilisateur de l'existence de la fonctionnalité" alt="Message pour notifier l'utilisateur de l'existence de la fonctionnalité" /></p>
 
 <p>Mode sans d&#8217;écriture sans distraction:</p>
 
-<p><img src="http://mikedamoiseau.github.io/images/wp2.jpg" title="Mode sans d'écriture sans distraction" alt="Mode sans d'écriture sans distraction" /></p>
+<p><img src="http://damoiseau.me/images/wp2.jpg" title="Mode sans d'écriture sans distraction" alt="Mode sans d'écriture sans distraction" /></p>
 
 <p><strong>Choix des langues</strong></p>
 
 <p>Wordpress est actuellement traduit en 44 langues! Il n&#8217;est maintenant plus nécessaire de télécharger ces fameux fichiers de langues et de les installer soi-même. Tout cela est de l&#8217;histoire ancienne, car les développeurs ont (finalement) ajouté une option de langue dans l&#8217;administration, qui permet le téléchargement automatique des fichiers de langue.</p>
 
-<p><img src="http://mikedamoiseau.github.io/images/wp3.jpg" title="Choix des langues" alt="Choix des langues" /></p>
+<p><img src="http://damoiseau.me/images/wp3.jpg" title="Choix des langues" alt="Choix des langues" /></p>
 
 <p><strong>Déconnexion globale</strong></p>
 
 <p>Autre fonctionnalité extrêmement intéressante, surtout si vous encodez vos articles dans des <em>cyber cafés</em> et autres ordinateurs publiques: la possibilité de vous déconnecter de manière globale. Je l&#8217;ai testé et cela fonctionne effectivement comme annoncé.</p>
 
-<p><img src="http://mikedamoiseau.github.io/images/wp4.jpg" title="Un bouton est ajouté dans le profile vous permettant de vous déconnecter globalement" alt="Un bouton est ajouté dans le profile vous permettant de vous déconnecter globalement" /></p>
+<p><img src="http://damoiseau.me/images/wp4.jpg" title="Un bouton est ajouté dans le profile vous permettant de vous déconnecter globalement" alt="Un bouton est ajouté dans le profile vous permettant de vous déconnecter globalement" /></p>
 
-<p><img src="http://mikedamoiseau.github.io/images/wp5.jpg" title="Déconnexion effectuée avec succès. Plus la peine de transpirer si vous aviez oublié de vous déconnecter depuis un autre ordinateur!" alt="Déconnexion effectuée avec succès. Plus la peine de transpirer si vous aviez oublié de vous déconnecter depuis un autre ordinateur!" /></p>
+<p><img src="http://damoiseau.me/images/wp5.jpg" title="Déconnexion effectuée avec succès. Plus la peine de transpirer si vous aviez oublié de vous déconnecter depuis un autre ordinateur!" alt="Déconnexion effectuée avec succès. Plus la peine de transpirer si vous aviez oublié de vous déconnecter depuis un autre ordinateur!" /></p>
 
 <p><strong>Insertion des vidéos Vine</strong></p>
 
@@ -78,7 +78,7 @@ Les développeurs ont complètement repensé le mode sans distraction, et je pen
 
 <p>Les développeurs ont ajouté un onglet supplémentaire dans la page de gestion des extensions, l&#8217;onglet <em>recommandation</em>. Très pratique pour découvrir de nouvelles extensions, les recommandations sont basées sur les extensions que vous avez déjà installées.</p>
 
-<p><img src="http://mikedamoiseau.github.io/images/wp6.jpg" title="WP 4.1 - Extensions recommandées" alt="WP 4.1 - Extensions recommandées" /></p>
+<p><img src="http://damoiseau.me/images/wp6.jpg" title="WP 4.1 - Extensions recommandées" alt="WP 4.1 - Extensions recommandées" /></p>
 
 <p>Voilà pour la partie utilisateur. Qu&#8217;en est-il de la partie développeur? (vous savez, vous, moi, les développeurs d&#8217;extensions et de thèmes&hellip;)</p>
 
@@ -86,11 +86,11 @@ Les développeurs ont complètement repensé le mode sans distraction, et je pen
 
 <p>20 nouveaux icônes disponibles, divisés en 3 catégories: média, article et divers:</p>
 
-<p><img src="http://mikedamoiseau.github.io/images/misc.jpg" title="Icônes catégorie média" alt="Icônes catégorie média" /></p>
+<p><img src="http://damoiseau.me/images/misc.jpg" title="Icônes catégorie média" alt="Icônes catégorie média" /></p>
 
-<p><img src="http://mikedamoiseau.github.io/images/media.jpg" title="Icônes catégorie média" alt="Icônes catégorie média" /></p>
+<p><img src="http://damoiseau.me/images/media.jpg" title="Icônes catégorie média" alt="Icônes catégorie média" /></p>
 
-<p><img src="http://mikedamoiseau.github.io/images/post-screen.jpg" title="Icônes catégorie article" alt="Icônes catégorie article" /></p>
+<p><img src="http://damoiseau.me/images/post-screen.jpg" title="Icônes catégorie article" alt="Icônes catégorie article" /></p>
 
 <div style="clear: both;"></div>
 
@@ -163,9 +163,9 @@ En indiquant que votre thème supporte le titrage de Wordpress, vous indiquez �
   
   <entry>
     <title type="html"><![CDATA[Tester Le Rendu De Votre Site Internet Simultanément Sur Plusieurs Périphériques Avec BrowserSync]]></title>
-    <link href="http://mikedamoiseau.github.io/tester-le-rendu-de-votre-site-internet-simultanement-sur-plusieurs-peripheriques-avec-browsersync"/>
+    <link href="http://damoiseau.me/tester-le-rendu-de-votre-site-internet-simultanement-sur-plusieurs-peripheriques-avec-browsersync"/>
     <updated>2014-10-30T13:55:17+07:00</updated>
-    <id>http://mikedamoiseau.github.io/tester-le-rendu-de-votre-site-internet-simultanement-sur-plusieurs-peripheriques-avec-browsersync</id>
+    <id>http://damoiseau.me/tester-le-rendu-de-votre-site-internet-simultanement-sur-plusieurs-peripheriques-avec-browsersync</id>
     <content type="html"><![CDATA[<p><a href="http://www.browsersync.io/" title="BrowserSync">BrowserSync</a> est un outil que l&#8217;on pourrait pratiquement considéré comme magique! J&#8217;ai découvert cet utilitaire il y a quelques semaines, et depuis je ne peux plus m&#8217;en passer lorsque je travaille sur à peu près n&#8217;importe quel projet web.</p>
 
 <!--more-->
@@ -236,9 +236,9 @@ BrowserSync propose d&#8217;autres fonctionnalités telles qu&#8217;un mini serv
   
   <entry>
     <title type="html"><![CDATA[Wordpress, Des Filtres Et Des Actions (2ème Partie)]]></title>
-    <link href="http://mikedamoiseau.github.io/wordpress-filtres-actions-partie-2"/>
+    <link href="http://damoiseau.me/wordpress-filtres-actions-partie-2"/>
     <updated>2014-10-19T13:43:16+07:00</updated>
-    <id>http://mikedamoiseau.github.io/wordpress-filtres-actions-partie-2</id>
+    <id>http://damoiseau.me/wordpress-filtres-actions-partie-2</id>
     <content type="html"><![CDATA[<p>Cet article fait suite à un article écrit il y a quelques temps de celà (en fait, il y a longtemps déjà et vous m&#8217;en voyez désolé&hellip;): <a href="http://damoiseau.me/wordpress-filtres-actions-partie-1/" title="WordPress, des filtres et des actions (1ère partie)">Wordpress, des filtres et des actions (1ère partie)</a>.</p>
 
 <p>Rappelez-vous, dans l&#8217;article précédent j&#8217;expliquais la différence entre <a href="http://codex.wordpress.org/Function_Reference/add_filter">un filtre</a> et <a href="http://codex.wordpress.org/Function_Reference/add_action">une action</a>&hellip; Un filtre est une fonction qui va recevoir un paramètre en entrée, le transformer et renvoyer le résultat de la transformation. L&#8217;action, quant à elle, reçoit 0, 1 ou plusieurs paramètres en entrée et effectue une action; cette action ne renvoie pas de résultat, ce n&#8217;est pas nécessaire.</p>
@@ -355,9 +355,9 @@ Une des fonctionnalités de base de tout annuaire qui se respecte est l&#8217;é
   
   <entry>
     <title type="html"><![CDATA[WordPress 4.0 Benny Disponible Au Téléchargement]]></title>
-    <link href="http://mikedamoiseau.github.io/wordpress-4-dot-0-benny-disponible-au-telechargement"/>
+    <link href="http://damoiseau.me/wordpress-4-dot-0-benny-disponible-au-telechargement"/>
     <updated>2014-09-05T13:40:49+07:00</updated>
-    <id>http://mikedamoiseau.github.io/wordpress-4-dot-0-benny-disponible-au-telechargement</id>
+    <id>http://damoiseau.me/wordpress-4-dot-0-benny-disponible-au-telechargement</id>
     <content type="html"><![CDATA[<p>La version 4.0 de Wordpress est finalement disponible! Quoi de neuf dans cette version?</p>
 
 <!-- more -->
@@ -400,9 +400,9 @@ Avec Wordpress 4.0, on a finalement droit à un peu plus de flexibilité en tan
   
   <entry>
     <title type="html"><![CDATA[Modifier Un Custom Post Type Existant]]></title>
-    <link href="http://mikedamoiseau.github.io/modifier-un-custom-post-type-existant"/>
+    <link href="http://damoiseau.me/modifier-un-custom-post-type-existant"/>
     <updated>2014-07-12T13:38:34+07:00</updated>
-    <id>http://mikedamoiseau.github.io/modifier-un-custom-post-type-existant</id>
+    <id>http://damoiseau.me/modifier-un-custom-post-type-existant</id>
     <content type="html"><![CDATA[<p>Je suis tombé dernièrement sur un cas relativement intéressant&hellip; Je travaillais sur un site utilisant le plugin <a href="https://wordpress.org/plugins/wp-orbit-slider/" title="WP Orbit Slider - Wordpress plugin">WP Orbit Slider</a>.
 WP Orbit Slider est un petit plugin qui permettant d&#8217;afficher des slideshows. Il est relativement basique et fait bien son boulot&hellip;</p>
 
@@ -497,9 +497,9 @@ Attention, les arguments sont passés via un objet et non un tableau!</p>
   
   <entry>
     <title type="html"><![CDATA[Wordpress, Des Filtres Et Des Actions (1ère Partie)]]></title>
-    <link href="http://mikedamoiseau.github.io/wordpress-filtres-actions-partie-1"/>
+    <link href="http://damoiseau.me/wordpress-filtres-actions-partie-1"/>
     <updated>2014-06-08T13:32:43+07:00</updated>
-    <id>http://mikedamoiseau.github.io/wordpress-filtres-actions-partie-1</id>
+    <id>http://damoiseau.me/wordpress-filtres-actions-partie-1</id>
     <content type="html"><![CDATA[<p>Il est impossible d&#8217;écrire des plugins et/ou des thèmes pour Wordpress sans passer par l&#8217;utilisation des filtres et des actions. En fait, Wordpress utilise énormément les deux, et ne pas comprendre ce que c&#8217;est ni à quoi ça sert, et bien c&#8217;est mal&hellip; Et ce qui est encore plus mal, c&#8217;est de ne pas comprendre ce qui les différencie!
 La nuance entre un filtre et une action est ténue, et c&#8217;est une question qui revient souvent chez les développeurs débutant avec Wordpress: <strong>Quelle est la différence entre un filtre et une action?</strong></p>
 
@@ -594,9 +594,9 @@ De nombreuses fonctions du langage PHP peuvent être considérées comme des fil
   
   <entry>
     <title type="html"><![CDATA[PHP - Les Différentes Manières D'appeler La Fonction Callback D'usort]]></title>
-    <link href="http://mikedamoiseau.github.io/php-les-differentes-manieres-dappeler-la-fonction-callback-dusort"/>
+    <link href="http://damoiseau.me/php-les-differentes-manieres-dappeler-la-fonction-callback-dusort"/>
     <updated>2014-05-01T13:27:18+07:00</updated>
-    <id>http://mikedamoiseau.github.io/php-les-differentes-manieres-dappeler-la-fonction-callback-dusort</id>
+    <id>http://damoiseau.me/php-les-differentes-manieres-dappeler-la-fonction-callback-dusort</id>
     <content type="html"><![CDATA[<p>Connaissez-vous les différentes manières d&#8217;utiliser une fonction callback (ou <a href="http://fr.wikipedia.org/wiki/Fonction_de_rappel" title="Fonction de rappel - callback function">fonction de rappel</a> en bon français) en paramètre de la fonction <code>usort</code></p>
 
 <p>Tout le monde connaît la méthode la plus simple qui consiste à donner en paramètre le nom d&#8217;une fonction globale, comme montré dans l&#8217;exemple suivant:</p>
@@ -787,9 +787,9 @@ Ce serait quand-même bien de pouvoir utiliser notre fonction <em>usort</em> dan
   
   <entry>
     <title type="html"><![CDATA[GIT - Ajouter Localement Une Branche Distante]]></title>
-    <link href="http://mikedamoiseau.github.io/git-ajouter-localement-une-branche-distante"/>
+    <link href="http://damoiseau.me/git-ajouter-localement-une-branche-distante"/>
     <updated>2014-04-17T13:25:03+07:00</updated>
-    <id>http://mikedamoiseau.github.io/git-ajouter-localement-une-branche-distante</id>
+    <id>http://damoiseau.me/git-ajouter-localement-une-branche-distante</id>
     <content type="html"><![CDATA[<p>Auparavant, lorsque j&#8217;avais besoin d&#8217;ajouter localement une branche présente sur un dépôt distant, j&#8217;utilisais les commandes suivantes:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -842,9 +842,9 @@ Et bien ce n&#8217;est tout simplement pas possible!</p>
   
   <entry>
     <title type="html"><![CDATA[WordPress 3.9 Smith Disponible Au Téléchargement]]></title>
-    <link href="http://mikedamoiseau.github.io/wordpress-3.9-smith-disponible-au-telechargement"/>
+    <link href="http://damoiseau.me/wordpress-3.9-smith-disponible-au-telechargement"/>
     <updated>2014-04-17T13:17:54+07:00</updated>
-    <id>http://mikedamoiseau.github.io/wordpress-3.9-smith-disponible-au-telechargement</id>
+    <id>http://damoiseau.me/wordpress-3.9-smith-disponible-au-telechargement</id>
     <content type="html"><![CDATA[<p>Quelques mois après la version 3.8, c&#8217;est au tour de la version 3.9 de Wordpress de voir officiellement le jour!
 Un seul plugin a été intégré au noyau de Wordpress, il s&#8217;agit du plugin <a href="http://wordpress.org/plugins/widget-customizer/" title="Widgets Customizer">Widgets Customizer</a>.</p>
 
@@ -923,9 +923,9 @@ Cette fonctionnalité a été ajoutée dans Apparences > Personnaliser</p>
   
   <entry>
     <title type="html"><![CDATA[Recharger Le Contenu D'un Iframe via Javascript]]></title>
-    <link href="http://mikedamoiseau.github.io/recharger-le-contenu-dun-iframe-via-javascript"/>
+    <link href="http://damoiseau.me/recharger-le-contenu-dun-iframe-via-javascript"/>
     <updated>2014-03-16T13:15:36+07:00</updated>
-    <id>http://mikedamoiseau.github.io/recharger-le-contenu-dun-iframe-via-javascript</id>
+    <id>http://damoiseau.me/recharger-le-contenu-dun-iframe-via-javascript</id>
     <content type="html"><![CDATA[<p>Commençons par situer le contexte:
 Un client me demande d&#8217;afficher une carte Google (google maps) dans un iframe (c&#8217;est le moyen le plus simple d&#8217;intégrer une carte google maps dans un site web). Sur la carte, un marqueur indique l&#8217;emplacement de l&#8217;adresse de son bureau.</p>
 
@@ -967,9 +967,9 @@ Ce code-ci devrait fonctionner sur tous les navigateurs:</p>
   
   <entry>
     <title type="html"><![CDATA[Ajouter Dynamiquement Des Liens JS Et CSS Dans La Balise Head De Votre Site]]></title>
-    <link href="http://mikedamoiseau.github.io/ajouter-dynamiquement-des-liens-js-et-css-dans-la-balise-head-de-votre-site"/>
+    <link href="http://damoiseau.me/ajouter-dynamiquement-des-liens-js-et-css-dans-la-balise-head-de-votre-site"/>
     <updated>2014-02-18T13:12:59+07:00</updated>
-    <id>http://mikedamoiseau.github.io/ajouter-dynamiquement-des-liens-js-et-css-dans-la-balise-head-de-votre-site</id>
+    <id>http://damoiseau.me/ajouter-dynamiquement-des-liens-js-et-css-dans-la-balise-head-de-votre-site</id>
     <content type="html"><![CDATA[<p>Ajouter des liens vers des fichiers JS et/ou CSS dans le layout est quelque chose d&#8217;extrêmement facile dans <strong>CakePHP</strong>:
 Par exemple:</p>
 
@@ -1083,9 +1083,9 @@ Par exemple:</p>
   
   <entry>
     <title type="html"><![CDATA[Les Raisons Qui Font Que Vos Visiteurs Ne S'attardent Pas Sur Votre Site]]></title>
-    <link href="http://mikedamoiseau.github.io/les-raisons-qui-font-que-vos-visiteurs-ne-sattardent-pas-sur-votre-site"/>
+    <link href="http://damoiseau.me/les-raisons-qui-font-que-vos-visiteurs-ne-sattardent-pas-sur-votre-site"/>
     <updated>2014-01-04T13:11:11+07:00</updated>
-    <id>http://mikedamoiseau.github.io/les-raisons-qui-font-que-vos-visiteurs-ne-sattardent-pas-sur-votre-site</id>
+    <id>http://damoiseau.me/les-raisons-qui-font-que-vos-visiteurs-ne-sattardent-pas-sur-votre-site</id>
     <content type="html"><![CDATA[<p>Vu le nombre de sites internet existant, attirer le chalant sur votre site est une tâche difficile. Et comme si ce n&#8217;était pas suffisant, une autre tâche, délicate également, est de faire en sorte que votre visiteur s&#8217;attarde sur votre site, et s&#8217;y intéresse.</p>
 
 <p>Mais quelles sont les raisons qui font que vos visiteurs ne s&#8217;attardent pas sur vos pages?</p>
@@ -1173,9 +1173,9 @@ Un formulaire de contact peut être ajouté en moins de 5 minutes sur un site Wo
   
   <entry>
     <title type="html"><![CDATA[Ajouter Une Méthode TRUNCATE à Tous Vos Modèles CakePHP]]></title>
-    <link href="http://mikedamoiseau.github.io/ajouter-une-methode-truncate-a-tous-vos-modeles-cakephp"/>
+    <link href="http://damoiseau.me/ajouter-une-methode-truncate-a-tous-vos-modeles-cakephp"/>
     <updated>2013-12-31T13:09:22+07:00</updated>
-    <id>http://mikedamoiseau.github.io/ajouter-une-methode-truncate-a-tous-vos-modeles-cakephp</id>
+    <id>http://damoiseau.me/ajouter-une-methode-truncate-a-tous-vos-modeles-cakephp</id>
     <content type="html"><![CDATA[<p>La classe AppModel dans CakePHP possède un nombre conséquent de méthodes intéressantes, cependant il y a une méthode qui n&#8217;a pas été implémentée et qui pourtant peut se révéler particulièrement utile dans certains cas. Il s&#8217;agit de la méthode <code>truncate()</code>.</p>
 
 <p>Pourquoi cette méthode n&#8217;est-elle pas implémentée? Sans doute car trop dépendante du système de base de données utilisé? Ou alors parce que les développeurs du framework n&#8217;y voient tout simplement aucun intérêt&hellip; Aucune idée, mais ce n&#8217;est pas vraiment ce qui nous intéresse, n&#8217;est-ce pas? Au lieu de se focaliser sur le <strong>pourquoi</strong>, concentrons-nous donc sur le <strong>comment</strong>&hellip;</p>
@@ -1229,10 +1229,10 @@ Une dernière remarque&hellip; Si l&#8217;un de vos modèles utilise une source 
   
   <entry>
     <title type="html"><![CDATA[La Méthode Agile en Image]]></title>
-    <link href="http://mikedamoiseau.github.io/la-methode-agile-en-image"/>
+    <link href="http://damoiseau.me/la-methode-agile-en-image"/>
     <updated>2013-12-15T13:04:20+07:00</updated>
-    <id>http://mikedamoiseau.github.io/la-methode-agile-en-image</id>
-    <content type="html"><![CDATA[<p><a href="http://mikedamoiseau.github.io/images/try-agile.png"><img src="http://mikedamoiseau.github.io/images/try-agile.png" alt="try-agile" /></a></p>
+    <id>http://damoiseau.me/la-methode-agile-en-image</id>
+    <content type="html"><![CDATA[<p><a href="http://damoiseau.me/images/try-agile.png"><img src="http://damoiseau.me/images/try-agile.png" alt="try-agile" /></a></p>
 
 <p>Pour les anglophobes, une traduction imprécise:</p>
 
@@ -1251,9 +1251,9 @@ Cela signifie qu&#8217;on ne planifie plus et qu&#8217;on ne documente plus. On 
   
   <entry>
     <title type="html"><![CDATA[Wordpress 3.8 Disponible en Téléchargement]]></title>
-    <link href="http://mikedamoiseau.github.io/wordpress-3.8-disponible-en-telechargement"/>
+    <link href="http://damoiseau.me/wordpress-3.8-disponible-en-telechargement"/>
     <updated>2013-12-13T13:00:52+07:00</updated>
-    <id>http://mikedamoiseau.github.io/wordpress-3.8-disponible-en-telechargement</id>
+    <id>http://damoiseau.me/wordpress-3.8-disponible-en-telechargement</id>
     <content type="html"><![CDATA[<p>Ca y est, La version 3.8 est disponible!</p>
 
 <p>Quoi de neuf dans cette version?</p>
@@ -1284,9 +1284,9 @@ Cela signifie qu&#8217;on ne planifie plus et qu&#8217;on ne documente plus. On 
   
   <entry>
     <title type="html"><![CDATA[Tester en Javascript Si Une Variable Est Déclarée]]></title>
-    <link href="http://mikedamoiseau.github.io/tester-en-javascript-si-une-variable-est-declaree"/>
+    <link href="http://damoiseau.me/tester-en-javascript-si-une-variable-est-declaree"/>
     <updated>2013-12-09T12:57:55+07:00</updated>
-    <id>http://mikedamoiseau.github.io/tester-en-javascript-si-une-variable-est-declaree</id>
+    <id>http://damoiseau.me/tester-en-javascript-si-une-variable-est-declaree</id>
     <content type="html"><![CDATA[<p>Quels sont les différents moyens de tester en javascript si une variable est définie ou non?</p>
 
 <p><strong>1. Tester la valeur d&#8217;une variable</strong></p>
@@ -1357,9 +1357,9 @@ Par exemple:</p>
   
   <entry>
     <title type="html"><![CDATA[Un Peu D'humour Ne Fait Jamais De Mal...]]></title>
-    <link href="http://mikedamoiseau.github.io/un-peu-dhumour-ne-fait-jamais-de-mal"/>
+    <link href="http://damoiseau.me/un-peu-dhumour-ne-fait-jamais-de-mal"/>
     <updated>2013-11-08T12:51:37+07:00</updated>
-    <id>http://mikedamoiseau.github.io/un-peu-dhumour-ne-fait-jamais-de-mal</id>
+    <id>http://damoiseau.me/un-peu-dhumour-ne-fait-jamais-de-mal</id>
     <content type="html"><![CDATA[<p>Vous avez aimé What does the fox say? Vous aimerez encore plus celle-ci!</p>
 
 <!--more-->
@@ -1376,9 +1376,9 @@ Par exemple:</p>
   
   <entry>
     <title type="html"><![CDATA[Nouvelle Version d'Ubuntu 13.10 Saucy Salamander Disponible Au Téléchargement]]></title>
-    <link href="http://mikedamoiseau.github.io/nouvelle-version-dubuntu-13-dot-10-saucy-salamander-disponible-au-telechargement"/>
+    <link href="http://damoiseau.me/nouvelle-version-dubuntu-13-dot-10-saucy-salamander-disponible-au-telechargement"/>
     <updated>2013-10-24T12:48:21+07:00</updated>
-    <id>http://mikedamoiseau.github.io/nouvelle-version-dubuntu-13-dot-10-saucy-salamander-disponible-au-telechargement</id>
+    <id>http://damoiseau.me/nouvelle-version-dubuntu-13-dot-10-saucy-salamander-disponible-au-telechargement</id>
     <content type="html"><![CDATA[<p>La nouvelle version d&#8217;Ubuntu, la 13.10 Saucy Salamander, est disponible au téléchargement!</p>
 
 <!--more-->
@@ -1388,7 +1388,7 @@ Par exemple:</p>
 On va éviter d&#8217;entrer dans les détails techniques, mais disons tout simplement que le moteur pour l&#8217;interface graphique (appelé XMir) a été ajouté et qu&#8217;il permet de gérer toute la panoplie de périphériques possibles et imaginables: ordinateurs de bureau, portables, tablettes et téléphones.
 Ça c&#8217;est en théorie&hellip; En pratique, l&#8217;équipe de Canonical a rencontré des soucis de dernière minute et a préféré reporter l&#8217;intégration de XMir dans Ubuntu. Il est bien possible d&#8217;installer Ubuntu sur un Nexus, mais la version d&#8217;XMir n&#8217;est pas stable et il n&#8217;est donc pas recommandé de le faire.</p>
 
-<p><a href="http://mikedamoiseau.github.io/images/ubuntu-tv-pc-smartphone-tablet.jpg"><img src="http://mikedamoiseau.github.io/images/ubuntu-tv-pc-smartphone-tablet.jpg" alt="ubuntu-tv-pc-smartphone-tablet" /></a></p>
+<p><a href="http://damoiseau.me/images/ubuntu-tv-pc-smartphone-tablet.jpg"><img src="http://damoiseau.me/images/ubuntu-tv-pc-smartphone-tablet.jpg" alt="ubuntu-tv-pc-smartphone-tablet" /></a></p>
 
 <p>Ça c&#8217;est ce que j&#8217;ai compris en lisant les sites d&#8217;information&hellip; personnellement je ne compte pas installer Ubuntu sur mon téléphone, pas de soucis pour moi donc&hellip; J&#8217;installe la mise à jour en 13.10 sur mon antique Lenovo&hellip;</p>
 
@@ -1411,9 +1411,9 @@ On va éviter d&#8217;entrer dans les détails techniques, mais disons tout simp
   
   <entry>
     <title type="html"><![CDATA[Wordpress 3.7 en Préparation]]></title>
-    <link href="http://mikedamoiseau.github.io/wordpress-3.7-en-preparation"/>
+    <link href="http://damoiseau.me/wordpress-3.7-en-preparation"/>
     <updated>2013-10-20T12:44:53+07:00</updated>
-    <id>http://mikedamoiseau.github.io/wordpress-3.7-en-preparation</id>
+    <id>http://damoiseau.me/wordpress-3.7-en-preparation</id>
     <content type="html"><![CDATA[<p>Une nouvelle version de Wordpress est en préparation. Apparemment elle devrait sortir la semaine prochaine.</p>
 
 <p>Alors, qu&#8217;il y a-t-il de nouveau dans cette version? Et bien, pas grand chose&hellip; Mais c&#8217;est pas mal quand-même!</p>
