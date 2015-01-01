@@ -142,37 +142,121 @@
   </url>
   <url>
     <loc>http://damoiseau.me/404.html</loc>
-    <lastmod>2015-01-01T13:48:49+07:00</lastmod>
+    <lastmod>2015-01-01T13:52:35+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://damoiseau.me/blog/archives/</loc>
-    <lastmod>2015-01-01T13:48:49+07:00</lastmod>
+    <lastmod>2015-01-01T13:52:35+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://damoiseau.me/archives/</loc>
-    <lastmod>2015-01-01T13:48:49+07:00</lastmod>
+    <lastmod>2015-01-01T13:52:35+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://damoiseau.me/categories/</loc>
-    <lastmod>2015-01-01T13:48:49+07:00</lastmod>
+    <lastmod>2015-01-01T13:52:35+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://damoiseau.me/</loc>
-    <lastmod>2015-01-01T13:48:49+07:00</lastmod>
+    <lastmod>2015-01-01T13:52:35+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>http://damoiseau.me/posts/</loc>
-    <lastmod>2015-01-01T13:48:49+07:00</lastmod>
+    <lastmod>2015-01-01T13:52:35+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://damoiseau.me/les-entrees-des-menus-wordpress-seraient-elles-limites/</loc>
+    <lastmod>2015-01-01T13:52:35+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://damoiseau.me/wordpress-3-7-en-preparation/</loc>
+    <lastmod>2015-01-01T13:52:35+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://damoiseau.me/nouvelle-version-dubuntu-13-10/</loc>
+    <lastmod>2015-01-01T13:52:35+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://damoiseau.me/s-comment-tester-si-une-variable-est-declaree-definie-ou-rien-de-tout-cela/</loc>
+    <lastmod>2015-01-01T13:52:35+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://damoiseau.me/nouvelle-version-wordpress-3-8/</loc>
+    <lastmod>2015-01-01T13:52:35+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://damoiseau.me/ajouter-methode-truncate-vos-modeles-cakephp/</loc>
+    <lastmod>2015-01-01T13:52:35+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://damoiseau.me/les-raisons-qui-font-que-vos-visiteurs-ne-s-attardent-pas-sur-votre-site/</loc>
+    <lastmod>2015-01-01T13:52:35+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://damoiseau.me/ajouter-dynamiquement-liens-js-css-balise-head/</loc>
+    <lastmod>2015-01-01T13:52:35+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://damoiseau.me/wordpress-3-9-smith-disponible-au-telechargement/</loc>
+    <lastmod>2015-01-01T13:52:35+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://damoiseau.me/php-usort-dans-une-classe-avec-callback-private-static/</loc>
+    <lastmod>2015-01-01T13:52:35+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://damoiseau.me/wordpress-4-0-benny-disponible-au-telechargement/</loc>
+    <lastmod>2015-01-01T13:52:35+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://damoiseau.me/wordpress-des-filtres-et-des-actions-2eme-partie/</loc>
+    <lastmod>2015-01-01T13:52:35+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://damoiseau.me/tester-rendu-site-simultane-browsersync/</loc>
+    <lastmod>2015-01-01T13:52:35+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://damoiseau.me/wordpress-4-1-disponible-au-telechargement/</loc>
+    <lastmod>2015-01-01T13:52:35+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
