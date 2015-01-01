@@ -4,7 +4,7 @@
   <title><![CDATA[Damoiseau.ME, Le blog d'un développeur web]]></title>
   <link href="http://damoiseau.me/atom.xml" rel="self"/>
   <link href="http://damoiseau.me/"/>
-  <updated>2015-01-01T12:41:35+07:00</updated>
+  <updated>2015-01-01T13:28:19+07:00</updated>
   <id>http://damoiseau.me/</id>
   <author>
     <name><![CDATA[Michael Damoiseau]]></name>
@@ -15,7 +15,7 @@
   
   <entry>
     <title type="html"><![CDATA[Réécriture Du Blog Avec Jekyll/Octopress Et Bonne Année 2015]]></title>
-    <link href="http://damoiseau.me/reecriture-blog-jekyll-octopress-bonne-annee-2015"/>
+    <link href="http://damoiseau.me/reecriture-blog-jekyll-octopress-bonne-annee-2015/"/>
     <updated>2014-12-31T17:42:10+07:00</updated>
     <id>http://damoiseau.me/reecriture-blog-jekyll-octopress-bonne-annee-2015</id>
     <content type="html"><![CDATA[<p>Pour terminer l&#8217;année en beauté, j&#8217;ai décidé de réécrire complètement le moteur du blog. Adieu Wordpress, et bienvenue Jekyll!</p>
@@ -30,7 +30,7 @@
   
   <entry>
     <title type="html"><![CDATA[Wordpress 4.1 Disponible Au Téléchargement]]></title>
-    <link href="http://damoiseau.me/wordpress-4.1-disponible-au-telechargement"/>
+    <link href="http://damoiseau.me/wordpress-4.1-disponible-au-telechargement/"/>
     <updated>2014-12-21T14:00:02+07:00</updated>
     <id>http://damoiseau.me/wordpress-4.1-disponible-au-telechargement</id>
     <content type="html"><![CDATA[<p>Quoi de neuf dans cette nouvelle mouture de Wordpress? Et bien pas mal de nouveautés en fait! Certaines d&#8217;entre elles étant très intéressantes, je vous invite vivement à lire mon article ^^</p>
@@ -163,7 +163,7 @@ En indiquant que votre thème supporte le titrage de Wordpress, vous indiquez �
   
   <entry>
     <title type="html"><![CDATA[Tester Le Rendu De Votre Site Internet Simultanément Sur Plusieurs Périphériques Avec BrowserSync]]></title>
-    <link href="http://damoiseau.me/tester-le-rendu-de-votre-site-internet-simultanement-sur-plusieurs-peripheriques-avec-browsersync"/>
+    <link href="http://damoiseau.me/tester-le-rendu-de-votre-site-internet-simultanement-sur-plusieurs-peripheriques-avec-browsersync/"/>
     <updated>2014-10-30T13:55:17+07:00</updated>
     <id>http://damoiseau.me/tester-le-rendu-de-votre-site-internet-simultanement-sur-plusieurs-peripheriques-avec-browsersync</id>
     <content type="html"><![CDATA[<p><a href="http://www.browsersync.io/" title="BrowserSync">BrowserSync</a> est un outil que l&#8217;on pourrait pratiquement considéré comme magique! J&#8217;ai découvert cet utilitaire il y a quelques semaines, et depuis je ne peux plus m&#8217;en passer lorsque je travaille sur à peu près n&#8217;importe quel projet web.</p>
@@ -236,7 +236,7 @@ BrowserSync propose d&#8217;autres fonctionnalités telles qu&#8217;un mini serv
   
   <entry>
     <title type="html"><![CDATA[Wordpress, Des Filtres Et Des Actions (2ème Partie)]]></title>
-    <link href="http://damoiseau.me/wordpress-filtres-actions-partie-2"/>
+    <link href="http://damoiseau.me/wordpress-filtres-actions-partie-2/"/>
     <updated>2014-10-19T13:43:16+07:00</updated>
     <id>http://damoiseau.me/wordpress-filtres-actions-partie-2</id>
     <content type="html"><![CDATA[<p>Cet article fait suite à un article écrit il y a quelques temps de celà (en fait, il y a longtemps déjà et vous m&#8217;en voyez désolé&hellip;): <a href="http://damoiseau.me/wordpress-filtres-actions-partie-1/" title="WordPress, des filtres et des actions (1ère partie)">Wordpress, des filtres et des actions (1ère partie)</a>.</p>
@@ -355,7 +355,7 @@ Une des fonctionnalités de base de tout annuaire qui se respecte est l&#8217;é
   
   <entry>
     <title type="html"><![CDATA[WordPress 4.0 Benny Disponible Au Téléchargement]]></title>
-    <link href="http://damoiseau.me/wordpress-4-dot-0-benny-disponible-au-telechargement"/>
+    <link href="http://damoiseau.me/wordpress-4-dot-0-benny-disponible-au-telechargement/"/>
     <updated>2014-09-05T13:40:49+07:00</updated>
     <id>http://damoiseau.me/wordpress-4-dot-0-benny-disponible-au-telechargement</id>
     <content type="html"><![CDATA[<p>La version 4.0 de Wordpress est finalement disponible! Quoi de neuf dans cette version?</p>
@@ -400,7 +400,7 @@ Avec Wordpress 4.0, on a finalement droit à un peu plus de flexibilité en tan
   
   <entry>
     <title type="html"><![CDATA[Modifier Un Custom Post Type Existant]]></title>
-    <link href="http://damoiseau.me/modifier-un-custom-post-type-existant"/>
+    <link href="http://damoiseau.me/modifier-un-custom-post-type-existant/"/>
     <updated>2014-07-12T13:38:34+07:00</updated>
     <id>http://damoiseau.me/modifier-un-custom-post-type-existant</id>
     <content type="html"><![CDATA[<p>Je suis tombé dernièrement sur un cas relativement intéressant&hellip; Je travaillais sur un site utilisant le plugin <a href="https://wordpress.org/plugins/wp-orbit-slider/" title="WP Orbit Slider - Wordpress plugin">WP Orbit Slider</a>.
@@ -497,7 +497,7 @@ Attention, les arguments sont passés via un objet et non un tableau!</p>
   
   <entry>
     <title type="html"><![CDATA[Wordpress, Des Filtres Et Des Actions (1ère Partie)]]></title>
-    <link href="http://damoiseau.me/wordpress-filtres-actions-partie-1"/>
+    <link href="http://damoiseau.me/wordpress-filtres-actions-partie-1/"/>
     <updated>2014-06-08T13:32:43+07:00</updated>
     <id>http://damoiseau.me/wordpress-filtres-actions-partie-1</id>
     <content type="html"><![CDATA[<p>Il est impossible d&#8217;écrire des plugins et/ou des thèmes pour Wordpress sans passer par l&#8217;utilisation des filtres et des actions. En fait, Wordpress utilise énormément les deux, et ne pas comprendre ce que c&#8217;est ni à quoi ça sert, et bien c&#8217;est mal&hellip; Et ce qui est encore plus mal, c&#8217;est de ne pas comprendre ce qui les différencie!
@@ -594,7 +594,7 @@ De nombreuses fonctions du langage PHP peuvent être considérées comme des fil
   
   <entry>
     <title type="html"><![CDATA[PHP - Les Différentes Manières D'appeler La Fonction Callback D'usort]]></title>
-    <link href="http://damoiseau.me/php-les-differentes-manieres-dappeler-la-fonction-callback-dusort"/>
+    <link href="http://damoiseau.me/php-les-differentes-manieres-dappeler-la-fonction-callback-dusort/"/>
     <updated>2014-05-01T13:27:18+07:00</updated>
     <id>http://damoiseau.me/php-les-differentes-manieres-dappeler-la-fonction-callback-dusort</id>
     <content type="html"><![CDATA[<p>Connaissez-vous les différentes manières d&#8217;utiliser une fonction callback (ou <a href="http://fr.wikipedia.org/wiki/Fonction_de_rappel" title="Fonction de rappel - callback function">fonction de rappel</a> en bon français) en paramètre de la fonction <code>usort</code></p>
@@ -787,7 +787,7 @@ Ce serait quand-même bien de pouvoir utiliser notre fonction <em>usort</em> dan
   
   <entry>
     <title type="html"><![CDATA[GIT - Ajouter Localement Une Branche Distante]]></title>
-    <link href="http://damoiseau.me/git-ajouter-localement-une-branche-distante"/>
+    <link href="http://damoiseau.me/git-ajouter-localement-une-branche-distante/"/>
     <updated>2014-04-17T13:25:03+07:00</updated>
     <id>http://damoiseau.me/git-ajouter-localement-une-branche-distante</id>
     <content type="html"><![CDATA[<p>Auparavant, lorsque j&#8217;avais besoin d&#8217;ajouter localement une branche présente sur un dépôt distant, j&#8217;utilisais les commandes suivantes:</p>
@@ -842,7 +842,7 @@ Et bien ce n&#8217;est tout simplement pas possible!</p>
   
   <entry>
     <title type="html"><![CDATA[WordPress 3.9 Smith Disponible Au Téléchargement]]></title>
-    <link href="http://damoiseau.me/wordpress-3.9-smith-disponible-au-telechargement"/>
+    <link href="http://damoiseau.me/wordpress-3.9-smith-disponible-au-telechargement/"/>
     <updated>2014-04-17T13:17:54+07:00</updated>
     <id>http://damoiseau.me/wordpress-3.9-smith-disponible-au-telechargement</id>
     <content type="html"><![CDATA[<p>Quelques mois après la version 3.8, c&#8217;est au tour de la version 3.9 de Wordpress de voir officiellement le jour!
@@ -923,7 +923,7 @@ Cette fonctionnalité a été ajoutée dans Apparences > Personnaliser</p>
   
   <entry>
     <title type="html"><![CDATA[Recharger Le Contenu D'un Iframe via Javascript]]></title>
-    <link href="http://damoiseau.me/recharger-le-contenu-dun-iframe-via-javascript"/>
+    <link href="http://damoiseau.me/recharger-le-contenu-dun-iframe-via-javascript/"/>
     <updated>2014-03-16T13:15:36+07:00</updated>
     <id>http://damoiseau.me/recharger-le-contenu-dun-iframe-via-javascript</id>
     <content type="html"><![CDATA[<p>Commençons par situer le contexte:
@@ -967,7 +967,7 @@ Ce code-ci devrait fonctionner sur tous les navigateurs:</p>
   
   <entry>
     <title type="html"><![CDATA[Ajouter Dynamiquement Des Liens JS Et CSS Dans La Balise Head De Votre Site]]></title>
-    <link href="http://damoiseau.me/ajouter-dynamiquement-des-liens-js-et-css-dans-la-balise-head-de-votre-site"/>
+    <link href="http://damoiseau.me/ajouter-dynamiquement-des-liens-js-et-css-dans-la-balise-head-de-votre-site/"/>
     <updated>2014-02-18T13:12:59+07:00</updated>
     <id>http://damoiseau.me/ajouter-dynamiquement-des-liens-js-et-css-dans-la-balise-head-de-votre-site</id>
     <content type="html"><![CDATA[<p>Ajouter des liens vers des fichiers JS et/ou CSS dans le layout est quelque chose d&#8217;extrêmement facile dans <strong>CakePHP</strong>:
@@ -1083,7 +1083,7 @@ Par exemple:</p>
   
   <entry>
     <title type="html"><![CDATA[Les Raisons Qui Font Que Vos Visiteurs Ne S'attardent Pas Sur Votre Site]]></title>
-    <link href="http://damoiseau.me/les-raisons-qui-font-que-vos-visiteurs-ne-sattardent-pas-sur-votre-site"/>
+    <link href="http://damoiseau.me/les-raisons-qui-font-que-vos-visiteurs-ne-sattardent-pas-sur-votre-site/"/>
     <updated>2014-01-04T13:11:11+07:00</updated>
     <id>http://damoiseau.me/les-raisons-qui-font-que-vos-visiteurs-ne-sattardent-pas-sur-votre-site</id>
     <content type="html"><![CDATA[<p>Vu le nombre de sites internet existant, attirer le chalant sur votre site est une tâche difficile. Et comme si ce n&#8217;était pas suffisant, une autre tâche, délicate également, est de faire en sorte que votre visiteur s&#8217;attarde sur votre site, et s&#8217;y intéresse.</p>
@@ -1173,7 +1173,7 @@ Un formulaire de contact peut être ajouté en moins de 5 minutes sur un site Wo
   
   <entry>
     <title type="html"><![CDATA[Ajouter Une Méthode TRUNCATE à Tous Vos Modèles CakePHP]]></title>
-    <link href="http://damoiseau.me/ajouter-une-methode-truncate-a-tous-vos-modeles-cakephp"/>
+    <link href="http://damoiseau.me/ajouter-une-methode-truncate-a-tous-vos-modeles-cakephp/"/>
     <updated>2013-12-31T13:09:22+07:00</updated>
     <id>http://damoiseau.me/ajouter-une-methode-truncate-a-tous-vos-modeles-cakephp</id>
     <content type="html"><![CDATA[<p>La classe AppModel dans CakePHP possède un nombre conséquent de méthodes intéressantes, cependant il y a une méthode qui n&#8217;a pas été implémentée et qui pourtant peut se révéler particulièrement utile dans certains cas. Il s&#8217;agit de la méthode <code>truncate()</code>.</p>
@@ -1229,7 +1229,7 @@ Une dernière remarque&hellip; Si l&#8217;un de vos modèles utilise une source 
   
   <entry>
     <title type="html"><![CDATA[La Méthode Agile en Image]]></title>
-    <link href="http://damoiseau.me/la-methode-agile-en-image"/>
+    <link href="http://damoiseau.me/la-methode-agile-en-image/"/>
     <updated>2013-12-15T13:04:20+07:00</updated>
     <id>http://damoiseau.me/la-methode-agile-en-image</id>
     <content type="html"><![CDATA[<p><a href="http://damoiseau.me/images/try-agile.png"><img src="http://damoiseau.me/images/try-agile.png" alt="try-agile" /></a></p>
@@ -1251,7 +1251,7 @@ Cela signifie qu&#8217;on ne planifie plus et qu&#8217;on ne documente plus. On 
   
   <entry>
     <title type="html"><![CDATA[Wordpress 3.8 Disponible en Téléchargement]]></title>
-    <link href="http://damoiseau.me/wordpress-3.8-disponible-en-telechargement"/>
+    <link href="http://damoiseau.me/wordpress-3.8-disponible-en-telechargement/"/>
     <updated>2013-12-13T13:00:52+07:00</updated>
     <id>http://damoiseau.me/wordpress-3.8-disponible-en-telechargement</id>
     <content type="html"><![CDATA[<p>Ca y est, La version 3.8 est disponible!</p>
@@ -1284,7 +1284,7 @@ Cela signifie qu&#8217;on ne planifie plus et qu&#8217;on ne documente plus. On 
   
   <entry>
     <title type="html"><![CDATA[Tester en Javascript Si Une Variable Est Déclarée]]></title>
-    <link href="http://damoiseau.me/tester-en-javascript-si-une-variable-est-declaree"/>
+    <link href="http://damoiseau.me/tester-en-javascript-si-une-variable-est-declaree/"/>
     <updated>2013-12-09T12:57:55+07:00</updated>
     <id>http://damoiseau.me/tester-en-javascript-si-une-variable-est-declaree</id>
     <content type="html"><![CDATA[<p>Quels sont les différents moyens de tester en javascript si une variable est définie ou non?</p>
@@ -1357,7 +1357,7 @@ Par exemple:</p>
   
   <entry>
     <title type="html"><![CDATA[Un Peu D'humour Ne Fait Jamais De Mal...]]></title>
-    <link href="http://damoiseau.me/un-peu-dhumour-ne-fait-jamais-de-mal"/>
+    <link href="http://damoiseau.me/un-peu-dhumour-ne-fait-jamais-de-mal/"/>
     <updated>2013-11-08T12:51:37+07:00</updated>
     <id>http://damoiseau.me/un-peu-dhumour-ne-fait-jamais-de-mal</id>
     <content type="html"><![CDATA[<p>Vous avez aimé What does the fox say? Vous aimerez encore plus celle-ci!</p>
@@ -1376,7 +1376,7 @@ Par exemple:</p>
   
   <entry>
     <title type="html"><![CDATA[Nouvelle Version d'Ubuntu 13.10 Saucy Salamander Disponible Au Téléchargement]]></title>
-    <link href="http://damoiseau.me/nouvelle-version-dubuntu-13-dot-10-saucy-salamander-disponible-au-telechargement"/>
+    <link href="http://damoiseau.me/nouvelle-version-dubuntu-13-dot-10-saucy-salamander-disponible-au-telechargement/"/>
     <updated>2013-10-24T12:48:21+07:00</updated>
     <id>http://damoiseau.me/nouvelle-version-dubuntu-13-dot-10-saucy-salamander-disponible-au-telechargement</id>
     <content type="html"><![CDATA[<p>La nouvelle version d&#8217;Ubuntu, la 13.10 Saucy Salamander, est disponible au téléchargement!</p>
@@ -1411,7 +1411,7 @@ On va éviter d&#8217;entrer dans les détails techniques, mais disons tout simp
   
   <entry>
     <title type="html"><![CDATA[Wordpress 3.7 en Préparation]]></title>
-    <link href="http://damoiseau.me/wordpress-3.7-en-preparation"/>
+    <link href="http://damoiseau.me/wordpress-3.7-en-preparation/"/>
     <updated>2013-10-20T12:44:53+07:00</updated>
     <id>http://damoiseau.me/wordpress-3.7-en-preparation</id>
     <content type="html"><![CDATA[<p>Une nouvelle version de Wordpress est en préparation. Apparemment elle devrait sortir la semaine prochaine.</p>

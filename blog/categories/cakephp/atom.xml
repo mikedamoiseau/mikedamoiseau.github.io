@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Cakephp | Damoiseau.ME, Le blog d'un développeur web]]></title>
   <link href="http://damoiseau.me/blog/categories/cakephp/atom.xml" rel="self"/>
   <link href="http://damoiseau.me/"/>
-  <updated>2015-01-01T12:41:35+07:00</updated>
+  <updated>2015-01-01T13:28:19+07:00</updated>
   <id>http://damoiseau.me/</id>
   <author>
     <name><![CDATA[Michael Damoiseau]]></name>
@@ -15,7 +15,7 @@
   
   <entry>
     <title type="html"><![CDATA[Ajouter Dynamiquement Des Liens JS Et CSS Dans La Balise Head De Votre Site]]></title>
-    <link href="http://damoiseau.me/ajouter-dynamiquement-des-liens-js-et-css-dans-la-balise-head-de-votre-site"/>
+    <link href="http://damoiseau.me/ajouter-dynamiquement-des-liens-js-et-css-dans-la-balise-head-de-votre-site/"/>
     <updated>2014-02-18T13:12:59+07:00</updated>
     <id>http://damoiseau.me/ajouter-dynamiquement-des-liens-js-et-css-dans-la-balise-head-de-votre-site</id>
     <content type="html"><![CDATA[<p>Ajouter des liens vers des fichiers JS et/ou CSS dans le layout est quelque chose d&#8217;extrêmement facile dans <strong>CakePHP</strong>:
@@ -108,7 +108,7 @@ $this-&gt;Html-&gt;script('googlemaps', array( 'inline' =&gt; false ) );
   
   <entry>
     <title type="html"><![CDATA[Ajouter Une Méthode TRUNCATE à Tous Vos Modèles CakePHP]]></title>
-    <link href="http://damoiseau.me/ajouter-une-methode-truncate-a-tous-vos-modeles-cakephp"/>
+    <link href="http://damoiseau.me/ajouter-une-methode-truncate-a-tous-vos-modeles-cakephp/"/>
     <updated>2013-12-31T13:09:22+07:00</updated>
     <id>http://damoiseau.me/ajouter-une-methode-truncate-a-tous-vos-modeles-cakephp</id>
     <content type="html"><![CDATA[<p>La classe AppModel dans CakePHP possède un nombre conséquent de méthodes intéressantes, cependant il y a une méthode qui n&#8217;a pas été implémentée et qui pourtant peut se révéler particulièrement utile dans certains cas. Il s&#8217;agit de la méthode <code>truncate()</code>.</p>
@@ -149,7 +149,7 @@ Une dernière remarque&hellip; Si l&#8217;un de vos modèles utilise une source 
   
   <entry>
     <title type="html"><![CDATA[Paramétrer Le Composant Paginator Dans l'AppController]]></title>
-    <link href="http://damoiseau.me/parametrer-le-composant-paginator-dans-lappcontroller"/>
+    <link href="http://damoiseau.me/parametrer-le-composant-paginator-dans-lappcontroller/"/>
     <updated>2013-09-29T12:38:10+07:00</updated>
     <id>http://damoiseau.me/parametrer-le-composant-paginator-dans-lappcontroller</id>
     <content type="html"><![CDATA[<p>Que se passe-t-il lorsque vous devez écrire un backend avec un nombre conséquent de contrôleurs dont l&#8217;affichage des résultats est paginé?
@@ -301,7 +301,7 @@ Au lieu de dupliquer notre code dans les deux contrôleurs <code>PostsController
   
   <entry>
     <title type="html"><![CDATA[Implémenter Un "Soft Delete" Avec CakePHP]]></title>
-    <link href="http://damoiseau.me/implementer-un-soft-delete-avec-cakephp"/>
+    <link href="http://damoiseau.me/implementer-un-soft-delete-avec-cakephp/"/>
     <updated>2013-09-28T12:34:35+07:00</updated>
     <id>http://damoiseau.me/implementer-un-soft-delete-avec-cakephp</id>
     <content type="html"><![CDATA[<p>Dernièrement, j&#8217;ai eu à travailler sur un projet dont une des conditions du cahier des charges était de ne pas effacer les données présentes dans la base de données (excepté pour quelques tables&hellip;). À la place, le système devait changer l&#8217;état d&#8217;un champ de l&#8217;enregistrement qui indiquait au système qu&#8217;il ne devait plus le prendre en compte (pour info, le nom de ce champ était <code>is_activated</code>).</p>
