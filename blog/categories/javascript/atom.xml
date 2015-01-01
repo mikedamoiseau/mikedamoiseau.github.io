@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Javascript | Damoiseau.ME, Le blog d'un développeur web]]></title>
   <link href="http://damoiseau.me/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://damoiseau.me/"/>
-  <updated>2015-01-01T14:02:54+07:00</updated>
+  <updated>2015-01-01T14:03:48+07:00</updated>
   <id>http://damoiseau.me/</id>
   <author>
     <name><![CDATA[Michael Damoiseau]]></name>
@@ -15,7 +15,7 @@
   
   <entry>
     <title type="html"><![CDATA[Recharger Le Contenu D'un Iframe via Javascript]]></title>
-    <link href="http://damoiseau.me/recharger-le-contenu-dun-iframe-via-javascript/"/>
+    <link href="http://damoiseau.me/recharger-le-contenu-dun-iframe-via-javascript"/>
     <updated>2014-03-16T13:15:36+07:00</updated>
     <id>http://damoiseau.me/recharger-le-contenu-dun-iframe-via-javascript</id>
     <content type="html"><![CDATA[<p>Commençons par situer le contexte:
@@ -52,7 +52,7 @@ iframe.contentDocument.location=iframe.src;
   
   <entry>
     <title type="html"><![CDATA[Tester en Javascript Si Une Variable Est Déclarée]]></title>
-    <link href="http://damoiseau.me/tester-en-javascript-si-une-variable-est-declaree/"/>
+    <link href="http://damoiseau.me/tester-en-javascript-si-une-variable-est-declaree"/>
     <updated>2013-12-09T12:57:55+07:00</updated>
     <id>http://damoiseau.me/tester-en-javascript-si-une-variable-est-declaree</id>
     <content type="html"><![CDATA[<p>Quels sont les différents moyens de tester en javascript si une variable est définie ou non?</p>
@@ -100,7 +100,7 @@ if ( a == null ) {
   
   <entry>
     <title type="html"><![CDATA[Javascript: Ma Variable Est-elle Un Tableau?]]></title>
-    <link href="http://damoiseau.me/javascript-ma-variable-est-elle-un-tableau/"/>
+    <link href="http://damoiseau.me/javascript-ma-variable-est-elle-un-tableau"/>
     <updated>2013-09-06T12:27:41+07:00</updated>
     <id>http://damoiseau.me/javascript-ma-variable-est-elle-un-tableau</id>
     <content type="html"><![CDATA[<p>Javascript est langage de programmation parfois pas piqué des vers! Des choses censées être relativement simples peuvent vite devenir relativement compliquées!</p>

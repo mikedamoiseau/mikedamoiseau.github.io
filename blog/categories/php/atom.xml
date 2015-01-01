@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Php | Damoiseau.ME, Le blog d'un développeur web]]></title>
   <link href="http://damoiseau.me/blog/categories/php/atom.xml" rel="self"/>
   <link href="http://damoiseau.me/"/>
-  <updated>2015-01-01T14:02:54+07:00</updated>
+  <updated>2015-01-01T14:03:48+07:00</updated>
   <id>http://damoiseau.me/</id>
   <author>
     <name><![CDATA[Michael Damoiseau]]></name>
@@ -15,7 +15,7 @@
   
   <entry>
     <title type="html"><![CDATA[Wordpress, Des Filtres Et Des Actions (2ème Partie)]]></title>
-    <link href="http://damoiseau.me/wordpress-filtres-actions-partie-2/"/>
+    <link href="http://damoiseau.me/wordpress-filtres-actions-partie-2"/>
     <updated>2014-10-19T13:43:16+07:00</updated>
     <id>http://damoiseau.me/wordpress-filtres-actions-partie-2</id>
     <content type="html"><![CDATA[<p>Cet article fait suite à un article écrit il y a quelques temps de celà (en fait, il y a longtemps déjà et vous m&#8217;en voyez désolé&hellip;): <a href="http://damoiseau.me/wordpress-filtres-actions-partie-1/" title="WordPress, des filtres et des actions (1ère partie)">Wordpress, des filtres et des actions (1ère partie)</a>.</p>
@@ -108,7 +108,7 @@ add_filter( &lsquo;filtre_sur_le_titre&rsquo;, &lsquo;mon_filtre_sur_le_titre&rs
   
   <entry>
     <title type="html"><![CDATA[Modifier Un Custom Post Type Existant]]></title>
-    <link href="http://damoiseau.me/modifier-un-custom-post-type-existant/"/>
+    <link href="http://damoiseau.me/modifier-un-custom-post-type-existant"/>
     <updated>2014-07-12T13:38:34+07:00</updated>
     <id>http://damoiseau.me/modifier-un-custom-post-type-existant</id>
     <content type="html"><![CDATA[<p>Je suis tombé dernièrement sur un cas relativement intéressant&hellip; Je travaillais sur un site utilisant le plugin <a href="https://wordpress.org/plugins/wp-orbit-slider/" title="WP Orbit Slider - Wordpress plugin">WP Orbit Slider</a>.
@@ -175,7 +175,7 @@ Attention, les arguments sont passés via un objet et non un tableau!</p>
   
   <entry>
     <title type="html"><![CDATA[Wordpress, Des Filtres Et Des Actions (1ère Partie)]]></title>
-    <link href="http://damoiseau.me/wordpress-filtres-actions-partie-1/"/>
+    <link href="http://damoiseau.me/wordpress-filtres-actions-partie-1"/>
     <updated>2014-06-08T13:32:43+07:00</updated>
     <id>http://damoiseau.me/wordpress-filtres-actions-partie-1</id>
     <content type="html"><![CDATA[<p>Il est impossible d&#8217;écrire des plugins et/ou des thèmes pour Wordpress sans passer par l&#8217;utilisation des filtres et des actions. En fait, Wordpress utilise énormément les deux, et ne pas comprendre ce que c&#8217;est ni à quoi ça sert, et bien c&#8217;est mal&hellip; Et ce qui est encore plus mal, c&#8217;est de ne pas comprendre ce qui les différencie!
@@ -260,7 +260,7 @@ add_action( 'publish_post', 'email_amis' );
   
   <entry>
     <title type="html"><![CDATA[PHP - Les Différentes Manières D'appeler La Fonction Callback D'usort]]></title>
-    <link href="http://damoiseau.me/php-les-differentes-manieres-dappeler-la-fonction-callback-dusort/"/>
+    <link href="http://damoiseau.me/php-les-differentes-manieres-dappeler-la-fonction-callback-dusort"/>
     <updated>2014-05-01T13:27:18+07:00</updated>
     <id>http://damoiseau.me/php-les-differentes-manieres-dappeler-la-fonction-callback-dusort</id>
     <content type="html"><![CDATA[<p>Connaissez-vous les différentes manières d&#8217;utiliser une fonction callback (ou <a href="http://fr.wikipedia.org/wiki/Fonction_de_rappel" title="Fonction de rappel - callback function">fonction de rappel</a> en bon français) en paramètre de la fonction <code>usort</code></p>
@@ -423,7 +423,7 @@ public function aa() {
   
   <entry>
     <title type="html"><![CDATA[Les Entrées Des Menus Wordpress Seraient-elles Limitées?]]></title>
-    <link href="http://damoiseau.me/les-entrees-des-menus-wordpress-seraient-elles-limitees/"/>
+    <link href="http://damoiseau.me/les-entrees-des-menus-wordpress-seraient-elles-limitees"/>
     <updated>2013-10-01T12:40:30+07:00</updated>
     <id>http://damoiseau.me/les-entrees-des-menus-wordpress-seraient-elles-limitees</id>
     <content type="html"><![CDATA[<h5>Le client</h5>

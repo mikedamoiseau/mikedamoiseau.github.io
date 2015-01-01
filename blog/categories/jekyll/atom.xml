@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Jekyll | Damoiseau.ME, Le blog d'un développeur web]]></title>
   <link href="http://damoiseau.me/blog/categories/jekyll/atom.xml" rel="self"/>
   <link href="http://damoiseau.me/"/>
-  <updated>2015-01-01T14:02:54+07:00</updated>
+  <updated>2015-01-01T14:03:48+07:00</updated>
   <id>http://damoiseau.me/</id>
   <author>
     <name><![CDATA[Michael Damoiseau]]></name>
@@ -15,7 +15,7 @@
   
   <entry>
     <title type="html"><![CDATA[Réécriture Du Blog Avec Jekyll/Octopress Et Bonne Année 2015]]></title>
-    <link href="http://damoiseau.me/reecriture-blog-jekyll-octopress-bonne-annee-2015/"/>
+    <link href="http://damoiseau.me/reecriture-blog-jekyll-octopress-bonne-annee-2015"/>
     <updated>2014-12-31T17:42:10+07:00</updated>
     <id>http://damoiseau.me/reecriture-blog-jekyll-octopress-bonne-annee-2015</id>
     <content type="html"><![CDATA[<p>Pour terminer l&#8217;année en beauté, j&#8217;ai décidé de réécrire complètement le moteur du blog. Adieu Wordpress, et bienvenue Jekyll!</p>

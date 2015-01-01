@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Divers | Damoiseau.ME, Le blog d'un développeur web]]></title>
   <link href="http://damoiseau.me/blog/categories/divers/atom.xml" rel="self"/>
   <link href="http://damoiseau.me/"/>
-  <updated>2015-01-01T14:02:54+07:00</updated>
+  <updated>2015-01-01T14:03:48+07:00</updated>
   <id>http://damoiseau.me/</id>
   <author>
     <name><![CDATA[Michael Damoiseau]]></name>
@@ -15,7 +15,7 @@
   
   <entry>
     <title type="html"><![CDATA[Réécriture Du Blog Avec Jekyll/Octopress Et Bonne Année 2015]]></title>
-    <link href="http://damoiseau.me/reecriture-blog-jekyll-octopress-bonne-annee-2015/"/>
+    <link href="http://damoiseau.me/reecriture-blog-jekyll-octopress-bonne-annee-2015"/>
     <updated>2014-12-31T17:42:10+07:00</updated>
     <id>http://damoiseau.me/reecriture-blog-jekyll-octopress-bonne-annee-2015</id>
     <content type="html"><![CDATA[<p>Pour terminer l&#8217;année en beauté, j&#8217;ai décidé de réécrire complètement le moteur du blog. Adieu Wordpress, et bienvenue Jekyll!</p>
@@ -30,7 +30,7 @@
   
   <entry>
     <title type="html"><![CDATA[Tester Le Rendu De Votre Site Internet Simultanément Sur Plusieurs Périphériques Avec BrowserSync]]></title>
-    <link href="http://damoiseau.me/tester-le-rendu-de-votre-site-internet-simultanement-sur-plusieurs-peripheriques-avec-browsersync/"/>
+    <link href="http://damoiseau.me/tester-le-rendu-de-votre-site-internet-simultanement-sur-plusieurs-peripheriques-avec-browsersync"/>
     <updated>2014-10-30T13:55:17+07:00</updated>
     <id>http://damoiseau.me/tester-le-rendu-de-votre-site-internet-simultanement-sur-plusieurs-peripheriques-avec-browsersync</id>
     <content type="html"><![CDATA[<p><a href="http://www.browsersync.io/" title="BrowserSync">BrowserSync</a> est un outil que l&#8217;on pourrait pratiquement considéré comme magique! J&#8217;ai découvert cet utilitaire il y a quelques semaines, et depuis je ne peux plus m&#8217;en passer lorsque je travaille sur à peu près n&#8217;importe quel projet web.</p>
@@ -103,7 +103,7 @@ BrowserSync propose d&#8217;autres fonctionnalités telles qu&#8217;un mini serv
   
   <entry>
     <title type="html"><![CDATA[Les Raisons Qui Font Que Vos Visiteurs Ne S'attardent Pas Sur Votre Site]]></title>
-    <link href="http://damoiseau.me/les-raisons-qui-font-que-vos-visiteurs-ne-sattardent-pas-sur-votre-site/"/>
+    <link href="http://damoiseau.me/les-raisons-qui-font-que-vos-visiteurs-ne-sattardent-pas-sur-votre-site"/>
     <updated>2014-01-04T13:11:11+07:00</updated>
     <id>http://damoiseau.me/les-raisons-qui-font-que-vos-visiteurs-ne-sattardent-pas-sur-votre-site</id>
     <content type="html"><![CDATA[<p>Vu le nombre de sites internet existant, attirer le chalant sur votre site est une tâche difficile. Et comme si ce n&#8217;était pas suffisant, une autre tâche, délicate également, est de faire en sorte que votre visiteur s&#8217;attarde sur votre site, et s&#8217;y intéresse.</p>

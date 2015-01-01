@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Git | Damoiseau.ME, Le blog d'un développeur web]]></title>
   <link href="http://damoiseau.me/blog/categories/git/atom.xml" rel="self"/>
   <link href="http://damoiseau.me/"/>
-  <updated>2015-01-01T14:02:54+07:00</updated>
+  <updated>2015-01-01T14:03:48+07:00</updated>
   <id>http://damoiseau.me/</id>
   <author>
     <name><![CDATA[Michael Damoiseau]]></name>
@@ -15,7 +15,7 @@
   
   <entry>
     <title type="html"><![CDATA[GIT - Ajouter Localement Une Branche Distante]]></title>
-    <link href="http://damoiseau.me/git-ajouter-localement-une-branche-distante/"/>
+    <link href="http://damoiseau.me/git-ajouter-localement-une-branche-distante"/>
     <updated>2014-04-17T13:25:03+07:00</updated>
     <id>http://damoiseau.me/git-ajouter-localement-une-branche-distante</id>
     <content type="html"><![CDATA[<p>Auparavant, lorsque j&#8217;avais besoin d&#8217;ajouter localement une branche présente sur un dépôt distant, j&#8217;utilisais les commandes suivantes:</p>
